@@ -19,6 +19,8 @@ Elecrow にて、 PCB として作ることもできます。
 - [遊舎工房 レーザーカットサービス アクリル押出 A4 3mm](https://yushakobo.jp/lasercut/) ￥ 3,920 / 2 枚
 - [Elecrow PCB 105mm x 159mm 厚さ 1.6mm](https://www.elecrow.com/pcb-manufacturing.html) \$ 38.83 / 5 枚
 
+発注に必要なデータと発注方法のページは準備中です。
+
 ボトムプレートと PCB プレートの間にはスペーサーを挟みます。
 スペーサーのサイズにより、高さ調整が可能です。
 
