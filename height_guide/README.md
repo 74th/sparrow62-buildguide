@@ -41,8 +41,8 @@ Elecrow にて、 PCB として作ることもできます。
 中国産であれば安価に入手することができます。
 ネジはネジ穴が潰れると辛いため日本製のものを使いますが、スペーサーであれば中国産で妥協の範囲かと思います。
 
-- [brass spacer m2 3~10mm/1mm](https://www.aliexpress.com/item/32904784115.html) US\$ 1.04 ~ 2.20 / 50 個
-- [nylon spacer m2 5,6,8,10mm](https://www.aliexpress.com/item/32996308968.html) US\$ 0.49 ~ 1.37 / 50 個
+- [Aliexpress brass spacer m2 3~10mm/1mm](https://www.aliexpress.com/item/32904784115.html) US\$ 1.04 ~ 2.20 / 50 個
+- [Aliexpress nylon spacer m2 5,6,8,10mm](https://www.aliexpress.com/item/32996308968.html) US\$ 0.49 ~ 1.37 / 50 個
 
 ## Choc v1 で 約 15mm
 
