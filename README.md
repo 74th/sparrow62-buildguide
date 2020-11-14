@@ -63,7 +63,8 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 - Kailh Low Profile Choc v2 タクタイル（茶）([遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)): 非常に薄いタクタイルスイッチです。MX 軸の一般的なキーキャップが使用可能で、薄さをキープしたまま良い打ち心地を得ることができます。
 - Kailh Speed Switch Copper（茶）([遊舎工房](https://yushakobo.jp/shop/kailh-speed/): 押下点（押されたと判定される深さ）が 1.1mm と非常に小さいタクタイルスイッチです。そこまで押すことなく入力が軽快にでき、指が痛くなりません。
--
+- DSA キーキャップ （[遊舎工房](https://yushakobo.jp/product-category/keycaps/dsa/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/?category_id=59be1864b1b6195942000732)）: 非常に薄い、かつ全て同型のキーキャップです
+- 見つけてよかったキーキャップ https://www.amazon.co.jp/gp/product/B0852YVT71/
 
 ## キット同梱物
 
@@ -81,7 +82,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 - スペーサー M2 3mm x20
 - M2 ネジ x40
 
-トッププレートは Cherry MX 互換キースイッチ専用です。 Kailh Choc V1/V2 の場合キーキャップと干渉したり、高さが高すぎたりします。
+トッププレートは Cherry MX 互換キースイッチ専用とお考えください。 Kailh Choc V1/V2 の場合キーキャップと干渉したり、高さが高すぎたりします。
 
 ## キット同梱物が追加で必要な場合
 
