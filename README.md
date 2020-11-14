@@ -5,8 +5,8 @@
 Lily58 に触発された @74th が販売する、自作キーボードキットです。
 
 **Kailh Choc V2 キースイッチの場合（キーキャップ: DSA）**
-![](top_choc.jpg)
-![](top_choc2.jpg)
+![](img/top_choc.jpg)
+![](img/top_choc2.jpg)
 
 以下のような特徴があります。
 
@@ -29,10 +29,10 @@ Lily58 に触発された @74th が販売する、自作キーボードキット
 ぜひ Lily58 の購入も検討ください。
 
 **Kailh Choc V1 キースイッチの場合**
-![](top_choc_v1.jpg)
+![](img/top_choc_v1.jpg)
 
 **Cherry MX 互換スイッチを使用し、トッププレートを加えた場合（キーキャップ: DSA）**
-![](top_cherry_mx.jpg)
+![](img/top_cherry_mx.jpg)
 
 ### 対応キースイッチ
 
@@ -118,7 +118,7 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 切断した際に発生する小さな破片にご注意ください。
 写真青丸の銅線は切断しないように気をつけてください。
 
-![](choc_v2.jpg)
+![](img/choc_v2.jpg)
 
 切断後に、少し残ってしまった場合には、折り曲げておきます。
 
@@ -128,7 +128,7 @@ Pro Micro の Micro USB 端子は非常にもげやすいものになってい�
 これを防止するため、端子に エボキシ系接着剤を塗布します。
 誤って端子の中に接着剤が入り込まないように気をつけてください。
 
-![](pro_micro_connecter.jpg)
+![](img/pro_micro_connecter.jpg)
 
 ### Pro Micro とピンヘッダをはんだ付けする
 
@@ -138,7 +138,7 @@ https://yushakobo.zendesk.com/hc/ja/articles/360044233974-%E3%82%B3%E3%83%B3%E3%
 
 Sparrow62 キーボードは Pro Micro を写真の向きで使います。
 
-![](pro_micro.jpg)
+![](img/pro_micro.jpg)
 
 先に、Pro Micro とピンヘッダを PCB に差し込みます。
 その上から、 Pro Micro とピンヘッダのみをはんだづけします。
@@ -174,19 +174,19 @@ https://twitter.com/Salicylic_acid3/status/1108798243142434816
 
 **1.先に PCB の片側にはんだをつける**
 
-![](diode1.jpg)
+![](img/diode1.jpg)
 
 **2.つけたハンダを溶かして、ダイオードを片側をはんだ付けする**
 
-![](diode2.jpg)
+![](img/diode2.jpg)
 
 **3.ダイオードの向きを確認する**
 
-![](diode4.jpg)
+![](img/diode4.jpg)
 
 **4.反対側の足をはんだ付けする**
 
-![](diode2.jpg)
+![](img/diode2.jpg)
 
 ### スイッチソケットを実装する
 
@@ -205,19 +205,19 @@ https://twitter.com/Salicylic_acid3/status/1310253635255717889
 
 **1.先に PCB の両側の端子にハンダをつける**
 
-![](socket1.jpg)
+![](img/socket1.jpg)
 
 **2.ソケットを置き、ハンダを溶かしながら押す**
 
-![](socket2.jpg)
+![](img/socket2.jpg)
 
 **3.反対側も同様にする**
 
-![](socket3.jpg)
+![](img/socket3.jpg)
 
 **4.密着するまでくりかえす**
 
-![](socket4.jpg)
+![](img/socket4.jpg)
 
 ### タクトスイッチを実装する
 
@@ -231,7 +231,7 @@ https://twitter.com/Salicylic_acid3/status/1310253635255717889
 
 **タクトスイッチ**
 
-![](tact_switch.jpg)
+![](img/tact_switch.jpg)
 
 ### TRRS ジャックを実装する
 
@@ -245,7 +245,7 @@ TRRS ジャックは、**ダイオードとは異なる面に** 実装します�
 
 **TRRS コネクタ**
 
-![](trrs.jpg)
+![](img/trrs.jpg)
 
 ### キースイッチを差し込む
 
@@ -279,7 +279,7 @@ qmk flash -kb sparrow62 -km default
 
 この default のキーマップは以下のようになっています。 `MO(_FN)`のキーを押すと、キーレイヤが下の`[_FN]`のものに変わり、F1-12 キーや、矢印キーとして動作させることができます。
 
-![](default_keymap.png)
+![](img/default_keymap.png)
 
 新しいキーマップを作成する場合には、以下のように実行します（nnyn が新しいキーマップ名）
 
@@ -328,11 +328,11 @@ https://config.qmk.fm/#/test
 
 左手用のキーの場合、以下の同じ色の部分がつながっています。それぞれテスターなどで疎通しているか確認ください。
 
-![](left_hand_debug.jpg)
+![](img/left_hand_debug.jpg)
 
 右手用のキーの場合、以下の同じ色の部分がつながっています。それぞれテスターなどで疎通しているか確認ください。
 
-![](right_hand_debug.jpg)
+![](img/right_hand_debug.jpg)
 
 #### 縦一列、横一列が動作しない場合
 
