@@ -89,7 +89,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 キットに付属している以上の材料が必要になった場合、PCB 以外は秋月電子通商、または遊舎工房で購入することが可能です。
 
 - TRRS ジャック: [秋月電子通商](https://akizukidenshi.com/catalog/g/gC-06070/)、[遊舎工房](https://yushakobo.jp/shop/a0800tr-01-1/)
-- ダイオード: [秋月電子通商](https://akizukidenshi.com/catalog/g/gI-07084/)、[遊舎工房](https://yushakobo.jp/shop/a0800di-02-100/
+- ダイオード: [秋月電子通商](https://akizukidenshi.com/catalog/g/gI-07084/)、[遊舎工房](https://yushakobo.jp/shop/a0800di-02-100/)
 - タクトスイッチ: [秋月電子通商](https://akizukidenshi.com/catalog/g/gP-08073/)、[遊舎工房](https://yushakobo.jp/shop/a0800ts-01-1/)、[モノタロウ](https://www.monotaro.com/p/0148/6257/)
 - ゴム足: [モノタロウ](https://www.monotaro.com/p/4891/2387/)
 
