@@ -339,6 +339,15 @@ https://config.qmk.fm/#/test
 青丸が COL のラインとなっており、そのまま Pro Micro の COL0-6 につながっています。緑丸が ROW のラインとなっており、そのまま Pro Micro の ROW0-4 につながっています。
 Pro Micro の接続を確認ください。
 
+## 追加でトッププレート、ボトムプレートが欲しい場合
+
+追加でトッププレート、ボトムプレートが入り用の場合には、[遊舎工房さんのレーザーカットサービス](https://yushakobo.jp/lasercut/)で利用可能なデータを提供していますので、ご自身で発注ください。
+また、データで問題があった場合には、私まで問い合わせください。
+
+- [トッププレート A4 Sparrow62_top_Laser_A4.svg](additional_plate/Sparrow62_top_Laser_A4.svg)
+- [ボトムプレート A4 Sparrow62_bottom_Laser_A4.svg](additional_plate/Sparrow62_bottom_Laser_A4.svg)
+- [ボトムプレート 450x300 Sparrow62_set_Laser_450x300.svg](additional_plate/Sparrow62_set_Laser_450x300.svg)
+
 ## 不明点がある場合
 
 不明点がある場合、作成にあたり相談したいことがある場合には、私のところまでお気軽に問い合わせください。
