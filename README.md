@@ -251,9 +251,50 @@ TRRS ジャックは、**ダイオードとは異なる面に** 実装します�
 
 キースイッチをソケットに差し込みます。キーキャップはまだしません。
 
-### Pro Micro にファイームウェアを書き込む
+### Pro Micro にファームウェアを書き込む
 
 ファームウェアには、[QMK Firmware](https://docs.qmk.fm/) を使います。
+
+デフォルトのキーマップで良い場合、QMK Toolbox でファームウェアを書き込めば完了です。
+
+キーマップのカスタマイズには、VIA を使うと GUI で変更できます。
+更に高度なカスタ合図を行う場合、QMK Firmware のビルド環境を整える必要があります。
+
+#### QMK Toolbox を使ってデフォルトのファームウェアを書き込む
+
+以下のキーマップを、default のファームウェアとして提供しています。
+
+- [Download sparrow62_default.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_default.hex)
+
+レイヤ 1
+
+![](./img/keymmmap_default_layer1.png)
+
+レイヤ 2（レイヤ 1 の`MO(1)`のキーと同時に押すと、動作する）
+
+![](./img/keymmmap_default_layer2.png)
+
+こちらを [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) を使って書き込むことができます。
+
+QMK Toolbox の使い方は[サリチル酸さんの記事](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)が詳しいため、こちらを確認ください。
+
+左右のキーボードの両方に書き込む必要があります。
+
+#### VIA を使ってキーマップを変更する
+
+GUI でキーマップを変更できる [VIA](https://caniusevia.com/) というツールがあります。
+
+VIA を使うには、VIA のファームウェアを書き込む必要があります。以下からダウンロードし、[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)などを使って書き込んでください。
+
+- [Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
+
+VIA には、まだ Sparrow62 の設定がマージされていないため、VIA を起動した後に、以下の手順で設定を追加します。
+
+1. **SETTINGS タブ** を開き、**Show Design tab** を有効化する。
+2. **DESIGN タブ** を開き、**Load Draft Definition** から[この JSON ファイル(via_sparrow62.json)](https://github.com/74th/sparrow62-buildguide/raw/master/via_sparrow62.json) を読み込ませる。
+3. キーボードを接続し、**CONFIGURE タブ**を開く
+
+#### 更にカスタマイズするため、QMK Firmware のビルド環境を整える
 
 QMK Firmware のセットアップ手順（[公式英語](https://docs.qmk.fm/#/newbs_getting_started)、[有志日本語](https://github.com/shelaf/qmk_firmware/blob/master/docs/ja/newbs_getting_started.md)）に従い、インストールします。
 
