@@ -268,11 +268,11 @@ TRRS ジャックは、**ダイオードとは異なる面に** 実装します�
 
 レイヤ 1
 
-![](./img/keymmmap_default_layer1.png)
+![](./img/keymap_default_layer1.png)
 
 レイヤ 2（レイヤ 1 の`MO(1)`のキーと同時に押すと、動作する）
 
-![](./img/keymmmap_default_layer2.png)
+![](./img/keymap_default_layer2.png)
 
 こちらを [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) を使って書き込むことができます。
 
