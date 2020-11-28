@@ -340,19 +340,6 @@ qmk flash -kb sparrow62 -km nnyn
 - [Keymap Overview](https://docs.qmk.fm/#/keymap)
 - [はじめての QMK キーマップ編集](https://qiita.com/marksard/items/9317949ce1da327f7436)
 
-QMK Firmware を自前でビルドする以外にも、QMK Configurator、QMK Toolbox を使った方法があります。
-サリチル酸さんのブログが非常に参考になるため、こちらをご確認ください。
-
-- [（初心者編）QMK Configurator を使ってキーマップを書き換えよう - 自作キーボード温泉街の歩き方](https://salicylic-acid3.hatenablog.com/entry/qmk-configurator)
-- [（初心者編）自作キーボードにファームウェアを書き込む - 自作キーボード温泉街の歩き方](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)
-
-<!--
-また、GUI でキーレイアウトが変更可能な、VIA があります。
-こちらもサリチル酸さんのブログが非常に参考になるため、ご確認ください。
-
-- [（初心者編）VIA を使ってキーマップを書き換えよう - 自作キーボード温泉街の歩き方](https://salicylic-acid3.hatenablog.com/entry/via-manual)
--->
-
 ### キースイッチのテストをする
 
 QMK Continuator のキーテストを開きます。
