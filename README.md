@@ -294,6 +294,8 @@ VIA には、まだ Sparrow62 の設定がマージされていないため、VI
 2. **DESIGN タブ** を開き、**Load Draft Definition** から[この JSON ファイル(via_sparrow62.json)](https://github.com/74th/sparrow62-buildguide/raw/master/via_sparrow62.json) を読み込ませる。
 3. キーボードを接続し、**CONFIGURE タブ**を開く
 
+VIAの使い方は[サリチル酸さんのブログ](https://salicylic-acid3.hatenablog.com/entry/via-manual)が詳しいので、こちら参照ください。
+
 #### 更にカスタマイズするため、QMK Firmware のビルド環境を整える
 
 QMK Firmware のセットアップ手順（[公式英語](https://docs.qmk.fm/#/newbs_getting_started)、[有志日本語](https://github.com/shelaf/qmk_firmware/blob/master/docs/ja/newbs_getting_started.md)）に従い、インストールします。
