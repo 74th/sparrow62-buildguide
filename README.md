@@ -294,22 +294,13 @@ VIA には、まだ Sparrow62 の設定がマージされていないため、VI
 2. **DESIGN タブ** を開き、**Load Draft Definition** から[この JSON ファイル(via_sparrow62.json)](https://github.com/74th/sparrow62-buildguide/raw/master/via_sparrow62.json) を読み込ませる。
 3. キーボードを接続し、**CONFIGURE タブ**を開く
 
-VIAの使い方は[サリチル酸さんのブログ](https://salicylic-acid3.hatenablog.com/entry/via-manual)が詳しいので、こちら参照ください。
+VIA の使い方は[サリチル酸さんのブログ](https://salicylic-acid3.hatenablog.com/entry/via-manual)が詳しいので、こちら参照ください。
 
 #### 更にカスタマイズするため、QMK Firmware のビルド環境を整える
 
 QMK Firmware のセットアップ手順（[公式英語](https://docs.qmk.fm/#/newbs_getting_started)、[有志日本語](https://github.com/shelaf/qmk_firmware/blob/master/docs/ja/newbs_getting_started.md)）に従い、インストールします。
 
 Ubuntu を使用している場合には、ModemManager が邪魔をすることがあるので、`sudo systemctl stop ModemManager.service`を実行いておくと有効です。
-
-現在、QMK Firmware には Sparrow62 キーボードのファイルがマージされていません。
-qmk firmware のディレクトリに、sparrow62 のリポジトリをチェックアウトしてください。
-
-```
-cd ~/qmk_firmware
-git remote add 74th https:/github.com/74th/qmk-firmaware.git
-git checkout 74th/sparrow62
-```
 
 デフォルトのキーマップをインストールするには、PC と Pro Micro を USB ケーブルで接続し、以下を実行します。
 
@@ -330,7 +321,7 @@ qmk flash -kb sparrow62 -km default
 qmk new-keymap -kb sparrow62 -km nnyn
 ```
 
-キーマップの設定する C のソースが `~/qmk_firmware/keyboards/sparrow62/keymaps/nnyn2/keymap.c` にできます。
+キーマップの設定する C のソースが `~/qmk_firmware/keyboards/sparrow62/keymaps/nnyn/keymap.c` にできます。
 こちらを変更して、以下のコマンドで Firmware を書き込みます。
 
 ```
