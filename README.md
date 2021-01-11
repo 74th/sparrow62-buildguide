@@ -42,7 +42,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 - Kailh Low Profile Choc v1 ([遊舎工房](https://yushakobo.jp/shop/pg1350/)): 非常に薄いメカニカルキースイッチです。ただし、専用のキーキャップが必要です。
 - Kailh Low Profile Choc v2 ([遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)): 非常に薄いメカニカルキースイッチです。MX 軸の一般的なキーキャップが使用可能です。
 
-製作者のおすすめは、Kailh Low Profile Choc v2 です。
+製作者のおすすめは、Kailh Low Profile Choc v2, Kailh Speed Switch Copper です。
 
 ## キット以外に必要なもの
 
@@ -120,7 +120,9 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 
 ![](img/choc_v2.jpg)
 
-切断後に、少し残ってしまった場合には、折り曲げておきます。
+ここできれいに切断すると、安定性が増します。
+もし少し残ってぐらついてしまう場合、補助的にトッププレートを使うことで安定させることもできます（ただし、Choc スイッチの下の爪と上の爪までの幅が 1.65mm であるため、完全にははまりません）。
+[後からトッププレートが必要となった場合、遊舎工房さんで発注することができます。こちらを確認ください。](https://github.com/74th/sparrow62-buildguide#%E8%BF%BD%E5%8A%A0%E3%81%A7%E3%83%88%E3%83%83%E3%83%97%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%9C%E3%83%88%E3%83%A0%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%84%E5%A0%B4%E5%90%88)
 
 ### Pro Micro にもげ防止加工を実施（お好みで）
 
