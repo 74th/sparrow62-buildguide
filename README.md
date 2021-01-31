@@ -44,6 +44,13 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 製作者のおすすめは、Kailh Low Profile Choc v2, Kailh Speed Switch Copper です。
 
+## 販売先
+
+- Sparrow62 自作キーボードキット https://booth.pm/ja/items/2525427
+- 半組立済or完成品 Sparrow62 自作キーボードキット https://booth.pm/ja/items/2565218
+  - 半完成品: はんだ付け済み、キーキャップとキースイッチを付けるだけで完成するもの。別途TRRSケーブル、Micro USBケーブルは必要。
+  - 完成品: Kailh Speed Switch Copper、DSAキーキャップが付いた完成品キーボード
+
 ## キット以外に必要なもの
 
 以下のものが必要です。
