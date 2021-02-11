@@ -53,7 +53,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 - Kailh Low Profile Choc v2 ... 薄いキースイッチ。ちょっとお高め。
   - [遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)
 
-現在（2021/02/11）製作者が主に使っているのは、Durock T1、Durock ミディアム宅タイルです
+現在（2021/02/11）製作者が主に使っているのは、Durock T1、Durock ミディアムタクタイルです
 
 ## カスタマイズ
 
@@ -136,7 +136,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 その他に必要なものは以下になります。
 
-- M2 8mm ネジ x20
+- M2 6mm ネジ（8mmの代わり） x20
   - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
   - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
 - ゴム足
@@ -157,17 +157,22 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 他に必要なものは以下になります。
 
-- M2 4mm ネジ x20
+- M2 4mm ネジ x34（表から、トッププレートを貫く。裏から、トラックパッドプレートを貫く）
   - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 3mm](https://www.monotaro.com/p/4926/2543/)
   - [遊舎工房 スリムヘッド小ねじ M2 黒](https://yushakobo.jp/shop/a0800b2/)
-- M2 8mm ネジ x20
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
+- M2 6mm ネジ x20（裏から、ボトムプレート、PCBを貫く）
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 6mm](https://www.monotaro.com/p/4926/2762/)
   - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
-- M2 2mm 両雌ねじスペーサー x20
-  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4)](https://www.monotaro.com/p/1111/2858/)
-  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushakobo.jp/shop/a0800c2/)
+- M2 3mm 両雌ねじスペーサー x18（PCB-トッププレート間、トッププレートセットには付属）
+  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4) 3mm](https://www.monotaro.com/p/1111/2858/)
+  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushshakobo.jp/shop/a0800c2/)
   - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
-- ゴム足
+- M2 7mm 両雌ねじスペーサー x6
+  - [モノタロウ スペーサー(黄銅スペーサー) ARB-2000Eシリーズ(M=2 ピッチ0.4) 7mm)](https://www.monotaro.com/p/1113/3657/?t.attr_f2=M2&t.q=M2%20%83X%83y%81%5B%83T%81%5B)
+  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
+- M2 5.5mm 両雌ねじスペーサー x1（あったほうが良いが、なくても。PCB、トラックパッドトッププレートを接続。すこし空くが5mmや、4mm+ナットを挟んで5.6mmにすることもできる）
+  - [モノタロウ スペーサー(黄銅スペーサー) ARB-2000Eシリーズ(M=2 ピッチ0.4) 5.5mm](https://www.monotaro.com/p/1111/2903/)
+- 追加のゴム足
   - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
   - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
 
