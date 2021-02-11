@@ -34,7 +34,7 @@ Lily58 に触発された @74th が販売する、自作キーボードキット
 **Cherry MX 互換スイッチを使用し、トッププレートを加えた場合（キーキャップ: DSA）**
 ![](img/top_cherry_mx.jpg)
 
-### 対応キースイッチ
+### 対応、おすすめキースイッチ
 
 Sparrow62 Keyboard では、以下のキースイッチに対応しています。
 
@@ -42,14 +42,141 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 - Kailh Low Profile Choc v1 ([遊舎工房](https://yushakobo.jp/shop/pg1350/)): 非常に薄いメカニカルキースイッチです。ただし、専用のキーキャップが必要です。
 - Kailh Low Profile Choc v2 ([遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)): 非常に薄いメカニカルキースイッチです。MX 軸の一般的なキーキャップが使用可能です。
 
-製作者のおすすめは、Kailh Low Profile Choc v2, Kailh Speed Switch Copper です。
+製作者のおすすめは、以下の順です。
+
+- Durock T1 ... Holy Panda 調の強いタクタイルスイッチ。高品質だが、ちょっとお高め。
+  - [TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5fe9830e72eb4624411ad5f9)
+- Durock ミディアムタクタイル ... 程よいタクタイル。小指用に使っています。高品質だが、ちょっとお高め。
+  - [TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5fe9a5a6da019c0abb3e6fa6)
+- Kailh Speed Switch Copper ... 作用点までが 1mm と軽快に使えるゲーマースイッチ。
+  - [遊舎工房](https://yushakobo.jp/shop/kailh-speed/)
+- Kailh Low Profile Choc v2 ... 薄いキースイッチ。ちょっとお高め。
+  - [遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)
+
+現在（2021/02/11）製作者が主に使っているのは、Durock T1、Durock ミディアム宅タイルです
+
+### カスタマイズ
+
+作者は主に `Magic Trackpad 2 を快適に使うトッププレート、ボトムプレート` を使用しています。
+
+#### Cherry MX 互換スイッチ を使い、トッププレート、ボトムプレートを組み合わせる
+
+アクリルトッププレート、ボトムプレート 1、ボトムプレート 2 を作成することで、挟み込むことができます。トッププレートと、PCB の間にはスペーサー 3mm を使います。
+
+上から順に挙げると以下のようになります。
+
+1. M2 4mm ネジ
+2. トッププレート
+3. M2 3mm 両雌ねじスペーサー
+4. PCB
+5. ボトムプレート 1
+6. ボトムプレート 2
+7. M2 8mm ネジ
+8. ゴム足
+
+アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
+
+[テンプレート Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
+
+[遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
+
+その他に必要なものは以下になります。
+
+- M2 4mm ネジ x20
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 3mm](https://www.monotaro.com/p/4926/2543/)
+  - [遊舎工房 スリムヘッド小ねじ M2 黒](https://yushakobo.jp/shop/a0800b2/)
+- M2 8mm ネジ x20
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
+  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
+- M2 2mm 両雌ねじスペーサー x20
+  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4)](https://www.monotaro.com/p/1111/2858/)
+  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushakobo.jp/shop/a0800c2/)
+  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
+- ゴム足
+  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
+  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
+
+#### Kailh Choc v1/v2 スイッチを使い、トッププレート、ボトムプレートを組み合わせる
+
+正直なところ、Choc スイッチを使うのであれば、PCB にゴム足を直接付けたほうが薄さの上で有利であるため、推奨していません。
+
+上から順に挙げると以下のようになります。
+
+1. M2 8mm ネジ
+2. トッププレート
+3. PCB
+4. ボトムプレート 1
+5. ボトムプレート 2
+6. M2 ナット
+7. ゴム足
+
+アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
+
+[テンプレート Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
+
+[遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
+
+その他に必要なものは以下になります。
+
+- M2 10mm ネジ
+  - [モノタロウ (+)スリムヘッド小ねじ (ステンレス)(パック品) ねじの呼び M2、長さ 10mm、寸法 H 0.5mm、寸法 D 4mm](https://www.monotaro.com/p/4174/6731/?t.q=M2%20%83l%83W%2010mm)
+- M2 ナット
+  - [モノタロウ 六角ナット 1 種(ステンレス/ブラック)](https://www.monotaro.com/p/4221/6097/?t.q=%83i%83b%83g%20m2)
+
+ボトムプレート 2 を廃止することで、基本セットと同等の薄さになります。
+
+上から順に挙げると以下のようになります。
+
+1. M2 8mm ネジ
+2. トッププレート
+3. PCB
+4. ボトムプレート 1
+5. M2 ナット
+6. ゴム足
+
+その他に必要なものは以下になります。
+
+- M2 8mm ネジ x20
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
+  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
+- ゴム足
+  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
+  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
+
+#### Magic Trackpad 2 を快適に使うトッププレート、ボトムプレート
+
+片手 4 キーを廃し、そこに Magic Trackpad 2 を置くことができます。
+
+![](img/trackpad.jpeg)
+
+アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。現在右手を Magic Trackpad 2 で操作するためのキットとして提供しています。（左手用が必要でしたら、作成しますので気軽にお声かけください）
+
+[Sparrow62_Right_Magic_Trackpad_Laser_450x300.svg](./additional_plate/Sparrow62_Right_Magic_Trackpad_Laser_450x300.svg)
+
+[テンプレート 遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
+
+他に必要なものは以下になります。
+
+- M2 4mm ネジ x20
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 3mm](https://www.monotaro.com/p/4926/2543/)
+  - [遊舎工房 スリムヘッド小ねじ M2 黒](https://yushakobo.jp/shop/a0800b2/)
+- M2 8mm ネジ x20
+  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
+  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
+- M2 2mm 両雌ねじスペーサー x20
+  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4)](https://www.monotaro.com/p/1111/2858/)
+  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushakobo.jp/shop/a0800c2/)
+  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
+- ゴム足
+  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
+  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
 
 ## 販売先
 
 - Sparrow62 自作キーボードキット https://booth.pm/ja/items/2525427
-- 半組立済or完成品 Sparrow62 自作キーボードキット https://booth.pm/ja/items/2565218
-  - 半完成品: はんだ付け済み、キーキャップとキースイッチを付けるだけで完成するもの。別途TRRSケーブル、Micro USBケーブルは必要。
-  - 完成品: Kailh Speed Switch Copper、DSAキーキャップが付いた完成品キーボード
+- 半組立済 or 完成品 Sparrow62 自作キーボードキット https://booth.pm/ja/items/2565218
+  - 半完成品: はんだ付け済み、キーキャップとキースイッチを付けるだけで完成するもの。別途 TRRS ケーブル、Micro USB ケーブルは必要。
+  - 完成品: Kailh Speed Switch Copper、DSA キーキャップが付いた完成品キーボード
 
 ## キット以外に必要なもの
 
