@@ -76,7 +76,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
 
-[テンプレート Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
+[デザインファイル Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
 
 [遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
 
@@ -112,7 +112,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 
 アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
 
-[テンプレート Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
+[デザインファイル Sparrow62_set_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
 
 [遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
 
