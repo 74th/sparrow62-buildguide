@@ -88,7 +88,7 @@ Sparrow62 Keyboard では、以下のキースイッチに対応しています�
 - M2 8mm ネジ x20
   - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
   - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
-- M2 2mm 両雌ねじスペーサー x20
+- M2 3mm 両雌ねじスペーサー x20
   - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4)](https://www.monotaro.com/p/1111/2858/)
   - [遊舎工房 黄銅スペーサー（丸）M2](https://yushakobo.jp/shop/a0800c2/)
   - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
