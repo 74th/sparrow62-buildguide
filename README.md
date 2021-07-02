@@ -1,32 +1,26 @@
-# Sparrow 62 Keyboard ビルドガイド
+# Sparrow 62 Keyboard Build Guide
 
-## Sparrow 62 Keyboard とは
+## What's Sparrow 62 Keyboard
+
+DIY Keyboard kit inspired by Lily58.
 
 Lily58 に触発された @74th が販売する、自作キーボードキットです。
 
-**Kailh Choc V2 キースイッチの場合（キーキャップ: DSA）**
+**using Kailh Choc V2 switches（keycap: DSA）**
 ![](img/top_choc.jpg)
 ![](img/top_choc2.jpg)
 
-以下のような特徴があります。
+### features
 
-- 薄型キースイッチ Kailh Choc V1/V2 が使えること。
-- Cherry MX 互換キースイッチが使えること。
-- 縦に揃ったキー配置(カラムスタッガード)であること。
-- 十分キーの数が多いこと。
-- Pro Micro をキーの横に配置してキーボード自体を薄くすること。
-- キースイッチ交換可能なようにソケットを使うこと。
-- ボトムプレート、トッププレートをキットに含まないが、必要であれば別途発注可能であること。
+- able to use thin switches, Kailh Choc v1/v2 （薄型キースイッチ Kailh Choc V1/V2 が使えること）
+- able to use Cherry MX compatible switches （CherryMX 互換キースイッチが使えること）
+- aligned vertically (縦に揃ったキー配置(カラムスタッガード)であること）
+- enough number of keys（十分キーの数が多いこと）
+- placing the Pro Micro next to the keys to make the keyboard itself thinner （Pro Micro をキーの横に配置してキーボード自体を薄くすること)
+- using a socket to be able to replace switches (キースイッチ交換可能なようにソケットを使うこと)
 
-一方、この特徴をシンプルに実現するために、妥協している点は以下のとおりです。
-
-- LED に対応しないこと。
-- OLED ディスプレイ に対応しないこと。
-- 形が角ばっており、 Lily58 に比べて外見にこだわりがないこと
-- 薄さを優先し、ボトムプレートをキットに含まないこと
-
-より作りやすい、完成度の高いキーボードとして、ゆーちさんの頒布されている Lily58 があります。
-ぜひ Lily58 の購入も検討ください。
+As a more complete keyboard that is easier to make, there is Lily58 distributed by @F_YUUCHI. Please consider purchasing Lily58.
+（より作りやすい、完成度の高いキーボードとして、ゆーちさんの頒布されている Lily58 があります。 ぜひ Lily58 の購入も検討ください。）
 
 **Kailh Choc V1 キースイッチの場合**
 ![](img/top_choc_v1.jpg)
@@ -34,227 +28,50 @@ Lily58 に触発された @74th が販売する、自作キーボードキット
 **Cherry MX 互換スイッチを使用し、トッププレートを加えた場合（キーキャップ: DSA）**
 ![](img/top_cherry_mx.jpg)
 
-### 対応、おすすめキースイッチ
+## additional items
 
-Sparrow62 Keyboard では、以下のキースイッチに対応しています。
+The additional items required are as follows.
+（追加で以下のものが必要です。）
 
-- MX 互換キースイッチ
-- Kailh Low Profile Choc v1 ([遊舎工房](https://yushakobo.jp/shop/pg1350/)): 非常に薄いメカニカルキースイッチです。ただし、専用のキーキャップが必要です。
-- Kailh Low Profile Choc v2 ([遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)): 非常に薄いメカニカルキースイッチです。MX 軸の一般的なキーキャップが使用可能です。
+### For Kailh Choc v1/2 switches set（薄型キースイッチ Kailh Choc v1/2 セットの場合）
 
-製作者のおすすめは、以下の順です。
+- Kailh switch socket for Kailh Choc switches（Choc スイッチ用ソケット） x62
+- Kailh Choc switch v1/v2 x62
+- TRRS Cable x1
+- Pro Micro (ATMega 32U4) x2
+- USB Cable for Pro Micro x2
 
-- Durock T1 ... Holy Panda 調の強いタクタイルスイッチ。高品質だが、ちょっとお高め。
-  - [TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5fe9830e72eb4624411ad5f9)
-- Durock ミディアムタクタイル ... 程よいタクタイル。小指用に使っています。高品質だが、ちょっとお高め。
-  - [TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5fe9a5a6da019c0abb3e6fa6)
-- Kailh Speed Switch Copper ... 作用点までが 1mm と軽快に使えるゲーマースイッチ。
-  - [遊舎工房](https://yushakobo.jp/shop/kailh-speed/)
-- Kailh Low Profile Choc v2 ... 薄いキースイッチ。ちょっとお高め。
-  - [遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)
+### For CherryMX Compatible switches set（CherryMX 互換スイッチの場合）
 
-現在（2021/02/11）製作者が主に使っているのは、Durock T1、Durock ミディアムタクタイルです
+- Kailh switch socket for Cherry MX Compatible switches（CherryMX 互換スイッチ用ソケット） x62
+- Cherry MX Compatible switches x62
+- TRRS Cable x1
+- Pro Micro (ATMega 32U4) x2
+- USB Cable for Pro Micro x2
 
-## カスタマイズ
+### For CherryMX Compatible switches with Trackpad set（CherryMX 互換スイッチトラックパッド対応用の場合）
 
-作者は主に `Magic Trackpad 2 を快適に使うトッププレート、ボトムプレート` を使用しています。
+- Kailh switch socket for Cherry MX Compatible switches（CherryMX 互換スイッチ用ソケット） x58
+- Cherry MX Compatible switches x58
+- TRRS Cable x1
+- Pro Micro (ATMega 32U4) x2
 
-### Cherry MX 互換スイッチ を使い、トッププレート、ボトムプレートを組み合わせる
+### 購入できるストア
 
-アクリルトッププレート、ボトムプレート 1、ボトムプレート 2 を作成することで、挟み込むことができます。トッププレートと、PCB の間にはスペーサー 3mm を使います。
-
-上から順に挙げると以下のようになります。
-
-1. M2 4mm ネジ
-2. トッププレート
-3. M2 3mm 両雌ねじスペーサー
-4. PCB
-5. ボトムプレート 1
-6. ボトムプレート 2
-7. M2 8mm ネジ
-8. ゴム足
-
-アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
-
-- [デザインファイル Sparrow62_Top/Bottomセット+2_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
-- [デザインファイル Sparrow62 Topのみ Laser A4](./additional_plate/Sparrow62_top_Laser_A4.svg)
-- [デザインファイル Sparrow62 Bottomのみ Laser A4](./additional_plate/Sparrow62_bottom_Laser_A4.svg)
-- [遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
-
-その他に必要なものは以下になります。
-
-- M2 4mm ネジ x20
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 3mm](https://www.monotaro.com/p/4926/2543/)
-  - [遊舎工房 スリムヘッド小ねじ M2 黒](https://yushakobo.jp/shop/a0800b2/)
-- M2 8mm ネジ x20
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
-  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
-- M2 3mm 両雌ねじスペーサー x20
-  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4)](https://www.monotaro.com/p/1111/2858/)
-  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushakobo.jp/shop/a0800c2/)
-  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
-- ゴム足
-  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
-  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
-
-### Kailh Choc v1/v2 スイッチを使い、トッププレート、ボトムプレートを組み合わせる
-
-正直なところ、Choc スイッチを使うのであれば、PCB にゴム足を直接付けたほうが薄さの上で有利であるため、推奨していません。
-
-上から順に挙げると以下のようになります。
-
-1. M2 8mm ネジ
-2. トッププレート
-3. PCB
-4. ボトムプレート 1
-5. ボトムプレート 2
-6. M2 ナット
-7. ゴム足
-
-アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。
-
-- [デザインファイル Sparrow62_Top/Bottomセット+2_Laser_450x300.svg](./additional_plate/Sparrow62_set_Laser_450x300.svg)
-- [デザインファイル Sparrow62 Topのみ Laser A4](./additional_plate/Sparrow62_top_Laser_A4.svg)
-- [デザインファイル Sparrow62 Bottomのみ Laser A4](./additional_plate/Sparrow62_bottom_Laser_A4.svg)
-
-- [遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
-
-その他に必要なものは以下になります。
-
-- M2 10mm ネジ
-  - [モノタロウ (+)スリムヘッド小ねじ (ステンレス)(パック品) ねじの呼び M2、長さ 10mm、寸法 H 0.5mm、寸法 D 4mm](https://www.monotaro.com/p/4174/6731/?t.q=M2%20%83l%83W%2010mm)
-- M2 ナット
-  - [モノタロウ 六角ナット 1 種(ステンレス/ブラック)](https://www.monotaro.com/p/4221/6097/?t.q=%83i%83b%83g%20m2)
-
-ボトムプレート 2 を廃止することで、基本セットと同等の薄さになります。
-
-上から順に挙げると以下のようになります。
-
-1. M2 8mm ネジ
-2. トッププレート
-3. PCB
-4. ボトムプレート 1
-5. M2 ナット
-6. ゴム足
-
-その他に必要なものは以下になります。
-
-- M2 6mm ネジ（8mmの代わり） x20
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 8mm](https://www.monotaro.com/p/4926/2586/)
-  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
-- ゴム足
-  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
-  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
-
-### Magic Trackpad 2 を快適に使うトッププレート、ボトムプレート
-
-片手 4 キーを廃し、そこに Magic Trackpad 2 を置くことができます。
-
-![](img/trackpad.jpeg)
-
-アクリルトッププレート、ボトムプレートは以下のファイルを使い、遊舎工房で発注することが可能です。現在右手を Magic Trackpad 2 で操作するためのキットとして提供しています。（左手用が必要でしたら、作成しますので気軽にお声かけください）
-
-[Sparrow62_Right_Magic_Trackpad_Laser_450x300.svg](./additional_plate/Sparrow62_Right_Magic_Trackpad_Laser_450x300.svg)
-
-[テンプレート 遊舎工房 レーザーカットサービス](https://yushakobo.jp/lasercut/)
-
-他に必要なものは以下になります。
-
-- M2 4mm ネジ x34（表から、トッププレートを貫く。裏から、トラックパッドプレートを貫く）
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 3mm](https://www.monotaro.com/p/4926/2543/)
-  - [遊舎工房 スリムヘッド小ねじ M2 黒](https://yushakobo.jp/shop/a0800b2/)
-- M2 6mm ネジ x20（裏から、ボトムプレート、PCBを貫く）
-  - [モノタロウ SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ) 寸法 m M1.4(mm)、寸法 l 6mm](https://www.monotaro.com/p/4926/2762/)
-  - [遊舎工房 トラス小ねじ M2](https://yushakobo.jp/shop/a0800t2/)
-- M2 3mm 両雌ねじスペーサー x18（PCB-トッププレート間、トッププレートセットには付属）
-  - [モノタロウ スペーサー(黄銅スペーサー) ASB-2000E シリーズ(M=2 ピッチ 0.4) 3mm](https://www.monotaro.com/p/1111/2858/)
-  - [遊舎工房 黄銅スペーサー（丸）M2](https://yushshakobo.jp/shop/a0800c2/)
-  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
-- M2 7mm 両雌ねじスペーサー x6
-  - [モノタロウ スペーサー(黄銅スペーサー) ARB-2000Eシリーズ(M=2 ピッチ0.4) 7mm)](https://www.monotaro.com/p/1113/3657/?t.attr_f2=M2&t.q=M2%20%83X%83y%81%5B%83T%81%5B)
-  - [遊舎工房 黄銅スペーサー（六角）M2](https://yushakobo.jp/shop/a0800r2/)
-- M2 5.5mm 両雌ねじスペーサー x1（あったほうが良いが、なくても。PCB、トラックパッドトッププレートを接続。すこし空くが5mmや、4mm+ナットを挟んで5.6mmにすることもできる）
-  - [モノタロウ スペーサー(黄銅スペーサー) ARB-2000Eシリーズ(M=2 ピッチ0.4) 5.5mm](https://www.monotaro.com/p/1111/2903/)
-- 追加のゴム足
-  - [モノタロウ ソフトクッション 直径 × 高さ 8×2.0(mm)](https://www.monotaro.com/p/4891/2353/)
-  - [遊舎工房 ウレタンクッション – 丸型 10mm 6 個入り](https://yushakobo.jp/shop/a0800ur-01-6/)
-
-## 販売先
-
-- Sparrow62 自作キーボードキット https://booth.pm/ja/items/2525427
-- 半組立済 or 完成品 Sparrow62 自作キーボードキット https://booth.pm/ja/items/2565218
-  - 半完成品: はんだ付け済み、キーキャップとキースイッチを付けるだけで完成するもの。別途 TRRS ケーブル、Micro USB ケーブルは必要。
-  - 完成品: Kailh Speed Switch Copper、DSA キーキャップが付いた完成品キーボード
-
-## キット以外に必要なもの
-
-以下のものが必要です。
-
-- 電子工作用はんだ及び、はんだ付け工具
-- 対応キースイッチ x62
-- キースイッチ対応キーキャップ x62
 - スイッチ用 PCB ソケット x62 （以下のいづれか）
   - MX 互換スイッチ用 ([遊舎工房](https://yushakobo.jp/shop/a01ps/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5e02c5405b120c792616bcf9))
   - Kailh Low Profile Choc V1/V2 用 ([遊舎工房](https://yushakobo.jp/shop/a01ps/))
-- Micro USB ケーブル x1: Pro Micro と PC の接続用
 - TRRS ケーブル、もしくは 3.5mm ステレオミニプラグオーディオケーブル x1 ([遊舎工房](https://yushakobo.jp/shop/trrs_cable/)、[Amazon](https://www.amazon.co.jp/dp/B018FPYC78))
 - Pro Micro x2 ([遊舎工房](https://yushakobo.jp/shop/promicro-spring-pinheader/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5b24504ba6e6ee7ec60063e3))
 - Pro Micro 用コンスルー x2 (遊舎工房 Pro Micro に付属、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233))
 
-### おすすめのもの
+## how to build
 
-- Kailh Low Profile Choc v2 タクタイル（茶）([遊舎工房](https://yushakobo.jp/shop/kailh-choc-v2/)): 非常に薄いタクタイルスイッチです。MX 軸の一般的なキーキャップが使用可能で、薄さをキープしたまま良い打ち心地を得ることができます。
-- Kailh Speed Switch Copper（茶）([遊舎工房](https://yushakobo.jp/shop/kailh-speed/): 押下点（押されたと判定される深さ）が 1.1mm と非常に小さいタクタイルスイッチです。そこまで押すことなく入力が軽快にでき、指が痛くなりません。
-- DSA キーキャップ （[遊舎工房](https://yushakobo.jp/product-category/keycaps/dsa/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/?category_id=59be1864b1b6195942000732)）: 非常に薄い、かつ全て同型のキーキャップです
-- 見つけてよかったキーキャップ https://www.amazon.co.jp/gp/product/B0852YVT71/
+### if using Kailh Choc V2, remove 1 foot
 
-## キット同梱物
+Kailh Choc v2 を使うの場合、足を 1 本切断する
 
-キットには以下のものを含んでいます。
-
-- PCB x2 （左右の手の PCB は同じものです）
-- ダイオード 1N4148W x62
-- TRRS ジャック x2
-- タクトスイッチ x2
-- ゴム足 x20
-
-トッププレート付属の場合には、以下のものを含んでいます。
-
-- トッププレート x2
-- スペーサー M2 3mm x20
-- M2 ネジ x40
-
-トッププレートは Cherry MX 互換キースイッチ専用とお考えください。 Kailh Choc V1/V2 の場合キーキャップと干渉したり、高さが高すぎたりします。
-
-## キット同梱物が追加で必要な場合
-
-キットに付属している以上の材料が必要になった場合、PCB 以外は秋月電子通商、または遊舎工房で購入することが可能です。
-
-- TRRS ジャック: [秋月電子通商](https://akizukidenshi.com/catalog/g/gC-06070/)、[遊舎工房](https://yushakobo.jp/shop/a0800tr-01-1/)
-- ダイオード: [秋月電子通商](https://akizukidenshi.com/catalog/g/gI-07084/)、[遊舎工房](https://yushakobo.jp/shop/a0800di-02-100/)
-- タクトスイッチ: [秋月電子通商](https://akizukidenshi.com/catalog/g/gP-08073/)、[遊舎工房](https://yushakobo.jp/shop/a0800ts-01-1/)、[モノタロウ](https://www.monotaro.com/p/0148/6257/)
-- ゴム足: [モノタロウ](https://www.monotaro.com/p/4891/2387/)
-
-## 追加であると良いもの
-
-- はんだこて台 [Amazon](https://www.amazon.co.jp/dp/B0016V7JOC/): やすいものでもあると、机の上が煩雑になりません。
-- ハンダ吸い取り線 [Amazon](https://www.amazon.co.jp/dp/B002TKEGRM/): はんだ付け失敗時に取り外しできます。あったほうが心強いです。
-- フラックス: はんだ付け失敗時に再びはんだ付けをしやすくするのに塗ります。なくても良いです。
-- 逆作用ピンセット [Amazon](https://www.amazon.co.jp/dp/B0036RQR4W/): 手が震えずに効率的にはんだ付けできます。ダイオードは非常に小さい部品なのでこの機会に買いましょう。
-- マスキングテープ: ダイオード、ソケットなどの仮どめに使用できます。
-- デジタルテスター [Amazon](https://www.amazon.co.jp/dp/B003272E48/): 通電不良時の調査用に使えます。
-- ルーペ: ダイオードの方向確認に使えます。スマホのカメラの拡大機能でも代用できます。
-- エポキシ系接着剤 [Amazon](https://www.amazon.co.jp/dp/B003SL8CBC/): Pro Micro の MicroUSB 端子のもげ防止に使えます。
-- ニッパー [Amazon](https://www.amazon.co.jp/dp/B000ICAOE2/): タクトスイッチの足を切ります。
-- ラジオペンチ [Amazon](https://www.amazon.co.jp/dp/B00FB92PJY/): ソケットにスイッチを差し込んだ際、スイッチの端子が曲がることがあります。それを伸ばすのに使います。
-
-## 高さ調整に必要なもの
-
-[詳しくはこちらの高さ調整ガイドを確認ください。](./hight_guide/README.md)
-
-## 手順
-
-### Kailh Choc V2 の場合、足を 1 本切断する
+Kailh Choc V2 has three copper wireand one of the red circles in the photo is cut with nippers.
 
 Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真赤丸の 1 本をニッパで切断します。
 切断した際に発生する小さな破片にご注意ください。
@@ -266,7 +83,13 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 もし少し残ってぐらついてしまう場合、補助的にトッププレートを使うことで安定させることもできます（ただし、Choc スイッチの下の爪と上の爪までの幅が 1.65mm であるため、完全にははまりません）。
 [後からトッププレートが必要となった場合、遊舎工房さんで発注することができます。こちらを確認ください。](https://github.com/74th/sparrow62-buildguide#%E8%BF%BD%E5%8A%A0%E3%81%A7%E3%83%88%E3%83%83%E3%83%97%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%9C%E3%83%88%E3%83%A0%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%84%E5%A0%B4%E5%90%88)
 
-### Pro Micro にもげ防止加工を実施（お好みで）
+### Pro Micro anti-scratch processing
+
+Pro Micro にもげ防止加工を実施（お好みで）
+
+The Pro Micro's Micro USB port is extremely fragile.
+To prevent this, apply an evoxy adhesive to the terminals.
+Be careful not to accidentally get the adhesive inside the terminals.
 
 Pro Micro の Micro USB 端子は非常にもげやすいものになっています。
 これを防止するため、端子に エボキシ系接着剤を塗布します。
@@ -274,7 +97,13 @@ Pro Micro の Micro USB 端子は非常にもげやすいものになってい�
 
 ![](img/pro_micro_connecter.jpg)
 
-### Pro Micro とピンヘッダをはんだ付けする
+### Solder Pro Micro and pin header (if you using mac8 pin header)
+
+![](img/pro_micro.jpg)
+
+#### コンスルーピンヘッダを使用する場合
+
+Pro Micro とピンヘッダをはんだ付けする
 
 ピンヘッダには向きがあります。詳しくは、遊舎工房の解説を確認ださい。
 
@@ -282,124 +111,152 @@ https://yushakobo.zendesk.com/hc/ja/articles/360044233974-%E3%82%B3%E3%83%B3%E3%
 
 Sparrow62 キーボードは Pro Micro を写真の向きで使います。
 
-![](img/pro_micro.jpg)
-
 先に、Pro Micro とピンヘッダを PCB に差し込みます。
 その上から、 Pro Micro とピンヘッダのみをはんだづけします。
 ピンヘッダと PCB ははんだ付けしないようにします。
 
 Pro Micro は脆弱な部品ため、破損した場合交換が可能となります。
 
-### PCB を左右どちらに使うかを決める
+### Solder Diodes
 
-部品によって、実装面が異なります。
-
-- 表面に実装: タクトスイッチ、TRRS ジャック
-- 裏面に実装: ダイオード、スイッチソケット
-
-誤って反対面に実装しないように、実装する側に印をつけておくとよいでしょう。
-
-### ダイオードを実装する
-
+Solder the diode, paying attention to the orientation of the diode.
 ダイオードを向きを気をつけて、はんだ付けします。
 
+The video by @Salicylic_acid3 is very good, so I think you can check here.
 実装手順については、サリチル酸さんのツイートの動画が非常に良くできているため、こちらを確認いただくと良いと思います。
 
 https://twitter.com/Salicylic_acid3/status/1296494976319315970
 https://twitter.com/Salicylic_acid3/status/1108798243142434816
 
-1. 先に PCB の片側にはんだをつける。
-2. つけたハンダを溶かして、ダイオードの片側を付ける
-3. ダイオードの向きが間違っていないか、虫眼鏡、もしくはスマホカメラの拡大機能で確認する
-4. 反対側の足をはんだ付けする
-
-片面のダイオードが全て同じ向きを向くように設計されています。
-ダイオードの片側をはんだ付けした時点で、向きの確認を行い、その後反対側の足のはんだ付けをすると良いです。
-
-**1.先に PCB の片側にはんだをつける**
+**1. Solder one side of the PCB first (先に PCB の片側にはんだをつける)**
 
 ![](img/diode1.jpg)
 
-**2.つけたハンダを溶かして、ダイオードを片側をはんだ付けする**
+**2. Melt the attached solder and solder the diode on one side (つけたハンダを溶かして、ダイオードを片側をはんだ付けする)**
 
 ![](img/diode2.jpg)
 
-**3.ダイオードの向きを確認する**
+**3. Check the orientation of the diode (ダイオードの向きを確認する)**
 
 ![](img/diode4.jpg)
 
-**4.反対側の足をはんだ付けする**
+**4. Solder the other side (反対側の足をはんだ付けする)**
 
 ![](img/diode2.jpg)
 
-### スイッチソケットを実装する
+### Solder switch socket (スイッチソケットを実装する)
 
-スイッチソケットを、ダイオードと同じ面に、ハンダ付けします。
-
+The video by @Salicylic_acid3 is very good, so I think you can check here.
 実装手順について、こちらもサリチル酸さんのツイートの動画がよくできているため、こちらを確認いただくのが良いと思います。
 
 https://twitter.com/Salicylic_acid3/status/1310253635255717889
 
-私の場合は以下のようにしています。
-
-1. 先に PCB の両側の端子にハンダをつける
-2. ソケットを置き、片側を端子の上からハンダごてを当てて、先につけたハンダを溶かして、ソケットの端子と PCB を接着させる。この時、ソケットを上から押してある程度密着させる。
-3. 反対側の端子の上からはんだごてを押さえつけるようにあてて、ソケットの端子と基盤を密着させる。このときもソケットを押す。
-4. 再度反対側の端子にはんだごてを当てつつ、ソケットを押して、端子と基盤を密着させる。
-
-**1.先に PCB の両側の端子にハンダをつける**
+**1. Solder the pads on both sides of the PCB(先に PCB の両側の端子にハンダをつける)**
 
 ![](img/socket1.jpg)
 
-**2.ソケットを置き、ハンダを溶かしながら押す**
+**2. Place the socket and push while melting the solder(ソケットを置き、ハンダを溶かしながら押す)**
 
 ![](img/socket2.jpg)
 
-**3.反対側も同様にする**
+**3. Do the same on the other side(反対側も同様にする)**
 
 ![](img/socket3.jpg)
 
-**4.密着するまでくりかえす**
+**4. Repeat until they are in close contact (密着するまでくりかえす)**
 
 ![](img/socket4.jpg)
 
-### タクトスイッチを実装する
+### Implement tact switch
 
+タクトスイッチを実装する
+
+The tactile switches are **implement on a different surface than the diode**.
 タクトスイッチは、**ダイオードとは異なる面に** 実装します。
 
+The surface to be soldered is **the same surface as the diode**.
 足が裏面に出るため、はんだ付けを行う面は **ダイオードと同じ面** です。
 
-1. 先にタクトスイッチを差し込み、マスキングテープで固定します。
-2. 裏返して、足をはんだ付けします。
-3. 余分な足をニッパで切ります
-
-**タクトスイッチ**
+**tactile switch(タクトスイッチ)**
 
 ![](img/tact_switch.jpg)
 
-### TRRS ジャックを実装する
+### Implement TRRS socket
 
+TRRS ジャックを実装する
+
+The TRRS sockets are **implement on a different surface than the diode**.
 TRRS ジャックは、**ダイオードとは異なる面に** 実装します。
 
+The surface to be soldered is **the same surface as the diode**.
 足が裏面に出るため、はんだ付けを行う面は **ダイオードと同じ面** です。
 
-1. 先に TRRS ジャックを差し込み、マスキングテープで固定します。
-2. 裏返して、足をはんだ付けします。
-3. 余分な足をニッパで切ります
-
-**TRRS コネクタ**
+**TRRS Socket(TRRS ジャック)**
 
 ![](img/trrs.jpg)
 
-### キースイッチを差し込む
+### Assemble the top and bottom plate
 
-キースイッチをソケットに差し込みます。キーキャップはまだしません。
+トッププレートとボトムプレートを組み立てる。
 
-### Pro Micro にファームウェアを書き込む
+#### For Kailh Choc Switches
 
-ファームウェアには、[QMK Firmware](https://docs.qmk.fm/) を使います。
+Attach the bottom plate to the PCB with double-sided tape.
+両面テープで PCB とボトムプレートを貼り付けてください。 貼り付けなくても、うまくはまれば固定されます。
 
-デフォルトのキーマップで良い場合、QMK Toolbox でファームウェアを書き込めば完了です。
+#### For Cherry MX Compatible Switches
+
+![](./img/screw.png)
+
+#### For Cherry MX Cpmpatible Switches with Trackpad
+
+![](./img/screw_trackpad.png)
+
+![](./img/spacer.png)
+
+### Cut and attach rubber sheets with double-sided tape
+
+両面テープでボトムプレートとゴムシートを接着します。
+
+For trackpad, use a long rubber sheet.
+トラックパッドがある場合、より長いシートをトラックパッド用に使ってください。
+
+![](./img/rubber_sheet.jpg)
+
+![](./img/rubber_sheet2.jpg)
+
+### Insert switches and Pro Micro
+
+キースイッチと Pro Micro をソケットに差し込みます。
+
+### flash QMK Firmware
+
+#### using QMK Toolbox and REMAP
+
+[Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
+
+Download and install QMK Toolbox.
+
+https://github.com/qmk/qmk_toolbox/releases
+
+Flash via firmware.
+
+- Local File: sparrow62_via.hex
+- MCU : atmega32u4
+
+You can use REMAP for configuring your keymap.
+
+https://remap-keys.app/
+
+#### using QMK Firmware
+
+```
+qmk flash -kb sparrow62 -km default
+```
+
+## hints for Japanese
+
+VIA を使う場合、QMK Toolbox でファームウェアを書き込めば完了です。
 
 キーマップのカスタマイズには、VIA を使うと GUI で変更できます。
 更に高度なカスタ合図を行う場合、QMK Firmware のビルド環境を整える必要があります。
@@ -432,13 +289,7 @@ VIA を使うには、VIA のファームウェアを書き込む必要があり
 
 - [Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
 
-VIA には、まだ Sparrow62 の設定がマージされていないため、VIA を起動した後に、以下の手順で設定を追加します。
-
-1. **SETTINGS タブ** を開き、**Show Design tab** を有効化する。
-2. **DESIGN タブ** を開き、**Load Draft Definition** から[この JSON ファイル(via_sparrow62.json)](https://github.com/74th/sparrow62-buildguide/raw/master/via_sparrow62.json) を読み込ませる。
-3. キーボードを接続し、**CONFIGURE タブ**を開く
-
-VIA の使い方は[サリチル酸さんのブログ](https://salicylic-acid3.hatenablog.com/entry/via-manual)が詳しいので、こちら参照ください。
+VIA のファームウェアは Remap を使うと、ブラウザの UI でキーマップの変更ができます。
 
 #### 更にカスタマイズするため、QMK Firmware のビルド環境を整える
 
@@ -504,18 +355,7 @@ https://config.qmk.fm/#/test
 青丸が COL のラインとなっており、そのまま Pro Micro の COL0-6 につながっています。緑丸が ROW のラインとなっており、そのまま Pro Micro の ROW0-4 につながっています。
 Pro Micro の接続を確認ください。
 
-## 追加でトッププレート、ボトムプレートが欲しい場合
-
-追加でトッププレート、ボトムプレートが入り用の場合には、[遊舎工房さんのレーザーカットサービス](https://yushakobo.jp/lasercut/)で利用可能なデータを提供していますので、ご自身で発注ください。
-また、データで問題があった場合には、私まで問い合わせください。
-
-- [トッププレート A4 Sparrow62_top_Laser_A4.svg](additional_plate/Sparrow62_top_Laser_A4.svg)
-- [ボトムプレート A4 Sparrow62_bottom_Laser_A4.svg](additional_plate/Sparrow62_bottom_Laser_A4.svg)
-- [ボトムプレート 450x300 Sparrow62_set_Laser_450x300.svg](additional_plate/Sparrow62_set_Laser_450x300.svg)
-
-## 不明点がある場合
-
-不明点がある場合、作成にあたり相談したいことがある場合には、私のところまでお気軽に問い合わせください。
+## Contact me
 
 - Twitter: @74th
 - Mail: site@74th.tech
