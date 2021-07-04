@@ -1,8 +1,8 @@
-# Sparrow 62 Keyboard Build Guide
+# Sparrow 62 Keyboard Building Guide
 
 ## What's Sparrow 62 Keyboard
 
-DIY Keyboard kit inspired by Lily58.
+Sparrow62 is the DIY Keyboard kit inspired by Lily58.
 
 Lily58 に触発された @74th が販売する、自作キーボードキットです。
 
