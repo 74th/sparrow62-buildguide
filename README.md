@@ -1,73 +1,110 @@
-# Sparrow 62 Keyboard Building Guide
+# Sparrow62 (+1) v2 Keyboard Building Guide
+
+- If you build Sparrow 62 v2, please see [v1 Buildguide](./v1.md).
 
 ## What's Sparrow 62 Keyboard
 
-Sparrow62 is the DIY Keyboard kit inspired by Lily58.
-
-Lily58 に触発された @74th が販売する、自作キーボードキットです。
+Sparrow 62 は 74th が頒布する自作キーボードキットです。
+最初は Lily58 からインスピレーションを得て、数々の改良を加えました。
 
 **using Kailh Choc V2 switches（keycap: DSA）**
 ![](img/top_choc.jpg)
 ![](img/top_choc2.jpg)
 
-### features
+これは購入者がご自身で組み立てが必要なキットです。
+完成を保証するものではありません。
 
-- able to use thin switches, Kailh Choc v1/v2 （薄型キースイッチ Kailh Choc V1/V2 が使えること）
-- able to use Cherry MX compatible switches （CherryMX 互換キースイッチが使えること）
-- aligned vertically (縦に揃ったキー配置(カラムスタッガード)であること）
-- enough number of keys（十分キーの数が多いこと）
-- placing the Pro Micro next to the keys to make the keyboard itself thinner （Pro Micro をキーの横に配置してキーボード自体を薄くすること)
-- using a socket to be able to replace switches (キースイッチ交換可能なようにソケットを使うこと)
+名称は Sparrow62 ですが、Sparrow v2 では **63 キー** で構成されます。
 
-As a more complete keyboard that is easier to make, there is Lily58 distributed by @F_YUUCHI. Please consider purchasing Lily58.
-（より作りやすい、完成度の高いキーボードとして、ゆーちさんの頒布されている Lily58 があります。 ぜひ Lily58 の購入も検討ください。）
+### 特徴 / features
 
-**Kailh Choc V1 キースイッチの場合**
-![](img/top_choc_v1.jpg)
+- 縦に揃ったキー配置（カラムスタッガード）であり、指の曲げ伸ばしで多くのキーに届く様になっていること。
+- 左右分離しており、肩を開いてタイピングができること。
+- CherryMX 互換キースイッチが使えること。
+- 薄型キースイッチ Kailh Choc v1/v2 が使えること。
+- キースイッチが交換可能なようにスイッチソケットを使えること。
+- 数字キーを網羅できるほどキーの数が多いこと（60%キーボード）。
+- (new v2) 標準的なキーキャップセットを使用して、組み立てることができること。
+- (new v2) 右手のキーボードの右側にマウスなどを配置できるように、右手の右側のキーの数を抑え、左側が膨らむデザインであること。
+- (v1.3)オプションで、トラックパッドを右手左側に置くことができること。
+- (v1.3)ゴム足の代わりに、ゴムシートを使うことで十分薄くすることができること。
+- (new v2) 厚さの異なるプレート、PCB を用いて可能な限り薄くしていること。
+- (new v2) PCB とゴムシートの間にプレートをはさみ、全体の剛性と、打鍵感を高めてあること。
+- (new v2) 半導体不足でも入手の容易で、高性能な Raspberry Pi PICO を用いること。
+- (new v2) マイコン 1 つで左右のキーボードを制御すること。
+- (new v2) USB Type-C で接続できること。
 
-**Cherry MX 互換スイッチを使用し、トッププレートを加えた場合（キーキャップ: DSA）**
-![](img/top_cherry_mx.jpg)
+### v1 と v2 の違い
 
-## additional items
+- v1 は ProMicro と、QMK Firmware を用いて、キー入力を調整することができました。v2 は ProMicro と QMK Firmware に対応していません。
+- チップ抵抗や、マイコン裏のスルーホールとランドの接続など、実装難度は高くなっています。
 
-The additional items required are as follows.
-（追加で以下のものが必要です。）
+## 準備が必要なもの
 
-### For Kailh Choc v1/2 switches set（薄型キースイッチ Kailh Choc v1/2 セットの場合）
+### 部品
 
-- Kailh switch socket for Kailh Choc switches（Choc スイッチ用ソケット） x62
-- Kailh Choc switch v1/v2 x62
-- TRRS Cable x1
-- Pro Micro (ATMega 32U4) x2
-- USB Cable for Pro Micro x2
+キットの他に追加で以下のものが必要です。
 
-### For CherryMX Compatible switches set（CherryMX 互換スイッチの場合）
-
-- Kailh switch socket for Cherry MX Compatible switches（CherryMX 互換スイッチ用ソケット） x62
-- Cherry MX Compatible switches x62
-- TRRS Cable x1
-- Pro Micro (ATMega 32U4) x2
-- USB Cable for Pro Micro x2
-
-### For CherryMX Compatible switches with Trackpad set（CherryMX 互換スイッチトラックパッド対応用の場合）
-
-- Kailh switch socket for Cherry MX Compatible switches（CherryMX 互換スイッチ用ソケット） x58
-- Cherry MX Compatible switches x58
-- TRRS Cable x1
-- Pro Micro (ATMega 32U4) x2
-
-### 購入できるストア
-
-- スイッチ用 PCB ソケット x62 （以下のいづれか）
+- スイッチ用ソケット x63
+  - 「Cherry MX 互換用」と「Kailh Choc V1/V2 用」があります
   - MX 互換スイッチ用 ([遊舎工房](https://yushakobo.jp/shop/a01ps/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5e02c5405b120c792616bcf9))
-  - Kailh Low Profile Choc V1/V2 用 ([遊舎工房](https://yushakobo.jp/shop/a01ps/))
-- TRRS ケーブル、もしくは 3.5mm ステレオミニプラグオーディオケーブル x1 ([遊舎工房](https://yushakobo.jp/shop/trrs_cable/)、[Amazon](https://www.amazon.co.jp/dp/B018FPYC78))
-- Pro Micro x2 ([遊舎工房](https://yushakobo.jp/shop/promicro-spring-pinheader/)、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5b24504ba6e6ee7ec60063e3))
-- Pro Micro 用コンスルー x2 (遊舎工房 Pro Micro に付属、[TALP KEYBOARD](https://talpkeyboard.stores.jp/items/5e056626d790db16e2889233))
+  - Kailh Low Profile Choc V1/V2 用 ([遊舎工房](https://yushakobo.jp/shop/a01ps/))、TALP KEYBOARD
+- 自作キーボードスイッチ x63
+  - Cherry MX 互換スイッチ と Kailh Choc v1/v2 スイッチを使うことができます
+- TRRS ケーブル （4 極オーディオミニプラグのケーブル）x1
+  - 3 極ステレオケーブルは不可
+  - TRRS ケーブル x1 ([遊舎工房](https://yushakobo.jp/shop/trrs_cable/)、[Amazon](https://www.amazon.co.jp/dp/B018FPYC78))
+  - 50 cm より長いケーブルで接続可能かどうかは確認していません。
+- Raspberry PI Pico x1
+- USB 2.0 Type-C Cable x1
+- (CherryMX 互換スイッチを使用する場合）PCB マウントスタビライザー x3
 
-## how to build
+### 組み立てに必要な機材
 
-### if using Kailh Choc V2, remove 1 foot
+- はんだごて、はんだこて台、スポンジ
+  - BC 型 と ペン型 の 2 つのこて先があると便利ですが、どちらかでも大丈夫です。
+- はんだ
+- ピンセット（表面実装部品を抑えるのに利用します）
+- ニッパ（連結ピンヘッダの切断や、長いピンの切断に使います）
+- 両面テープ（ゴムシートとボトムプレートを接着します）
+- はさみ（ゴムシートを切断するのに使います）
+
+### あるとよいもの
+
+- フラックス
+  - はんだにはフラックスが含まれていて、端子に広がるようにできていますが、熱を加えすぎるとすべてのフラックスが蒸発します。その場合、追加のフラックスを入れて使います
+- フラックス洗浄液
+- ルーペ（スマートフォンカメラでも代用できます）
+- ラジオペンチ（スイッチの足が曲がってしまった場合に、つまんで伸ばします）
+
+## キットに同梱されているもの
+
+- 左手トッププレート x1
+- 左手 PCB x1
+- 左手ボトムプレート x1
+- 右手トッププレート x1
+- 右手 PCB x1
+- 右手ボトムプレート x1
+- 左手 IC カバー（黒アクリルプレート、穴 3 つ） x1
+- 右手 IC カバー（黒アクリルプレート、穴 2 つ） x1
+- ゴムシート x2
+- 2012 SMD 抵抗 1kΩ(102) x3
+- 2012 SMD 抵抗 5.1kΩ(512) x2
+- 2012 SMD 抵抗 10kΩ(103) x3
+- ダイオード
+- USB Type-C ソケット基盤 x1
+- LED SK6812MINI-E x1
+- TRRS ソケット x2
+- IO エキスパンダー IC MCP23017 x1
+- ピンヘッダー 1 列 12 ピン x1
+- 3.5mm スペーサー x24
+- 5.0mm スペーサー x5
+- 4.0mm ネジ（黒） x29
+- 5.0mm ネジ（銀） x29
+
+## 作成方法 / how to build
+
+### Kailh Choc v2 を使う場合
 
 Kailh Choc v2 を使うの場合、足を 1 本切断する
 
@@ -80,42 +117,13 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 ![](img/choc_v2.jpg)
 
 ここできれいに切断すると、安定性が増します。
-もし少し残ってぐらついてしまう場合、補助的にトッププレートを使うことで安定させることもできます（ただし、Choc スイッチの下の爪と上の爪までの幅が 1.65mm であるため、完全にははまりません）。
-[後からトッププレートが必要となった場合、遊舎工房さんで発注することができます。こちらを確認ください。](https://github.com/74th/sparrow62-buildguide#%E8%BF%BD%E5%8A%A0%E3%81%A7%E3%83%88%E3%83%83%E3%83%97%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%9C%E3%83%88%E3%83%A0%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%81%8C%E6%AC%B2%E3%81%97%E3%81%84%E5%A0%B4%E5%90%88)
 
-### Pro Micro anti-scratch processing
+### チップ抵抗のはんだ付け
 
-Pro Micro にもげ防止加工を実施（お好みで）
+チップ抵抗は左手と右手にそれぞれ 5 個ずつあります。
 
-The Pro Micro's Micro USB port is extremely fragile.
-To prevent this, apply an evoxy adhesive to the terminals.
-Be careful not to accidentally get the adhesive inside the terminals.
-
-Pro Micro の Micro USB 端子は非常にもげやすいものになっています。
-これを防止するため、端子に エボキシ系接着剤を塗布します。
-誤って端子の中に接着剤が入り込まないように気をつけてください。
-
-![](img/pro_micro_connecter.jpg)
-
-### Solder Pro Micro and pin header (if you using mac8 pin header)
-
-![](img/pro_micro.jpg)
-
-#### コンスルーピンヘッダを使用する場合
-
-Pro Micro とピンヘッダをはんだ付けする
-
-ピンヘッダには向きがあります。詳しくは、遊舎工房の解説を確認ださい。
-
-https://yushakobo.zendesk.com/hc/ja/articles/360044233974-%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%AB%E3%83%BC-%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%94%E3%83%B3%E3%83%98%E3%83%83%E3%83%80-%E3%81%AE%E5%8F%96%E3%82%8A%E4%BB%98%E3%81%91%E6%96%B9%E3%82%92%E6%95%99%E3%81%88%E3%81%A6%E4%B8%8B%E3%81%95%E3%81%84
-
-Sparrow62 キーボードは Pro Micro を写真の向きで使います。
-
-先に、Pro Micro とピンヘッダを PCB に差し込みます。
-その上から、 Pro Micro とピンヘッダのみをはんだづけします。
-ピンヘッダと PCB ははんだ付けしないようにします。
-
-Pro Micro は脆弱な部品ため、破損した場合交換が可能となります。
+1k(102)、5.1k(512)、10kΩ(103)の 3 種類の抵抗を使い分けます。
+キットに付属のチップ抵抗
 
 ### Solder Diodes
 
