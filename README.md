@@ -6,8 +6,9 @@
 
 ## Sparrow62 v2 の注意点
 
-- Sparrow62 v2 には、シルクで Sparrow64 と書かれていますが、Sparrow62 の誤りです。
-- Sparrow62 v2 には、細かいバージョン差分があり、1 セットの内に複数のバージョンの記載がありますが、正常です。
+- v2.0.5 には、シルクで Sparrow64 と書かれていますが、Sparrow62 の誤りです。
+- v2 には、細かいバージョン差分があり、1 セットの内に複数のバージョンの記載がありますが、そのようなセットになっております。v2.0.5 と v2.0.4 が同一のセットに含まれています
+- v2.0.5 の抵抗 R9 は 27Ω に変更になりました。セットには予めはんだ付けしてあります。
 
 ## What's Sparrow 62 Keyboard
 
@@ -202,9 +203,11 @@ Choc 用スイッチソケットには向きがあります。以下の記事を
 
 ソケットのはんだ付けは動画のようにすることをおすすめしています。
 
-![動画](./img/v2/switch_socket.mp4)
+![動画（Google Drive）](https://drive.google.com/file/d/1VQYtKHCZkTQwoi6JiOMwTrHwYhy1caux/view?usp=sharing)
 
-[動画](./img/v2/switch_socket.mp4)
+![動画（Twitter）](https://twitter.com/74th/status/1514942328900775938)
+
+[動画ファイル switch_socket.mp4](./img/v2/switch_socket.mp4)
 
 1. ソケットを正しい方向にセットします。
 2. ソケットの端子の内側から、はんだごてで熱を加えます
@@ -214,7 +217,24 @@ Choc 用スイッチソケットには向きがあります。以下の記事を
 
 ### LED ライトを実装する
 
-TODO: 写真取る
+LED SK6812MINI-E の方向を注意してください。
+
+LED の実装は、PCB 裏面に裏向きにセットして実装します。
+PCB 表向きから見ると、発光面が見える形になります。
+
+また、LED の 4 本の足の 1 つ GND には切れ込みが入っています。切れ込みとシルクの斜め線を合わせるようにしてください。
+
+![](./img/v2/led_1.jpg)
+
+![](./img/v2/led_4.png)
+
+向きを確認できたら、一方の足をマスキングテープで留めます。
+
+![](./img/v2/led_2.jpg)
+
+すべての足を実装します。
+
+![](./img/v2/led_3.jpg)
 
 ### USB Type-C ソケットを実装する
 
@@ -278,7 +298,14 @@ TODO: 写真取る
 
 ### Raspberry Pi PICO （以下、PICO）の USB のランドへの予備ハンダ
 
-TODO: 裏面に予めハンダを乗せるやり方は OK か？
+このキットでは USB 端子を、付属の Micro USB から USB Type-C に変換しています。
+PICO の裏側には、USB DM/DP の信号のランド（TP2、TP3）があり、ここを PCB と接続する必要があります。
+
+PICO の実装の前にここにハンダを少し載せておきます。
+多くなるとガタつくため、少量のせてください。
+写真は TP3 に乗せていますが、TP2 と TP3 の 2 つに乗せてください。
+
+![](./img/v2/pico_usb_4.jpg)
 
 ### Raspberry Pi PICO （以下、PICO）の実装
 
@@ -305,14 +332,15 @@ PICO と PCB には M2 の穴があいており、ここに 5mm のネジを差�
 
 ![](img/v2/pico_5.jpg)
 
-### Raspberry Pi PICO の USB 端子の実装
+空いてしまっている場合、以下の写真のようになります。再度はんだづけをおこなってください。
 
-TODO: 予備ハンダがある場合の記述
+![](img/v2/pico_6.jpg)
+
+### Raspberry Pi PICO の USB 端子の実装
 
 ここが Sparrow 62 v2 の最難関です。
 
-PICO の裏側には、USB DM/DP の信号のランドがあり、ここを PCB と接続する必要があります。
-PCB を裏側に、この USB DM/DP が覗けるスルーホールが空いています。
+PCB を裏側に、この先程はんだを少し乗せた USB DM/DP が覗けるスルーホールが空いています。
 
 ![](img/v2/pico_usb_1.jpg)
 
@@ -412,15 +440,20 @@ PCB を横から覗き込み、PCB のランドと PICO の端子が確実には
 PICO のランドは、熱しすぎると剥がれて取れてしまう場合があります。
 ですので、はんだ吸い取り線が PCB にくっついて取れない場合も、力任せに引っ張ってしまわないように気をつけてください。
 
-#### ファームウェアの書き込み
+#### ファームウェアの準備と書き込み
 
-RP2-PICO ドライブが認識した場合、以下のキーチェック用のファームウェアをそのドライブに入れてください。
+KMK Firmware を使った例を紹介します。
+以下のリポジトリをチェックアウトし、記載の install に従い、セットアップを行います。
 
-ドライブに入れると、自動でアンマウントされて再起動し、USB キーボードとして認識します。
+https://github.com/74th/sparrow62-kmk
+
+キーマップファイル keymap.py には、[keymaps/test/keymap.py](https://github.com/74th/sparrow62-kmk/blob/main/keymaps/test/keymap.py) を使います。
+こちらは、レイヤーを使用しないキーマップの例になっており、キーの実装がうまくいっているかどうかを確認するのに最適です。
 
 #### キースイッチのテスト
 
-QMK Configurator の Keyboard Tester を開き、各スイッチソケットを通電させ、各キーが動作するか確認してください。
+[QMK Configurator の Keyboard Tester](https://config.qmk.fm/#/test) を開き、各スイッチソケットを通電させ、各キーが動作するか確認してください。
+
 通電させるためのケーブルをお持ち出ない場合、キースイッチをソケットに挿して、押下することでもテストできます。
 
 ここでは、以下のような問題が見つかります。
@@ -428,165 +461,25 @@ QMK Configurator の Keyboard Tester を開き、各スイッチソケットを�
 1. 一部のキーが動作しない
    1. ダイオードが正しい方向に実装されていない、もしくははんだづけ不良がある
    2. スイッチソケットが正しくはんだ付け不良がある
-2. 右手のキーがすべて動作しない
+2. キーが一切機能しない
+   1. PICO へ正しくファームウェアがインストールされていない
    1. TRRS ケーブルではなく、モノラル/ステレオオーディオケーブルを使用している
-   2. TRRS ケーブルとして、ノイズが大きいケーブル、または長すぎるケーブルを使用している
-   3. TRRS ソケットにはんだづけ不良がある
-   4. 1kΩ 抵抗、10kΩ 抵抗が誤って接続されている
-
-このファームウェアは、シリアルターミナルで常に状態を出力しています。
+   1. TRRS ケーブルとして、ノイズが大きいケーブル、または長すぎるケーブルを使用している
+   1. TRRS ソケットにはんだづけ不良がある
+   1. 1kΩ 抵抗、10kΩ 抵抗が誤って接続されている
 
 #### シリアルコンソールの確認
 
 すべてのキーの動作を確認できた場合、シリアルコンソールを確認する必要はありません。
-デバッグに活用ください。
-
-```
-
-```
-
-### Assemble the top and bottom plate
-
-トッププレートとボトムプレートを組み立てる。
-
-#### For Kailh Choc Switches
-
-Attach the bottom plate to the PCB with double-sided tape.
-両面テープで PCB とボトムプレートを貼り付けてください。 貼り付けなくても、うまくはまれば固定されます。
-
-#### For Cherry MX Compatible Switches
-
-![](./img/screw.png)
-
-#### For Cherry MX Cpmpatible Switches with Trackpad
-
-![](./img/screw_trackpad.png)
-
-![](./img/spacer.png)
-
-### Cut and attach rubber sheets with double-sided tape
-
-両面テープでボトムプレートとゴムシートを接着します。
-
-For trackpad, use a long rubber sheet.
-トラックパッドがある場合、より長いシートをトラックパッド用に使ってください。
-
-![](./img/rubber_sheet.jpg)
-
-![](./img/rubber_sheet2.jpg)
-
-### Insert switches and Pro Micro
-
-キースイッチと Pro Micro をソケットに差し込みます。
-
-### flash QMK Firmware
-
-#### using QMK Toolbox and REMAP
-
-[Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
-
-Download and install QMK Toolbox.
-
-https://github.com/qmk/qmk_toolbox/releases
-
-Flash via firmware.
-
-- Local File: sparrow62_via.hex
-- MCU : atmega32u4
-
-You can use REMAP for configuring your keymap.
-
-https://remap-keys.app/
-
-#### using QMK Firmware
-
-```
-qmk flash -kb sparrow62 -km default
-```
-
-## hints for Japanese
-
-VIA を使う場合、QMK Toolbox でファームウェアを書き込めば完了です。
-
-キーマップのカスタマイズには、VIA を使うと GUI で変更できます。
-更に高度なカスタ合図を行う場合、QMK Firmware のビルド環境を整える必要があります。
-
-#### QMK Toolbox を使ってデフォルトのファームウェアを書き込む
-
-以下のキーマップを、default のファームウェアとして提供しています。
-
-- [Download sparrow62_default.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_default.hex)
-
-レイヤ 1
-
-![](./img/keymap_default_layer1.png)
-
-レイヤ 2（レイヤ 1 の`MO(1)`のキーと同時に押すと、動作する）
-
-![](./img/keymap_default_layer2.png)
-
-こちらを [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) を使って書き込むことができます。
-
-QMK Toolbox の使い方は[サリチル酸さんの記事](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)が詳しいため、こちらを確認ください。
-
-左右のキーボードの両方に書き込む必要があります。
-
-#### VIA を使ってキーマップを変更する
-
-GUI でキーマップを変更できる [VIA](https://caniusevia.com/) というツールがあります。
-
-VIA を使うには、VIA のファームウェアを書き込む必要があります。以下からダウンロードし、[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)などを使って書き込んでください。
-
-- [Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
-
-VIA のファームウェアは Remap を使うと、ブラウザの UI でキーマップの変更ができます。
-
-#### 更にカスタマイズするため、QMK Firmware のビルド環境を整える
-
-QMK Firmware のセットアップ手順（[公式英語](https://docs.qmk.fm/#/newbs_getting_started)、[有志日本語](https://github.com/shelaf/qmk_firmware/blob/master/docs/ja/newbs_getting_started.md)）に従い、インストールします。
-
-Ubuntu を使用している場合には、ModemManager が邪魔をすることがあるので、`sudo systemctl stop ModemManager.service`を実行いておくと有効です。
-
-デフォルトのキーマップをインストールするには、PC と Pro Micro を USB ケーブルで接続し、以下を実行します。
-
-```
-qmk flash -kb sparrow62 -km default
-```
-
-`Detecting USB port, reset your controller now...`と表示されたところで、キーボードのタクトスイッチ（リセット）を押します。
-この Firmware の書き込みを、左右 2 つの Pro Micro で両方とも行います。
-
-この default のキーマップは以下のようになっています。 `MO(_FN)`のキーを押すと、キーレイヤが下の`[_FN]`のものに変わり、F1-12 キーや、矢印キーとして動作させることができます。
-
-![](img/default_keymap.png)
-
-新しいキーマップを作成する場合には、以下のように実行します（nnyn が新しいキーマップ名）
-
-```
-qmk new-keymap -kb sparrow62 -km nnyn
-```
-
-キーマップの設定する C のソースが `~/qmk_firmware/keyboards/sparrow62/keymaps/nnyn/keymap.c` にできます。
-こちらを変更して、以下のコマンドで Firmware を書き込みます。
-
-```
-qmk flash -kb sparrow62 -km nnyn
-```
-
-詳しいファームウェアの実装方法は、公式のドキュメントや Qiita の記事を参照ください。
-
-- [Keymap Overview](https://docs.qmk.fm/#/keymap)
-- [はじめての QMK キーマップ編集](https://qiita.com/marksard/items/9317949ce1da327f7436)
-
-### キースイッチのテストをする
-
-QMK Continuator のキーテストを開きます。
-
-https://config.qmk.fm/#/test
-
-キースイッチを押し、キーレイアウトの通りに動作するかを確認します。
-
-### 動作しないキーがある場合
+シリアルコンソールには、以下のエラーメッセージが出ることがあります。
+
+- `no module named 'kmk' / cannot find kmk module` : KMK モジュールが、PICO 内の lib/ ディレクトリに入っていません。
+- `no module named 'adafruit_mcp230xx' / cannot find adfruit_mcp230xx module` : MCP23017 のライブラリが、 PICO 内の lib/ ディレクトリに入っていません。
+- `no module named 'neopixel' / cannot find neopixel module` : neopixel ライブラリが lib/ ディレクトリに入っていません。
+- `No pull up found on SDA or SCL; check your wiring / cannot communicate to right board` : 右手とかろうじて通信はできているが、適切な状態ではないようです。この場合、左手の R1、R2 の 1kΩ 抵抗が正しく実装されていない場合に発生します。
+- `ValueError: No I2C device at address: 0x20 / cannot communicate to right board` : 右手と一切通信できない状態です。R1、R2 の抵抗や、PICO の GPIO 12、13 の接続、TRRS ソケットの接続を確認し、再度はんだごてを当ててはんだを追加したりします。
+
+### 組立後に動作しないキーがある場合
 
 #### 1 キーのみ動作しない場合
 
@@ -602,8 +495,8 @@ https://config.qmk.fm/#/test
 
 #### 縦一列、横一列が動作しない場合
 
-青丸が COL のラインとなっており、そのまま Pro Micro の COL0-6 につながっています。緑丸が ROW のラインとなっており、そのまま Pro Micro の ROW0-4 につながっています。
-Pro Micro の接続を確認ください。
+データシートの回路図を確認ください。PICO の GPIO がどの 行、列 と対応しているか記述されています。
+その箇所のはんだを追加して実装し直すなど行ってください。
 
 ## 資料
 
