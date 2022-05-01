@@ -1,8 +1,13 @@
 # Sparrow62 (+1) v2 Keyboard Building Guide
 
-- If you build Sparrow 62 v2, please see [v1 Buildguide](./v1.md).
+[If you build Sparrow 62 v1, please see v1 Buildguide](./v1.md). [Sparrow62 v1 のビルドガイドはこちら。](./v1.md)
 
 このガイドには一部 Sparrow 62 v1 の写真が含まれていますので注意ください。
+
+## Sparrow62 v2 の注意点
+
+- Sparrow62 v2 には、シルクで Sparrow64 と書かれていますが、Sparrow62 の誤りです。
+- Sparrow62 v2 には、細かいバージョン差分があり、1 セットの内に複数のバージョンの記載がありますが、正常です。
 
 ## What's Sparrow 62 Keyboard
 
@@ -40,6 +45,8 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
 
 - v1 は ProMicro と、QMK Firmware を用いて、キー入力を調整することができました。v2 は ProMicro と QMK Firmware に対応していません。
 - チップ抵抗や、マイコン裏のスルーホールとランドの接続など、実装難度は高くなっています。
+
+細かいバージョン差分はこちらを確認ください。
 
 ## 準備が必要なもの
 
@@ -90,7 +97,7 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
 - 左手 IC カバー（黒アクリルプレート、穴 3 つ） x1
 - 右手 IC カバー（黒アクリルプレート、穴 2 つ） x1
 - ゴムシート x2
-- 2012 SMD 抵抗 1kΩ(102) x3
+- 2012 SMD 抵抗 1kΩ(102) x2
 - 2012 SMD 抵抗 5.1kΩ(512) x2
 - 2012 SMD 抵抗 10kΩ(103) x3
 - ダイオード 1N4148W x63
@@ -195,7 +202,9 @@ Choc 用スイッチソケットには向きがあります。以下の記事を
 
 ソケットのはんだ付けは動画のようにすることをおすすめしています。
 
-[TODO: 動画](./)
+![動画](./img/v2/switch_socket.mp4)
+
+[動画](./img/v2/switch_socket.mp4)
 
 1. ソケットを正しい方向にセットします。
 2. ソケットの端子の内側から、はんだごてで熱を加えます
@@ -595,6 +604,11 @@ https://config.qmk.fm/#/test
 
 青丸が COL のラインとなっており、そのまま Pro Micro の COL0-6 につながっています。緑丸が ROW のラインとなっており、そのまま Pro Micro の ROW0-4 につながっています。
 Pro Micro の接続を確認ください。
+
+## 資料
+
+- [回路図、配線図等データシート](./datasheets/)
+- [付属部品の追加の購入先](./parts/)
 
 ## Contact me
 
