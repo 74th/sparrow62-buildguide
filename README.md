@@ -109,9 +109,9 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
 - ゴムシート x2
 - 2012 SMD 抵抗 1kΩ(102) x2
 - 2012 SMD 抵抗 5.1kΩ(512) x2
-- 2012 SMD 抵抗 10kΩ(103) x3
+- 2012 SMD 抵抗 10kΩ(103) x5
 - ダイオード 1N4148W x63
-- USB Type-C ソケット基盤 x1
+- USB Type-C ソケット基板 x1
 - LED SK6812MINI-E x1
 - TRRS ソケット x2
 - IO エキスパンダー IC MCP23017 x1
