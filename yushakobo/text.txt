@@ -1,0 +1,71 @@
+トップ写真
+https://github.com/74th/sparrow62-buildguide/raw/e83417652ee205e32c5776249729f3645829dba6/photos/v2/overview.jpg
+https://github.com/74th/sparrow62-buildguide/raw/056083fbceadf3f22635952caaedb32c383f6c4f/photos/v2/choc.jpg
+https://github.com/74th/sparrow62-buildguide/raw/056083fbceadf3f22635952caaedb32c383f6c4f/photos/v2/left.jpg
+https://raw.githubusercontent.com/74th/sparrow62-buildguide/e83417652ee205e32c5776249729f3645829dba6/photos/v2/lower.png
+
+Sparrow62(+1) v2 キーボードとは
+
+右手の外側にはマウスを近くに置きたい！
+キーキャップセットを楽しめて、キーの低さにこだわった63キー分割キーボードです。
+
+こだわり
+
+・右手のキーボードの外側にマウスを置くために、右側のキーの数をおさえ左側が膨らむデザインにしました。
+・縦に揃ったキー配置ながら、標準的なキーキャップセット使えます。
+・キーの低さを追求！ 机からの高さは、薄型Chocスイッチではキートップまで14.0mm、MXスイッチでDSAキーキャップでは23.5mmとなっています。
+・マイコン Raspberry Pi Pico 1個で、左右分離キーボードを実現しています。
+
+他の特徴
+
+・薄型Chocスイッチ v1/2 と、Cherry MX互換スイッチに対応
+・スイッチ交換対応（ソケットによるホットスワップ）
+・数字キーありの63キー（60%キーボード）
+・USB Type-C 接続
+
+キット内容
+
+・左手トッププレート x1
+・左手 PCB x1
+・左手ボトムプレート x1
+・右手トッププレート x1
+・右手 PCB x1
+・右手ボトムプレート x1
+・左手 IC カバー（黒アクリルプレート、穴 3 つ） x1
+・右手 IC カバー（黒アクリルプレート、穴 2 つ） x1
+・底用ゴムシート x2
+・2012 SMD 抵抗 1kΩ(102) x2、5.1kΩ(512) x2、0kΩ(103) x5
+・ダイオード 1N4148W x63
+・USB Type-C ソケット基板 x1
+・LED SK6812MINI-E x1
+・TRRS ソケット x2
+・IO エキスパンダー IC MCP23017 x1
+・ピンヘッダー 1 列 12 ピン x1
+・スペーサー 3.5mm x24、5.0mm x5
+・ネジ 4.0mm（黒） x29、5.0mm （銀） x29
+
+キットの他に必要なもの
+
+・Raspberry Pi Pico x1
+・スイッチ用PCBソケット（CherryMX互換用、もしくはChoc用）x63
+・スイッチ（CherryMX互換用、もしくは Kailh Choc v1/2）x63
+・スイッチ対応キーキャップ x63
+・PC接続用USB Type-C ケーブル x1
+・TRRSケーブル x1
+CherryMX互換用スイッチで組む場合
+・PCBマウントスタビライザ x4
+※Choc用のスタビライザは使用できません。
+
+ビルドガイド
+
+https://github.com/74th/sparrow62-buildguide/
+
+その他
+
+・Sparrow62 という名前ですが、63キーです
+・Raspberry Pi Picoを使うため、QMK Firmwareには(現状)対応していません。
+　KMK Firmwareにのみ対応しています。
+・右手の左側にトラックパッドを置くオプションパーツは下記サイトにて取り扱っております。
+https://74th.booth.pm
+
+ご質問がありましたら、製作者（74th）までメール site@74th.tech 、または Twitter @74th にお問い合わせください。
