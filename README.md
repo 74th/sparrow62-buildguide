@@ -79,7 +79,7 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
   - 50 cm より長いケーブルで接続可能かどうかは確認していません。
 - Raspberry PI Pico x1
 - USB 2.0 Type-C Cable x1
-- (CherryMX 互換スイッチを使用する場合）PCB マウントスタビライザー x3
+- (CherryMX 互換スイッチを使用する場合）PCB マウントスタビライザー x
 
 ### 組み立てに必要な機材
 
@@ -114,9 +114,9 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
 - ゴムシート x2
 - 2012 SMD 抵抗 1kΩ(102) x2
 - 2012 SMD 抵抗 5.1kΩ(512) x2
-- 2012 SMD 抵抗 10kΩ(103) x3
+- 2012 SMD 抵抗 10kΩ(103) x5
 - ダイオード 1N4148W x63
-- USB Type-C ソケット基盤 x1
+- USB Type-C ソケット基板 x1
 - LED SK6812MINI-E x1
 - TRRS ソケット x2
 - IO エキスパンダー IC MCP23017 x1
