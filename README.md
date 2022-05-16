@@ -217,9 +217,9 @@ Choc 用スイッチソケットには向きがあります。以下の記事を
 
 ソケットのはんだ付けは動画のようにすることをおすすめしています。
 
-![動画（Google Drive）](https://drive.google.com/file/d/1VQYtKHCZkTQwoi6JiOMwTrHwYhy1caux/view?usp=sharing)
+[動画（Google Drive）](https://drive.google.com/file/d/1VQYtKHCZkTQwoi6JiOMwTrHwYhy1caux/view?usp=sharing)
 
-![動画（Twitter）](https://twitter.com/74th/status/1514942328900775938)
+[動画（Twitter）](https://twitter.com/74th/status/1514942328900775938)
 
 [動画ファイル switch_socket.mp4](./img/v2/switch_socket.mp4)
 
