@@ -233,7 +233,7 @@ For trackpad, use a long rubber sheet.
 
 #### using QMK Toolbox and REMAP
 
-[Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
+[Download firmware/ssparrow62_v1_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrow62_v1_via.hex)
 
 Download and install QMK Toolbox.
 
@@ -241,7 +241,7 @@ https://github.com/qmk/qmk_toolbox/releases
 
 Flash via firmware.
 
-- Local File: sparrow62_via.hex
+- Local File: sparrow62_v1_via.hex
 - MCU : atmega32u4
 
 You can use REMAP for configuring your keymap.
@@ -265,7 +265,7 @@ VIA を使う場合、QMK Toolbox でファームウェアを書き込めば完�
 
 以下のキーマップを、default のファームウェアとして提供しています。
 
-- [Download sparrow62_default.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_default.hex)
+- [Download firmware/sparrow62_v1_default.hex](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrow62_v1_default.hex)
 
 レイヤ 1
 
@@ -287,7 +287,7 @@ GUI でキーマップを変更できる [VIA](https://caniusevia.com/) とい�
 
 VIA を使うには、VIA のファームウェアを書き込む必要があります。以下からダウンロードし、[QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)などを使って書き込んでください。
 
-- [Download sparrow62_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/sparrow62_via.hex)
+- [Download firmware/sparrow62_v1_via.hex](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrow62_v1_via.hex)
 
 VIA のファームウェアは Remap を使うと、ブラウザの UI でキーマップの変更ができます。
 
