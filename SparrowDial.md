@@ -95,8 +95,6 @@ Grove(HY2.0)コネクタを実装します。このコネクタは、PortA の�
 
 <img src="img/dial/m5stack_bottom_grove.jpeg" width="300px">
 
-TODO:
-
 ### ケースの加工
 
 遊舎工房や、TalpKeyboard で販売されているプラスチック GH60 互換ケースでは、干渉が発生するためケースの加工が必要です。
