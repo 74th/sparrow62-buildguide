@@ -1,4 +1,4 @@
-# Sparrow60C Keyboard Kit Build Guide
+# SparrowDial Keyboard Kit Build Guide
 
 このビルドガイドには他のキーボードの写真が含まれていますのでご注意ください。
 
@@ -8,7 +8,7 @@
 
 - booth(準備中)
 
-## Sparrow60C の注意点
+## SparrowDial の注意点
 
 - マイコン RP2040 が直接 PCB に実装されています。
 - GH60 互換キーボードケース対応の PCB ですが、必ずしもすべてのケースに対応するわけではありません。
@@ -16,14 +16,32 @@
 
 ## キットの内容
 
-- Sparrow60C PCB x1
-- Sparrow60C Top Plate (FR4 PCB) x1
-- ジョイスティックモジュール StickPointV x1
-- HY2.0 ケーブル x1
-- ダイオード 1N4148W x60
-- RGBLED SK6812-MINI-E x1
+### キーボード PCB
 
-### PCB に実装済みの部品
+- SparrowDial PCB x1
+- ダイオード 1N4148W x56
+- RGBLED SK6812-MINI-E x1
+- 表面実装 Grove(HY2.0) コネクタ（アイボリー色） x2
+
+### M5Stack Core2 PortA 底面引き出しモジュール
+
+- M5Stack Core2 ProtA 底面引き出し PCB x1
+- スルーホール Grove(HY2.0) コネクタ（白色） x1
+- 表面実装 2x15P ピンヘッ u x1
+
+### ケーブル
+
+- Grove(HY2.0) 互換 ケーブル 10cm x1
+- Grove(HY2.0) - USB-C Daughter ケーブル 10cm x1
+
+### ケース組み込み部品
+
+- SparrowDial Top Plate (FR4 PCB) x1
+- M2 2mm スペーサー x6 : ケースと PCB の間のスペーサー
+- M2 5mm 黒 平ネジ x1 : スイッチ干渉箇所のネジ止め用（← 側）
+- M2 5mm 銀 平ネジ x1 : スイッチ干渉箇所のネジ止め用（右側）
+
+## PCB に実装済みの部品
 
 - マイコン RP2040 x1
 - マイコンプログラム用フラッシュ W25Q32JVS x1
@@ -36,18 +54,20 @@
 ### キットの他に必要なもの
 
 - GH60 互換キーボードケース x1
-- MX 互換スイッチソケット x60
-- MX 互換スイッチ x60
+- MX 互換スイッチソケット x56
+- MX 互換スイッチ x56
 - MX 互換スイッチ用キーキャップ一式 x1
 - PC 接続用 USB Type-C ケーブル x1
+- Trackpad 用 M5Stack どちらか
+  - M5Stack Core2 x1
+  - M5Stack Dial x1
 
 ### 組み立てに必要な機材
 
-- はんだごて、はんだこて台、スポンジ
-- はんだ
+- はんだごて、はんだ
+- ニッパ（キーボードケースの加工用）
 - ピンセット（表面実装部品を抑えるのに利用します）
-- 両面テープ（ゴムシートとボトムプレートを接着します）
-- PC（Windows、Linux、MacOS の動作するもの。ファームウェアの作成に必要。）
+- PC（Windows、Linux、MacOS の動作するもの。ファームウェアの作成に必要）
 
 ### あるとよいもの
 
@@ -58,6 +78,36 @@
 - ラジオペンチ（ネジ止めの他、スイッチの足が曲がってしまった場合に、つまんで伸ばします）
 
 ## how to build / 作成方法
+
+このキーボードには、RP2040 の動作に必要な部品は既に実装されています。
+
+### M5Stack Core2 PortA 底面引き出しモジュール の組み立て
+
+M5StackCore2 を利用する場合、モジュールを組み立てます。
+
+JP1 ジャンパがありますが、ここは真ん中と BAT をショートさせます。
+
+<img src="img/dial/m5stack_bottom_jumper.jpeg" width="300px">
+
+次に表面実装 2x15P ピンヘッドを実装します。スルーホールと異なり、はんだがピンヘッダにのみに回り、PCB のランドに届いていないことがあります。ランドまで加熱するようにしてください。ピンヘッダはずれやすいため、対角端の 1 ピンずつを先に実装して位置合わせの上、残りを実装すると良いでしょう。
+
+Grove(HY2.0)コネクタを実装します。このコネクタは、PortA の記述がある面に実装します。
+
+<img src="img/dial/m5stack_bottom_grove.jpeg" width="300px">
+
+TODO:
+
+### ケースの加工
+
+遊舎工房や、TalpKeyboard で販売されているプラスチック GH60 互換ケースでは、干渉が発生するためケースの加工が必要です。
+
+#### 共通
+
+TODO:
+
+#### M5Dial 使用時のみ
+
+TODO:
 
 ### Solder Diodes / ダイオードのはんだ付け
 
@@ -92,10 +142,10 @@ Once you have checked and it is ok, solder the other leg as well.
 
 ![](img/v1/diode2.jpg)
 
-### Soldering the switch socket / スイッチソケットを実装する
+### Soldering switch sockets / スイッチソケットを実装する
 
-We recommend soldering the socket as shown in the video.
-🇯🇵 ソケットのはんだ付けは動画のようにすることをおすすめしています。
+We recommend soldering the socket as shown in the video. With the latest Kailh switch sockets, it is no longer possible to insert the soldering iron from the top, but you should still insert it from the open side.
+🇯🇵 ソケットのはんだ付けは動画のようにすることをおすすめしています。最新の Kailh 社製スイッチソケットでは、上面からはんだごてを差し込むことはできなくなりましたが、それでも横の空いている面からはんだごてを差し込む様にします。
 
 [Movie（Google Drive）](https://drive.google.com/file/d/1VQYtKHCZkTQwoi6JiOMwTrHwYhy1caux/view?usp=sharing)
 
@@ -117,4 +167,14 @@ We recommend soldering the socket as shown in the video.
 4. はんだを外してから、ピンセットなどでソケットを抑えます
 5. はんだごてを抜きます
 
-### Soldering Socket
+### Soldering HY2.0 sockets / ソケットの実装
+
+TODO:
+
+### M5StackCore2、M5Dial へのファームウェアの書き込み
+
+TODO:
+
+###
+
+## 追加で加工すると良いこと
