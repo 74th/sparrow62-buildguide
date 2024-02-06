@@ -27,7 +27,7 @@
 
 - M5Stack Core2 ProtA 底面引き出し PCB x1
 - スルーホール Grove(HY2.0) コネクタ（白色） x1
-- 表面実装 2x15P ピンヘッ u x1
+- 表面実装 2x15P ピンヘッダ x1
 
 ### ケーブル
 
@@ -38,8 +38,7 @@
 
 - SparrowDial Top Plate (FR4 PCB) x1
 - M2 2mm スペーサー x6 : ケースと PCB の間のスペーサー
-- M2 5mm 黒 平ネジ x1 : スイッチ干渉箇所のネジ止め用（← 側）
-- M2 5mm 銀 平ネジ x1 : スイッチ干渉箇所のネジ止め用（右側）
+- M2 6mm 黒 平ネジ x6 : ケースと PCB の間のネジ止め
 
 ## PCB に実装済みの部品
 
@@ -101,11 +100,27 @@ Grove(HY2.0)コネクタを実装します。このコネクタは、PortA の�
 
 #### 共通
 
-TODO:
+TODO: 写真
+
+写真の印の部分の仕切りをニッパで切り取ります。
 
 #### M5Dial 使用時のみ
 
-TODO:
+TODO: 写真
+
+まず、写真のネジ止め部分を、ニッパで切り取ります。
+
+TODO: 写真
+
+次に、写真の印の部分の仕切りをニッパで切り取ります。
+
+#### M5Dial がどうしても収まらないとき
+
+コードの整理などでぎりぎり収まりますが、収まらないときは、はんだごてで、写真の箇所のプラスチックを溶かし、空間を広げます。
+
+TODO: 写真
+
+主に障害になるのは、M5Dial の底部の下の方です。
 
 ### Solder Diodes / ダイオードのはんだ付け
 
@@ -165,14 +180,42 @@ We recommend soldering the socket as shown in the video. With the latest Kailh s
 4. はんだを外してから、ピンセットなどでソケットを抑えます
 5. はんだごてを抜きます
 
-### Soldering HY2.0 sockets / ソケットの実装
+### Soldering Grove(HY2.0) sockets / Grove(HY2.0) ソケットの実装
+
+2 箇所ある Grove(HY2.0) ソケットを実装します。
+
+まず、1 本のピンのみを実装し、はんだごてを更にあてながら PCB のシルクの位置になるように調整します。その後、残りのピンも実装します。ケーブルを差し込む面にも下部に固定用の金属部分があるため、こちらも忘れずに実装します。
 
 TODO:
 
 ### M5StackCore2、M5Dial へのファームウェアの書き込み
 
+ファームウェアは以下の方法でマイコンにアップロードできます。
+
+- 1. https://74th.github.com/sparrow62-buildguide/firmware/index.html にて、ファームウェアをアップロードする
+- 2.
+
+M5StackCore2、M5Dial は USB で接続します。
+
 TODO:
 
-###
+### SparrowDial PCB 上の RP2040 へのファームウェアの書き込み
+
+始めから VIA、Remap 用のファームウェアが書き込まれた状態になっています。VIA、Remap を利用しない利用しない
+
+#### VIA、Remap を利用する場合
+
+VIA、Remap は Web サイトや、ツール上からキーマップの書き換えができるサイトです。VIA 対応のファームウェアを RP2040 にアップロードすると、利用できるようになります。
+
+- Remap https://remap-keys.app/
+- VIA https://caniusevia.com/
+
+ファームウェアは以下からダウンロードできます。
+
+- VIA、Remap 用ファームウェア [firmware/sparrowdial_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrowdial_via.uf2)
+
+左下の BOOTSEL ボタンを押しながら、RESET ボタンを押します。すると PC に USB ドライブが認識します。USB ドライブ上 RP2040 ではこれで USB ドライブ経由でファームウェアをアップロードすることができます。
+
+#### QMK Firmware でファームウェアをビルドする場合
 
 ## 追加で加工すると良いこと
