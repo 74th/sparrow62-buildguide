@@ -7,7 +7,7 @@
   "builds": [
     {
       "chipFamily": "ESP32",
-      "parts": [{ "path": "m5stackcore2-simple-pointer_v1.0.0.bin", "offset": 32768 }]
+      "parts": [{ "path": "../m5stackcore2-simple-pointer_v1.0.0.bin", "offset": 32768 }]
     }
   ]
 }
