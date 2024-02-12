@@ -1,0 +1,13 @@
+{
+  "name": "M5Dial Simple Pointer",
+  "version": "1.0.0",
+  "home_assistant_domain": "74th",
+  "funding_url": "https://github.com/74th",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "../m5dial-simple-pointer_v1.0.0.bin", "offset": 0 }]
+    }
+  ]
+}
