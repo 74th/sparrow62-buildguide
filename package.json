@@ -1,0 +1,10 @@
+{
+  "name": "sparrow62-buildguide",
+  "version": "0.1.0",
+  "description": "build guide tools",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.2.5"
+  }
+}
