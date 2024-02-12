@@ -1,0 +1,13 @@
+{
+  "name": "M5StackCore2 Simple Pointer",
+  "version": "1.0.0",
+  "home_assistant_domain": "74th",
+  "funding_url": "https://github.com/74th",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "https://github.com/74th/m5-trackpad-module/releases/download/m5stackcore2-simple-pointer%2F1.0.0/m5stackcore2-simple-pointer.bin", "offset": 32768 }]
+    }
+  ]
+}
