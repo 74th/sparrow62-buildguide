@@ -7,7 +7,7 @@
   "builds": [
     {
       "chipFamily": "ESP32",
-      "parts": [{ "path": "https://github.com/74th/m5-trackpad-module/releases/download/m5stackcore2-simple-pointer%2F1.0.0/m5stackcore2-simple-pointer.bin", "offset": 32768 }]
+      "parts": [{ "path": "m5stackcore2-simple-pointer_v1.0.0.bin", "offset": 32768 }]
     }
   ]
 }
