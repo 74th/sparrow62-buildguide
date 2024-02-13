@@ -4,7 +4,11 @@
   "description": "build guide tools",
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "serve": "./firmware"
+  },
   "dependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "serve": "^14.2.1"
   }
 }
