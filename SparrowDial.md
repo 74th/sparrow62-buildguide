@@ -193,12 +193,75 @@ TODO:
 
 ファームウェアは以下の方法でマイコンにアップロードできます。
 
-- 1. https://74th.github.com/sparrow62-buildguide/firmware/index.html にて、ファームウェアをアップロードする
-- 2. esptool.py等ファームウェアアップロードツールを用いる
+- 1. WebHIDを用いる [Sparrow Series Keyboards ESP32 Upload tool https://74th.github.io/sparrow62-buildguide/](https://74th.github.io/sparrow62-buildguide/) にて、ファームウェアをアップロードする
+- 2. [esptool](https://github.com/espressif/esptool/)、[espflash](https://github.com/esp-rs/espflash)等ファームウェアアップロードツールを用いる
+- 3. PlatformIOを用いて自前でビルドして書き込む
+
+[Sparrow Series Keyboards ESP32 Upload tool](https://74th.github.io/sparrow62-buildguide/)を用いる場合、特にツールのインストールがなく手軽に行うことができます。
+既に[esptool](https://github.com/espressif/esptool/)、[espflash](https://github.com/esp-rs/espflash)を導入しているのであれば、そのツール経由の方が煩雑ではないかもしれません。
+このファームウェアはPlatformIO（VS Codeを用いた汎用ファームウェア開発環境）を用いて、Arduinoフレームワークで開発するようになっております。M5DialにはWiFi経由でアップロードする方法もあり、それを利用する場合にはWiFiのSSIDとパスワードを追加する必要があるため、自前でのビルドが必要になります。
 
 M5StackCore2、M5DialはUSBで接続します。M5Dialについてはケースに組み込む前にファームウェアをアップロードする必要があります。
 
-TODO:
+#### Sparrow Series Keyboards ESP32 Upload tool
+
+Chromeブラウザを用いて、以下のサイトを開いてください。
+
+https://74th.github.io/sparrow62-buildguide/
+
+M5StackCore2を用いる場合「M5StackCore2 Simple Pointer」の下の「CONNECT」ボタンを、M5Dialを用いる場合「M5Dial Simple Pointer」の下の「CONNECT」ボタンを押してください。
+
+すると、接続するUSBを選択するポップアップが表示されます。ここで、「USB JTAG/serial debug unit」など、デバイスのUSBを選択し「CONNECT」ボタンを押してください。どれがデバイスのUSBかわからない場合、このポップアップの表示中にUSBを抜き差しすると、登場するUSBデバイスがそれであるとわかります。
+
+選択した後に「Device Dashboard」というウィンドウが表示されるため、「INSTALL <ファームウェア名>」のボタン（文字）を押します。「Confirm Installation」というウィンドウが続けて表示されるため「INSTALL」ボタンを押します。すると、ファームウェアがインストールされます。完了すると「Installation complete!」の表示になります。
+
+インストール後にデバイスは自動で再起動し、画面上に「no I2C Connection」と表示されていれば正常です。
+
+#### esptool、espflashを用いる場合
+
+esptool、espflashを用いる場合、ファームウェアを以下のGitHubリポジトリのReleaseから、最新の m5stackcore2-simple-pointer.bin、m5dial-simple-pointer.bin ダウンロードして利用ください。
+
+https://github.com/74th/m5-trackpad-module/releases
+
+コマンドが二つかかれていますが、両方行う必要はありません。どちらかのツールを利用ください。実行ファイル一つの[espflash](https://github.com/esp-rs/espflash)の方が手軽に思われます。
+
+```
+# M5StackCore2
+esptool.py --chip esp32 write_flash -z 0 m5stackcore2-simple-pointer.bin
+espflash write-bin 0 m5stackcore2-simple-pointer.bin
+
+# M5Dial
+esptool.py --chip esp32s3 write_flash -z 0 m5dial-simple-pointer.bin
+espflash write-bin 0 m5dial-simple-pointer.bin
+```
+
+#### 自前でビルドして書き込む
+
+PlatformIO等の使い方についてはご自身で調査の上利用ください。
+
+まず、以下のリポジトリをチェックアウトします。
+
+https://github.com/74th/m5-trackpad-module
+
+それぞれのディレクトリをワークスペースフォルダーにするようにVS Codeを起動します。
+
+- M5StackCore2: m5stackcore2-simple-pointer ディレクトリ
+- M5Dial: m5dial-simple-pointer ディレクトリ
+
+VS Codeに拡張機能[PlatformIO IDE](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide)をインストールします。
+
+M5Dialの場合には、src/ssid.h.templateをsrc/ssid.hとして複製し、コード内のSSIDとパスワードを更新します。
+
+VS Code上でコマンド「PlatformIO: Upload」を実行すると、USB経由でアップロードすることができます。
+
+M5Dialについては、WiFi経由でファームウェアをアップロードする機能があります。これは、ボタン（上面のオレンジ色のリングのM5と書かれた部分）を押しながら電源入れることで、WiFiへ接続し、ファームウェアのアップロードを受け付けるモードになります。WiFiへの接続に成功すると、画面上にIPアドレスが書き込まれます。この状態で、PlatformIOの設定ファイル`platfomio.ini`の最下部に以下の記述を追加すると、コマンド「PlatformIO: Upload」を行うと、書き込めるようになります。なお、`image=@`のパスの記述はMacOS、Linuxの場合の記述例になります。Windowsでは適宜変更を行ってください。
+
+```ini
+# platformio.ini
+
+upload_protocol = custom
+upload_command = curl -F "image=@.pio/build/m5dial/firmware.bin" 192.168.1.100/update
+```
 
 ### ケースへの組み込みの前の実装確認
 
@@ -232,7 +295,7 @@ M5DialのUSBと、SparrowDial PCBのPower Groveと書かれたGroveソケット�
 
 PCBをUSBに接続します。出荷時点でキーボードとして動作するファームウェアが書き込まれています。
 
-M5StackCore2、M5DialにI2C Connection Errorと書かれている場合、I2C通信に失敗していることがあります。ソケットの実装を見直してください。また、ファームウェア書き込み後にもこの表示が消えない場合には、一度USBを抜き差しして電源を入れ直してみてください（USBの抜き差しで、RP2040とM5StackCore2/M5Dialの両方の再起動を同じタイミングで行えます）。
+M5StackCore2、M5Dialにno I2C Connectionと書かれている場合、I2C通信に失敗していることがあります。ソケットの実装を見直してください。また、ファームウェア書き込み後にもこの表示が消えない場合には、一度USBを抜き差しして電源を入れ直してみてください（USBの抜き差しで、RP2040とM5StackCore2/M5Dialの両方の再起動を同じタイミングで行えます）。
 
 M5StackCore2/M5Dialを操作し、マウスカーソルが動作することを各員してください。
 
@@ -355,12 +418,6 @@ SparrowDial Top Plateは、SparrowDialの名前が入っている方が、上面
 
 ##### 6.1. M5StackCore2を用いる場合
 
-M5StackCore2のM-busのPCBは取り外してください。
-
-M5StackCore2の、ボトムケースを外してください。ボトムケースにはバッテリーが取り付けられており、PCBとはケーブルとソケットで繋がれています。このケーブルは取り外してください。
-
-そして、
-
 M5StackCore2のM-Bus PCB（底面のCore2と書かれた白いPCB）を外します。このPCBには、ピンヘッダとピンソケットで本体PCBに接続されており、垂直に抜く必要があります。
 
 TODO: 写真
@@ -389,9 +446,15 @@ TODO: 写真
 
 M5DialのPortA Groveソケット（赤茶色）に、SparrowDial PCBのI2C Groveと接続されたHY2.0ケーブルを接続します。
 
-M5DialのUSBソケットに、SparrowDial PCBのPower Groveと接続されたGrove USBドーターケーブルを接続します。
-
 TODO: 写真
+
+M5DialのUSBソケットに、SparrowDial PCBのPower Groveと接続されたGrove USBドーターケーブルを接続します。USB-Cドーターケーブルは壊れやすいため、気をつけてください。もし、USB-CドーターケーブルのUSB-Cコネクタからケーブルが外れてしまった場合には、ケーブルの皮むきを行い、以下のVCCとGNDのみ接続してください。
+
+TODO: USB-Cドーターケーブルの写真
+
+M5Dialは垂直には、USBの部分が邪魔して入りません。USBドーターケーブルのUSBコネクタがPCBの下に入るようにななめに差し込んでください。M5Dialはかなりギリギリの所で格納されます。ケーブルをM5Dialのケースの接触部分に当たらないようにしてください。わりと、スイッチをはめていく段階で収まったりします。
+
+どうしてもM5Dialが収まらない場合、はんだごてを用いてケースの接触部分のプラスチックを溶かすなどして、空間を作って見てください。
 
 #### 7. SparrowDial Top Plateを重ねる
 
@@ -418,3 +481,41 @@ USBをPCに接続し、QMK Configuratorを開き、キーをタイプしてす�
 #### 10. キーキャップの差し込み
 
 すべてのキーが動作することを確認できたならば、キーキャップを付けて完成です！
+
+## M5StackCore2の操作について
+
+以下の操作となっております。
+
+- スライド：ポインタ移動
+- タップ：左クリック
+- 2本指タップ：右クリック
+- 2本指垂直スライド：ホイール
+- 左下のエリアのタップ：左クリック
+
+詳しくは、以下の動画を確認ください。
+
+https://www.youtube.com/watch?v=8jPP54jqswg
+
+なかなか2本指タップの反応が難しいです。指を離したり、垂直方向ではなく水平方向に指が並ぶようにしたりすると反応します。
+
+その場合には、キーに左クリック、右クリックを設定してみてください。また、ユーザキー0`SCROLL`（REMAP上の`USER 0`）には押下中のスライドでスクロールする機能が含まれています。初期ファームウェアでは有効になっていませんが、試してみてください。
+
+## M5Dialの操作について
+
+以下の操作となっております。
+
+- スライド：ポインタ移動
+- タップ：左クリック
+- ボタン：右クリック
+- 指がタッチパネルに接触中にボタン（M5と書かれた部分）：左クリック
+- ロータリーエンコーダ：ホイール
+
+指がタッチパネルに接触中にボタンを押してその状態でスライドすることで、ドラッグを実現するように設計しています。しかし、操作が若干難しいです。
+
+その場合には、ーに左クリックを設定してみてください。
+
+## トラブルシューティング
+
+### no I2C Connectionと出続ける
+
+時折、no I2C Connectionになったまま接続が確立されないことがあります。その場合には、一度キーボードのUSBを抜き差ししてみてください。キーボードとM5StackCore2、M5Dialが同時にリセットされます。
