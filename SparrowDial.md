@@ -39,6 +39,8 @@
 - SparrowDial Top Plate (FR4 PCB) x1
 - M2 2mm スペーサー x6 : ケースとPCBの間のスペーサー
 - M2 8mm 黒 平ネジ x6 : ケースとPCBの間のネジ止め
+- M3 10mm 鍋ネジ x2 : M5StackCore2とトッププレートのネジ止め
+- M3 15mm 鍋ネジ x2 : M5StackCore2とトッププレートのネジ止め
 
 ## PCB に実装済みの部品
 
@@ -99,13 +101,13 @@ Grove(HY2.0)コネクタを実装します。このコネクタは、PortAの記
 
 遊舎工房や、TalpKeyboard で販売されているプラスチック GH60互換ケースでは、干渉が発生するためケースの加工が必要です。
 
-#### 共通
+#### M5StackCore2 を使う場合
 
-TODO: 写真
+写真の印の部分の仕切りをニッパで切り取ります。記しのネジ穴の支えのプラスチックがわずかに干渉するため、右側のみを2mmほど削ります。
 
-写真の印の部分の仕切りをニッパで切り取ります。
+![](img/dial/case-cutting-m5stackcore2.png)
 
-#### M5Dial 使用時のみ
+#### M5Dial を使う場合
 
 TODO: 写真
 
@@ -208,7 +210,7 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 まず、1本のピンのみを実装し、はんだごてを更にあてながらPCBのシルクの位置になるように調整します。その後、残りのピンも実装します。ケーブルを差し込む面にも下部に固定用の金属部分があるため、こちらも忘れずに実装します。
 
-TODO:
+![](./img/dial/grove-port.png)
 
 ### M5StackCore2、M5Dialへのファームウェアの書き込み
 
@@ -292,15 +294,15 @@ upload_command = curl -F "image=@.pio/build/m5dial/firmware.bin" 192.168.1.100/u
 
 M5StackCore2のM-Bus PCB（底面のCore2と書かれた白いPCB）を外します。このPCBには、ピンヘッダとピンソケットで本体PCBに接続されており、垂直に抜く必要があります。
 
-TODO: 写真
+![](./img/dial/m5stackcore2-remove-mbus.jpg)
 
 M5StackCore2の底面の4つのネジを外し、ボトムケースを取り外します。ボトムケース部分には、バッテリーが搭載されており、本体PCBとソケットとケーブルで接続されています。このソケットを外して下さい。
 
-TODO: 写真
+![](./img/dial/m5stackcore-remove-bottom.jpg)
 
 M-BusにM5StackCore2 PortA 底面引き出しモジュールを写真の向きで接続します。
 
-TODO: 写真
+![](./img/dial/m5stackcore2-mbusporta.jpg)
 
 なお、必ずバッテリーを外した状態で行ってください。
 
@@ -369,13 +371,13 @@ M5Dialを用いる場合、ケースの上の中空スペーサーを落とさ�
 
 M5StackCore2を用いる場合、若干ダイオードがケースに干渉しますが、少しPCBをずらすと干渉を避けて、ケースのネジ穴に密着させることができます。
 
-TODO: 写真
+![](./img/dial/stack-pcb.jpg)
 
 #### 5. SparrowDial PCBとケースのネジ止め
 
 付属のネジを用いて、M2 8mmネジで6箇所を留めます。M5Dialを用いる場合、中空スペーサーを落とさない様にしてください。
 
-TODO: 写真
+![](./img/dial/stack-pcb-skrew.jpg)
 
 #### 6. SparrowDial Top PlateへのM5StackCore2、M5Dialの組み込み
 
@@ -383,21 +385,9 @@ SparrowDial Top Plateは、SparrowDialの名前が入っている方が、上面
 
 ##### 6.1. M5StackCore2を用いる場合
 
-M5StackCore2のM-Bus PCB（底面のCore2と書かれた白いPCB）を外します。このPCBには、ピンヘッダとピンソケットで本体PCBに接続されており、垂直に抜く必要があります。
-
-TODO: 写真
-
-M5StackCore2の底面の4つのネジを外し、ボトムケースを取り外します。ボトムケース部分には、バッテリーが搭載されており、本体PCBとソケットとケーブルで接続されています。このソケットを外して下さい。
-
-TODO: 写真
-
-M-BusにM5StackCore2 PortA 底面引き出しモジュールを写真の向きで接続します。
-
-TODO: 写真
-
 M5StackCore2のタッチボタンが左側になるように、Top Plateの裏面からM3ネジで留めます。
 
-TODO: 写真
+![](./img/dial/mount-stackcore2.jpg)
 
 なお、必ずバッテリーを外した状態で行ってください。
 
@@ -423,9 +413,9 @@ M5Dialは垂直には、USBの部分が邪魔して入りません。USBドー�
 
 #### 7. SparrowDial Top Plateを重ねる
 
-SparrowDial Top Plateを、ケースに重ねます。SparrowDialは、PCBとTop Plate間の固定は、スイッチのみで行います。
+SparrowDial Top Plateを、ケースに重ねます。SparrowDialは、PCBとTop Plate間の固定はスイッチのみで行うため、この時点では固定されません。
 
-TODO: 写真
+![](./img/dial/stack-top-plate.jpg)
 
 #### 8. スイッチの差し込み
 
@@ -433,13 +423,15 @@ SparrowDial Top Plateの穴から、SparrowDial PCBに向かってスイッチ�
 
 この時、M5Dial、M5StackCore2のまわりのスイッチと、左右外側のスイッチから、順に固定していくと、高さをキープしやすくなります。
 
-TODO: 写真
+![](./img/dial/insert-switch-m5stackcore.jpg)
+
+TODO: M5Dialの写真
 
 M5Dialは結構干渉し、十分に刺さらない場合があります。その場合、M5Dialのケーブルが干渉していないか確認して、ケーブルをずらしたり、前述の「M5Dial がどうしても収まらないとき」の対策を行ってみてください。
 
 #### 9. キーの動作テスト
 
-USBをPCに接続し、QMK Configuratorを開き、キーをタイプしてすべてのキーが動作するかを確認します。詳細は前述の「ケースへの組み込み前の実装確認」を確認ください。
+USBをPCに接続し、すべてのキーが動作するかを確認します。詳細は前述の「ケースへの組み込み前の実装確認」を確認ください。
 
 動作しないキーがある場合、一度すべてをケースから取り外し、該当キーのダイオードとスイッチソケットの実装をやり直します。
 
