@@ -321,4 +321,4 @@ qmk compile -kb sparrow60c -km <keymap_name>
 
 > Trouble Shooting Guide
 >
-> [./truble_shooting_guide.md](./truble_shooting_guide.md)
+> [./trouble_shooting_guide.md](./trouble_shooting_guide.md)

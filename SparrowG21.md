@@ -75,39 +75,6 @@
 
 ## how to build / 作成方法
 
-### Solder Diodes / ダイオードのはんだ付け
-
-Solder the diode, paying attention to the orientation of the diode.
-🇯🇵 ダイオードを向きを気をつけて、はんだ付けします。
-
-The video by @Salicylic_acid3 is very good, so I think you can check here.
-🇯🇵 実装手順については、サリチル酸さんのツイートの動画が非常に良くできているため、こちらを確認いただくと良いと思います。
-
-https://twitter.com/Salicylic_acid3/status/1296494976319315970
-https://twitter.com/Salicylic_acid3/status/1108798243142434816
-
-Solder one side of the PCB first.
-🇯🇵 先に PCB の片側にはんだをつけます。
-
-![](img/v1/diode1.jpg)
-
-Melt the solder you have applied and solder one side of the diode.
-🇯🇵 つけたハンダを溶かして、ダイオードを片側をはんだ付けします。
-
-![](img/v2/diode_1.jpg)
-
-First, solder all the diodes **only one side**.
-Once one side is soldered, check that all diodes are facing the same way.
-🇯🇵 まず、すべてのダイオードを**片側だけ**はんだ付けをしましょう。
-片側のはんだ付けが済んだところで、一度すべてのダイオードが同じ向きを向いているか確認します。
-
-![](img/v1/diode4.jpg)
-
-Once you have checked and it is ok, solder the other leg as well.
-🇯🇵 確認が済んで大丈夫であれば、反対側の足もはんだ付けします。
-
-![](img/v1/diode2.jpg)
-
 ### Soldering the switch socket / スイッチソケットを実装する
 
 > [!CAUTION]
@@ -354,4 +321,4 @@ SparrowG21のロゴの右側のLEDの設定です。
 
 > Trouble Shooting Guide
 >
-> [./truble_shooting_guide.md](./truble_shooting_guide.md)
+> [./trouble_shooting_guide.md](./trouble_shooting_guide.md)

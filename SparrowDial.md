@@ -539,4 +539,4 @@ qmk compile -kb sparrowdial -km <keymap_name>
 
 > Trouble Shooting Guide
 >
-> [./truble_shooting_guide.md](./truble_shooting_guide.md)
+> [./trouble_shooting_guide.md](./trouble_shooting_guide.md)
