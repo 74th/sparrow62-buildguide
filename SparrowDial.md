@@ -109,11 +109,11 @@ Grove(HY2.0)コネクタを実装します。このコネクタは、PortAの記
 
 #### M5Dial を使う場合
 
-TODO: 写真
+![](img/dial/remove-poll-m5dial.jpg)
 
 まず、写真のネジ止め部分を、ニッパで切り取ります。
 
-TODO: 写真
+![](img/dial/remove-poll-m5dial.jpg)
 
 次に、写真の印の部分の仕切りをニッパで切り取ります。
 
@@ -121,7 +121,7 @@ TODO: 写真
 
 コードの整理などでぎりぎり収まりますが、収まらないときは、はんだごてで、写真の箇所のプラスチックを溶かし、空間を広げます。
 
-TODO: 写真
+![](img/dial/case-cutting-m5dial.jpg)
 
 主に障害になるのは、M5Dial の底部の下の方です。
 
@@ -355,13 +355,13 @@ M5Dialを用いる場合、追加でGrove USBドーターケーブルをSparrowD
 
 コードの先端を、SparrowDial PCBの中央の円形ホールを通すようにしてください。
 
-TODO: 写真
+![](img/dial/m5dial-grove-connect.jpg)
 
 #### 3. （M5Dialを用いる場合のみ）ケース底面のネジ穴に対して、2mm中空スペーサーを置く
 
 ケース底面の、各ネジ穴のところに、M2 2mm中空スペーサーを置きます。
 
-TODO: 写真
+![](img/dial/spacer-m5dial.jpg)
 
 #### 4. SparrowDial PCBをケースに配置する
 
@@ -397,15 +397,15 @@ M5StackCore2 PortA底面引き出しモジュールのGroveソケットと、Spa
 
 M5Dialの、オレンジ色の大きなナット部品を使って、Top Plateを挟み込むように固定します。この時、上面のM5の文字が下になるようにしてください。
 
-TODO: 写真
+![](img/dial/mount-m5dial.jpg)
 
 M5DialのPortA Groveソケット（赤茶色）に、SparrowDial PCBのI2C Groveと接続されたHY2.0ケーブルを接続します。
 
-TODO: 写真
+![](img/dial/connect-m5dial.jpg)
 
 M5DialのUSBソケットに、SparrowDial PCBのPower Groveと接続されたGrove USBドーターケーブルを接続します。USB-Cドーターケーブルは壊れやすいため、気をつけてください。もし、USB-CドーターケーブルのUSB-Cコネクタからケーブルが外れてしまった場合には、ケーブルの皮むきを行い、以下のVCCとGNDのみ接続してください。
 
-TODO: USB-Cドーターケーブルの写真
+![](img/dial/usb-c-daughter-cable.jpg)
 
 M5Dialは垂直には、USBの部分が邪魔して入りません。USBドーターケーブルのUSBコネクタがPCBの下に入るようにななめに差し込んでください。M5Dialはかなりギリギリの所で格納されます。ケーブルをM5Dialのケースの接触部分に当たらないようにしてください。わりと、スイッチをはめていく段階で収まったりします。
 
@@ -421,11 +421,15 @@ SparrowDial Top Plateを、ケースに重ねます。SparrowDialは、PCBとTop
 
 SparrowDial Top Plateの穴から、SparrowDial PCBに向かってスイッチを差し込みます。MX互換スイッチには、Top Plateを挟み込む溝が付いています。この溝にTop Plateが挟まれるようにTop Plateを持ち上げてください。
 
+SparrowDialのキーはGH60互換ケースを使う都合、以下のキーが異なる向きを向いています。差し込むときに気をつけてください。
+
+![](./img/dial/diferent_orientation_key.jpg)
+
 この時、M5Dial、M5StackCore2のまわりのスイッチと、左右外側のスイッチから、順に固定していくと、高さをキープしやすくなります。
 
 ![](./img/dial/insert-switch-m5stackcore.jpg)
 
-TODO: M5Dialの写真
+![](img/dial/insert-switch-m5dial.jpg)
 
 M5Dialは結構干渉し、十分に刺さらない場合があります。その場合、M5Dialのケーブルが干渉していないか確認して、ケーブルをずらしたり、前述の「M5Dial がどうしても収まらないとき」の対策を行ってみてください。
 
