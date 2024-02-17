@@ -19,9 +19,10 @@
 - Sparrow60C PCB x1
 - Sparrow60C Top Plate (FR4 PCB) x1
 - ジョイスティックモジュール StickPointV x1
-- HY2.0 ケーブル x1
+- HY2.0-4P(Grove) ケーブル x1
 - ダイオード 1N4148W x60
 - RGBLED SK6812-MINI-E x1
+- HY2.0-4P(Grove) SMD ソケット x1
 - M2 4mm スペーサー x4 : StickPointV、PCB間
 - M2 8mm 黒 平ネジ x7 : ケースとPCBの間のネジ止め
 - M2 4mm 黒 平ネジ x8 : StickPointVとPCBのスペーサーとのネジ止め
@@ -31,6 +32,7 @@
 - マイコン RP2040 x1
 - マイコンプログラム用フラッシュ W25Q32JVS x1
 - RP2040 の動作に必要な受動部品（コンデンサ、抵抗、水晶発振器）
+- 6x6mm SMD タクタイルスイッチ（RP2040 RESET、BOOTSEL用） x2
 - 電源保護用理想ダイオード CH213K x1
 - USB Type-C コネクタ x1
 
@@ -241,9 +243,11 @@ TODO: 写真
 
 #### 7. キーの動作テスト
 
-USBをPCに接続し、QMK Configuratorを開き、キーをタイプしてすべてのキーが動作するかを確認します。詳細は前述の「ケースへの組み込み前の実装確認」を確認ください。
+各キーが動作することをRemapのTest Matrix modeを使って確認して下さい。
 
-動作しないキーがある場合、一度すべてをケースから取り外し、該当キーのダイオードとスイッチソケットの実装をやり直します。
+> RemapのTest Matrix modeを使ったキーマトリックスのテスト方法
+>
+> [./remap_test_matrix_mode.md](./remap_test_matrix_mode.md)
 
 #### 8. キーキャップの差し込み
 
@@ -310,3 +314,11 @@ qmk compile -kb sparrow60c -km <keymap_name>
 ```
 
 すると、`~/qmk_firmware/.build/sparrowdial_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
+
+## トラブルシューティング
+
+こちらのページを確認ください。
+
+> Trouble Shooting Guide
+>
+> [./truble_shooting_guide.md](./truble_shooting_guide.md)

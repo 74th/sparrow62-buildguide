@@ -16,31 +16,45 @@
 
 ## キットの内容
 
-- Sparrow60C PCB x1
-- Sparrow60C Top Plate (FR4 PCB) x1
-- ジョイスティックモジュール StickPointV x1
-- HY2.0 ケーブル x1
+- SparrowG21 PCB x1
+- SparrowG21 Top Plate (FR4 PCB) x1
+- OLED x1
+- ジョイスティックモジュール B10K x2
+- SH1.0-4P(Qwiic) ケーブル x1
 - ダイオード 1N4148W x60
-- RGBLED SK6812-MINI-E x1
-- 0805 SMD 抵抗 x2
-- 0805 SMD 青色LED x2
+- RGBLED SK6812-MINI-E x12
+- SH1.0-4P(Qwiic) SMD ソケット x1
+- M2 2mm スペーサー x4 : StickPointV、PCB間
+- M2 8mm 黒 平ネジ x7 : ケースとPCBの間のネジ止め
 
-### PCB に実装済みの部品
+### PCBに実装済みの部品
 
 - マイコン RP2040 x1
 - マイコンプログラム用フラッシュ W25Q32JVS x1
 - RP2040 の動作に必要な受動部品（コンデンサ、抵抗、水晶発振器）
+- 6x6mm SMD タクタイルスイッチ（RP2040 RESET、BOOTSEL用） x2
 - 電源保護用理想ダイオード CH213K x1
+- 0805 SMD 青色LED x2
 - USB Type-C コネクタ x1
+
+### トッププレートに実装済みの部品
+
+- SH1.0-4P(Qwiic) SMD ソケット x1
+- 0805 SMD 抵抗 x2
+- 0805 SMD 青色LED x2
 
 ## キットの組み立てに必要なもの
 
 ### キットの他に必要なもの
 
+本キットは、「MX互換スイッチ」もしくは「Kailh Choc v1 スイッチ/LOFREE x KAILH Full POM Low Profile スイッチ」を排他的に利用します。
+
+#### 共通で必要なもの
+
 - GH60 互換キーボードケース x1
-- MX 互換スイッチソケット x60
-- MX 互換スイッチ x60
-- MX 互換スイッチ用キーキャップ一式 x1
+- MX 互換スイッチソケット x21 （MX互換スイッチを用いる場合）
+- MX 互換スイッチ x21（MX互換スイッチを用いる場合）
+- MX 互換スイッチ用キーキャップ一式 x1（MX互換スイッチを用いる場合）
 - PC 接続用 USB Type-C ケーブル x1
 
 ### 組み立てに必要な機材
@@ -131,7 +145,7 @@ We recommend soldering the socket as shown in the video.
 
 TODO: 写真
 
-### RGBLED を実装する
+### RGBLED の実装
 
 RGBLED SK6812MINI-E の方向を注意してください。
 
@@ -174,24 +188,170 @@ TODO: 写真
 
 ### ジョイスティックの実装
 
-表面からスルーホールに差し込み、実装します。実装後、余分な足を切り取ります。
+表面からスルーホールに差し込みます。まず、足を1本だけ実装し、奥まで刺さっていることを確認してから、残りの足を実装してください。足の実装後、余分な足の部分をニッパ出切り取ります。
 
 TODO: 写真
 
-### トッププレートのLEDと抵抗の実装
+### 実装後の確認
 
-> [!NOTE]
-> トッププレートは、MX互換スイッチを使用する場合のみ利用可能です。Kailh Chocスイッチの場合は利用できません。
+本キットのRP2040にはあらかじめGP2040-CEを書き込んでいます。
 
-青色LEDと抵抗を実装します。実装の仕方は、ダイオードの時と同じで、まず片方のランドに
+実際にキーを押して確認してください。
 
-青色LEDは、裏面から、表面に向かって光を届けます。実装面では、矢印や記号が見える状態にしてください。以下の様になっていれば正しい向きとなります。
+テスト画面の表示の仕方はWindowsであれば以下のサイトを参照してください。
 
-![](img/common/led_direction.svg)
+> ゲームパッドとは？／動作確認方法は？／設定方法は？
+>
+> https://qa.elecom.co.jp/faq_detail.html?id=5432
 
-TODO: 写真
+GP2040-CEを新たにRP2040に書き込んだ場合には、SparrowG21用のキーアサインをやり直す必要があります。
 
-### トッププレートとPCBのQwiicソケットの実装
+### GP2040-CEのSparrowG21用の設定
 
-> [!NOTE]
-> トッププレートを使わないChocスイッチを使う場合は実装は不要です。
+本キットのRP2040にはあらかじめ設定したGP2040-CEを書き込んでいます。以下は、GP2040-CEのファームウェアを更新した場合や、設定を変更したい場合に参照してください。
+
+GP2040にはWeb Configuratorがあります。Web Configuratorを起動するには、以下のように操作します。
+
+- GP2040インストール直後: R3キー（IO17）を押しながらRESETを押す
+- SparrowG21用の設定を適用後: S2キーを押しながらRESETを押す
+
+その後、ブラウザにて [http://192.168.7.1](http://192.168.7.1)にアクセスすると開けます。
+
+#### Pin Mapping
+
+各スイッチと繋がるピンの設定です。
+
+ヘッダーの「Configuration」から「Pin Mapping」を開いてください。
+
+それぞれのピンを以下のように設定してください。設定後、Saveを押してください。
+
+| GP2040   | Pin |
+| -------- | --- |
+| Up       | 7   |
+| Down     | 5   |
+| Left     | 2   |
+| Right    | 6   |
+| B1       | 14  |
+| B2       | 16  |
+| B3       | 13  |
+| B4       | 15  |
+| L1       | 21  |
+| R1       | 19  |
+| L2       | 22  |
+| R2       | 20  |
+| S1       | 23  |
+| S2       | 3   |
+| L3       | 17  |
+| R3       | 18  |
+| A1       | 8   |
+| A2       | 11  |
+| Function | 12  |
+
+![](./img/g21/gp2040-pin-mapping.png)
+
+#### LED Configuration
+
+各スイッチのLEDの設定です。
+
+ヘッダーの「Configuration」から「LED Configuration」を開いてください。
+
+以下を設定します。設定後、Saveを押してください。
+
+| Setting Group Name    | Setting Name    | Value           |
+| --------------------- | --------------- | --------------- |
+| RGB LED Configuration | Data Pin        | 24              |
+|                       | LED Format      | RGB             |
+|                       | LED Layout      | 8-Button Layout |
+|                       | LEDs Per Button | 1               |
+
+![](./img/g21/gp2040-led-configuration.png)
+
+#### Display Configuration
+
+中央のOLEDの設定です。
+
+ヘッダーの「Configuration」から「Display Configuration」を開いてください。
+
+以下を設定します。設定後、Saveを押してください。
+
+| Setting Name   | Value    |
+| -------------- | -------- |
+| Enabled        | Enabled  |
+| I2C Block      | i2c0     |
+| SDA Pin        | 0        |
+| SCL Pin        | 1        |
+| I2C Address    | 0x3C     |
+| I2C Speed      | 400000   |
+| Flip Display   | None     |
+| Invert Display | Disabled |
+
+![](./img/g21/gp2040-display-configuration.png)
+
+#### On-Board LED Configuration
+
+SparrowG21のロゴの右側のLEDの設定です。
+
+ヘッダーの「Configuration」から「Add-Ons Configuration」を開いてください（以降の設定はすべてAdd-Ons Configurationです）。
+
+「On-Board LED COnfiguration」と書かれたパネルの「Enabled」をオンにしてください。LED Modeはお好みのものを設定してください。設定後、最下部のSaveを押してください。
+
+![](./img/g21/gp2040-onboard-led-configuration.png)
+
+#### Analog
+
+2つのジョイスティックの設定です。
+
+ヘッダーの「Configuration」から「Add-Ons Configuration」を開いてください。
+
+「Analog」と書かれたパネルの「Enabled」をオンにして、設定項目に以下の設定をしてください。設定後、最下部のSaveを押してください。
+
+| Setting Name          | Value        |
+| --------------------- | ------------ |
+| Analog Stick 1 X Pin  | 26           |
+| Analog Stick 1 Y Pin  | 27           |
+| Analog Stick 1 Mode   | Left Analog  |
+| Analog Stick 1 Invert | None         |
+| Analog Stick 2 X Pin  | 28           |
+| Analog Stick 2 Y Pin  | 29           |
+| Analog Stick 2 Mode   | Right Analog |
+| Analog Stick 2 Invert | None         |
+| Deadzone Size         | 5            |
+
+![](./img/g21/gp2040-analog.png)
+
+#### Turbo
+
+連射機能の設定です。
+
+ヘッダーの「Configuration」から「Add-Ons Configuration」を開いてください。
+
+「Turbo」と書かれたパネルの「Enabled」をオンにして、設定項目に以下の設定をしてください。設定後、最下部のSaveを押してください。
+
+| Setting Name                 | Value    |
+| ---------------------------- | -------- |
+| Turbo Pin                    | 9        |
+| Turbo Pin LED                | 10       |
+| Turbo Shot Count（連射速度） | お好みで |
+| Turbo Dial                   | none     |
+
+#### Extra Button Configuration
+
+追加ボタン（Down、RIGHT、S2ボタンに挟まれたEXTRAボタン）の設定です。任意のボタンを左手にも割り当てることができます。
+
+ジャンプアクションゲームでDownキーを割り当て、従来のDown（IO5）にUp、従来のUp（IO7）にB1を割り当てたりして、左手親指でジャンプする操作を想定しています。
+
+ヘッダーの「Configuration」から「Add-Ons Configuration」を開いてください。
+
+「Extra Button Configuration」と書かれたパネルの「Enabled」をオンにして、設定項目に以下の設定をしてください。設定後、最下部のSaveを押してください。
+
+| Setting Name | Value |
+| Extra Button Pin | 4 |
+| Extra Button（機能させるキー）| Downなどお好みで |
+
+## トラブルシューティング
+
+こちらのページを確認ください。
+
+> Trouble Shooting Guide
+>
+> [./truble_shooting_guide.md](./truble_shooting_guide.md)

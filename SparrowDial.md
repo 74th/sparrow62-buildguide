@@ -45,9 +45,9 @@
 - マイコン RP2040 x1
 - マイコンプログラム用フラッシュ W25Q32JVS x1
 - RP2040 の動作に必要な受動部品（コンデンサ、抵抗、水晶発振器）
+- 6x6mm SMD タクタイルスイッチ（RP2040 RESET、BOOTSEL用） x2
 - 電源保護用理想ダイオード CH213K x1
 - USB Type-C コネクタ x1
-- 表面実装 6x6mm タクタイルスイッチ（RESET/BOOTSEL用） x2
 
 ## キットの組み立てに必要なもの
 
@@ -320,24 +320,11 @@ M5StackCore2、M5Dialにno I2C Connectionと書かれている場合、I2C通信
 
 M5StackCore2/M5Dialを操作し、マウスカーソルが動作することを確認してください。
 
-QMK Configuratorのテスト画面を呼び出します。この画面では、キー入力に対して、どのキーが押されたのかを表示します。
+各キーが動作することをRemapのTest Matrix modeを使って確認して下さい。
 
-> QMK Configurator
+> RemapのTest Matrix modeを使ったキーマトリックスのテスト方法
 >
-> https://config.qmk.fm/#/test
-
-スイッチソケットの2箇所の金属部をジャンパ線や、ピンセットなどをあてたり、実際にスイッチを差し込んで押し込み、通電させます。すると、キースイッチが動作していれば、キー入力として反応します。キー入力として認識されない場合には、そのキーのダイオード、スイッチソケットの実装をやり直します。
-
-SparrowDialの初期キーマップは以下のようになっています。
-
-![](img/dial/sparrowdial_default_keymap1.png)
-
-- MouseBtn1は左クリックです。QMK Configuratorでは反応しませんので、マウスカーソルをクリック可能なところに移動させて確認してください。
-- MO(1) はレイヤー変更キーです。RGBLEDの色が変われば正常です。
-
-縦一列や、横一列反応しない場合には、RP2040のピンの実装が外れてしまった可能性があります。フラックスを塗った上で、RP2040の対応するピンにはんだごてを当てて、再実装します。どのキーがどのピンに対応しているかは、回路図を参照ください。
-
-また、このキーボードはレイアウト変更時に、RGBLEDの色が変わるようになっています。初期状態でLEDが点灯することを確認してください。
+> [./remap_test_matrix_mode.md](./remap_test_matrix_mode.md)
 
 ### ケースへの組み込み
 
@@ -552,6 +539,8 @@ qmk compile -kb sparrowdial -km <keymap_name>
 
 ## トラブルシューティング
 
-### no I2C Connectionと出続ける
+こちらのページを確認ください。
 
-時折、no I2C Connectionになったまま接続が確立されないことがあります。その場合には、一度キーボードのUSBを抜き差ししてみてください。キーボードとM5StackCore2、M5Dialが同時にリセットされます。
+> Trouble Shooting Guide
+>
+> [./truble_shooting_guide.md](./truble_shooting_guide.md)
