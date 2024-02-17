@@ -222,7 +222,7 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 [Sparrow Series Keyboards ESP32 Upload tool](https://74th.github.io/sparrow62-buildguide/)を用いる場合、特にツールのインストールがなく手軽に行うことができます。
 既に[esptool](https://github.com/espressif/esptool/)、[espflash](https://github.com/esp-rs/espflash)を導入しているのであれば、そのツール経由の方が煩雑ではないかもしれません。
-このファームウェアはPlatformIO（VS Codeを用いた汎用ファームウェア開発環境）を用いて、Arduinoフレームワークで開発するようになっております。M5DialにはWiFi経由でアップロードする方法もあり、それを利用する場合にはWiFiのSSIDとパスワードを追加する必要があるため、自前でのビルドが必要になります。
+このファームウェアはPlatformIO（VS Codeを用いた汎用ファームウェア開発環境）を用いて、Arduinoフレームワークで開発するようになっております。M5Dial Simple Pointer FirmwareにはWiFi経由でアップロードする方法もあり、それを利用する場合にはWiFiのSSIDとパスワードを追加する必要があるため、自前でのビルドが必要になります。
 
 M5StackCore2、M5DialはUSBで接続します。M5Dialについてはケースに組み込む前にファームウェアをアップロードする必要があります。
 
@@ -277,7 +277,7 @@ M5Dialの場合には、src/ssid.h.templateをsrc/ssid.hとして複製し、コ
 
 VS Code上でコマンド「PlatformIO: Upload」を実行すると、USB経由でアップロードすることができます。
 
-M5Dialについては、WiFi経由でファームウェアをアップロードする機能があります。これは、ボタン（上面のオレンジ色のリングのM5と書かれた部分）を押しながら電源入れることで、WiFiへ接続し、ファームウェアのアップロードを受け付けるモードになります。WiFiへの接続に成功すると、画面上にIPアドレスが書き込まれます。この状態で、PlatformIOの設定ファイル`platfomio.ini`の最下部に以下の記述を追加すると、コマンド「PlatformIO: Upload」を行うと、書き込めるようになります。なお、`image=@`のパスの記述はMacOS、Linuxの場合の記述例になります。Windowsでは適宜変更を行ってください。
+M5Dial Simple Pointer Firmwareについては、WiFi経由でファームウェアをアップロードする機能があります。これは、ボタン（上面のオレンジ色のリングのM5と書かれた部分）を押しながら電源入れることで、WiFiへ接続し、ファームウェアのアップロードを受け付けるモードになります。WiFiへの接続に成功すると、画面上にIPアドレスが書き込まれます。この状態で、PlatformIOの設定ファイル`platfomio.ini`の最下部に以下の記述を追加すると、コマンド「PlatformIO: Upload」を行うと、書き込めるようになります。なお、`image=@`のパスの記述はMacOS、Linuxの場合の記述例になります。Windowsでは適宜変更を行ってください。
 
 ```ini
 # platformio.ini
@@ -298,7 +298,7 @@ M5StackCore2のM-Bus PCB（底面のCore2と書かれた白いPCB）を外しま
 
 M5StackCore2の底面の4つのネジを外し、ボトムケースを取り外します。ボトムケース部分には、バッテリーが搭載されており、本体PCBとソケットとケーブルで接続されています。このソケットを外して下さい。
 
-![](./img/dial/m5stackcore-remove-bottom.jpg)
+![](./img/dial/m5stackcore2-remove-bottom.jpg)
 
 M-BusにM5StackCore2 PortA 底面引き出しモジュールを写真の向きで接続します。
 
