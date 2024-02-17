@@ -128,6 +128,8 @@ TODO: 写真
 Solder the diode, paying attention to the orientation of the diode.
 🇯🇵 ダイオードを向きを気をつけて、はんだ付けします。
 
+![](./img/common/diode_direction.svg)
+
 The video by @Salicylic_acid3 is very good, so I think you can check here.
 🇯🇵 実装手順については、サリチル酸さんのツイートの動画が非常に良くできているため、こちらを確認いただくと良いと思います。
 
@@ -180,6 +182,25 @@ We recommend soldering the socket as shown in the video. With the latest Kailh s
 3. ソケットの外側から、はんだごてを当ててはんだを流し込みます
 4. はんだを外してから、ピンセットなどでソケットを抑えます
 5. はんだごてを抜きます
+
+### RGBLED ライトを実装する
+
+RGBLED SK6812MINI-E の方向を注意してください。
+
+RGBLED の実装は、PCB 裏面に裏向きにセットして実装します。
+PCB 表向きから見ると、発光面が見える形になります。
+
+また、LED の 4 本の足の 1 つ GND には切れ込みが入っています。切れ込みとシルクの斜め線を合わせるようにしてください。
+
+![](./img/common/sk6812-mini-e.svg)
+
+向きを確認できたら、一方の足をマスキングテープで留めます。
+
+![](./img/v2/led_2.jpg)
+
+すべての足を実装します。
+
+![](./img/v2/led_3.jpg)
 
 ### Soldering Grove(HY2.0) sockets / Grove(HY2.0) ソケットの実装
 
@@ -291,13 +312,13 @@ M5Dialの裏面のPortAのGroveソケット（赤色）と、SparrowDial PCBのI
 
 M5DialのUSBと、SparrowDial PCBのPower Groveと書かれたGroveソケットを、Grove USBドーターケーブルで接続してください。
 
-#### キーの確認
+#### 動作の確認
 
 PCBをUSBに接続します。出荷時点でキーボードとして動作するファームウェアが書き込まれています。
 
 M5StackCore2、M5Dialにno I2C Connectionと書かれている場合、I2C通信に失敗していることがあります。ソケットの実装を見直してください。また、ファームウェア書き込み後にもこの表示が消えない場合には、一度USBを抜き差しして電源を入れ直してみてください（USBの抜き差しで、RP2040とM5StackCore2/M5Dialの両方の再起動を同じタイミングで行えます）。
 
-M5StackCore2/M5Dialを操作し、マウスカーソルが動作することを各員してください。
+M5StackCore2/M5Dialを操作し、マウスカーソルが動作することを確認してください。
 
 QMK Configuratorのテスト画面を呼び出します。この画面では、キー入力に対して、どのキーが押されたのかを表示します。
 
@@ -305,68 +326,25 @@ QMK Configuratorのテスト画面を呼び出します。この画面では、�
 >
 > https://config.qmk.fm/#/test
 
-スイッチソケットの2箇所の金属部をジャンパ線や、ピンセットなどをあてて、通電させます。すると、キースイッチが動作していれば、キー入力として反応します。キー入力として認識されない場合には、そのキーのダイオード、スイッチソケットの実装をやり直します。
+スイッチソケットの2箇所の金属部をジャンパ線や、ピンセットなどをあてたり、実際にスイッチを差し込んで押し込み、通電させます。すると、キースイッチが動作していれば、キー入力として反応します。キー入力として認識されない場合には、そのキーのダイオード、スイッチソケットの実装をやり直します。
+
+SparrowDialの初期キーマップは以下のようになっています。
+
+![](img/dial/sparrowdial_default_keymap1.png)
+
+- MouseBtn1は左クリックです。QMK Configuratorでは反応しませんので、マウスカーソルをクリック可能なところに移動させて確認してください。
+- MO(1) はレイヤー変更キーです。RGBLEDの色が変われば正常です。
 
 縦一列や、横一列反応しない場合には、RP2040のピンの実装が外れてしまった可能性があります。フラックスを塗った上で、RP2040の対応するピンにはんだごてを当てて、再実装します。どのキーがどのピンに対応しているかは、回路図を参照ください。
 
-また、このキーボードはレイアウト変更時に、LEDの色が変わるようになっています。初期状態でLEDが点灯することを確認してください。
-
-### SparrowDial PCB上のRP2040へのファームウェアの書き込み
-
-始めからVIA、Remap用のファームウェアが書き込まれた状態になっています。
-
-VIA、Remapを利用しない利用しない場合は、別途ファームウェアを用意してください。RP2040はBOOTSELボタンを押しながらRESETを行うと、USBマスストレージデバイスがPCに認識され、その中にuf2ファイルをドラッグドロップすることで、ファームウェアを書き込むことができます。
-
-#### VIA、Remapを利用する場合
-
-VIA、RemapはWebサイトや、ツール上からキーマップの書き換えができるサイトです。VIA対応のファームウェアをRP2040にアップロードすると、利用できるようになります。
-
-- Remap https://remap-keys.app/
-- VIA https://caniusevia.com/
-
-ファームウェアは以下からダウンロードできます。
-
-- VIA、Remap 用ファームウェア [firmware/sparrowdial_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrowdial_via.uf2)
-
-#### QMK Firmwareでファームウェアをビルドする場合
-
-現在、SparrowDialキーボードはQMK Firmwareの本体には取り込まれていません。下記リポジトリに作成したファームウェアのコードがあります。
-
-https://github.com/74th/qmk_firmware_sparrow_keyboard
-
-QMK Firmwareの環境のセットアップについては[公式のドキュメント https://docs.qmk.fm/#/newbs_getting_started](https://docs.qmk.fm/#/newbs_getting_started)を確認ください。[日本語のドキュメント https://docs.qmk.fm/#/ja/newbs_getting_started](https://docs.qmk.fm/#/ja/newbs_getting_started)もあります
-
-まず、リポジトリをチェックアウトしてください。QMK Firmwareのフォークとなっているため、QMK Firmwareのセットアップでチェックアウトされたgitリポジトリのremoteとして登録できます。
-
-```sh
-cd ~/qmk_firmware
-git remote add sparrow https://github.com/74th/qmk_firmware_sparrow_keyboard.git
-git fetch sparrow
-git checkout sparrow
-```
-
-このリポジトリ上では、キーボード名`sparrowdial`として登録されています。新しいキーマップを作成するには以下を実行します。
-
-```
-qmk new-keymap -kb sparrowdial -km <keymap_name>
-```
-
-`~/qmk_firmware/keyboards/sparrowdial/keymaps/<keymap_name>`というフォルダに作成されるため、キーマップを作成します。
-
-キーマップ作成後は、以下のコマンドでコンパイルします。
-
-```
-qmk compile -kb sparrowdial -km <keymap_name>
-```
-
-すると、`~/qmk_firmware/.build/sparrowdial_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
+また、このキーボードはレイアウト変更時に、RGBLEDの色が変わるようになっています。初期状態でLEDが点灯することを確認してください。
 
 ### ケースへの組み込み
 
 ケースへの組み込みは以下の手順で行います。
 
 1. ケース底面の加工（まだの場合）
-2. SparrowDial PCBへGroveケーブルを接続
+2. SparrowDial PCBへHY2.0(Grove)ケーブルを接続
 3. （M5Dialを用いる場合のみ）ケース底面のネジ穴に対して、2mm中空スペーサーを置く
 4. SparrowDial PCBをケースに配置する
 5. SparrowDial PCBとケースのネジ止め
@@ -474,15 +452,17 @@ M5Dialは結構干渉し、十分に刺さらない場合があります。そ�
 
 #### 9. キーの動作テスト
 
-USBをPCに接続し、QMK Configuratorを開き、キーをタイプしてすべてのキーが動作するかを確認します。
+USBをPCに接続し、QMK Configuratorを開き、キーをタイプしてすべてのキーが動作するかを確認します。詳細は前述の「ケースへの組み込み前の実装確認」を確認ください。
 
-動作しないキーがある場合、一度すべてをケースから取り外し、該当キーのダイオードとスイッチソケットの実装をやり直します。取り外す必要があるため、一度すべてのキーを挿してみることをお勧めします。
+動作しないキーがある場合、一度すべてをケースから取り外し、該当キーのダイオードとスイッチソケットの実装をやり直します。
 
 #### 10. キーキャップの差し込み
 
 すべてのキーが動作することを確認できたならば、キーキャップを付けて完成です！
 
-## M5StackCore2の操作について
+## トラックパッドモジュールの操作方法
+
+### M5StackCore2の場合
 
 以下の操作となっております。
 
@@ -500,7 +480,7 @@ https://www.youtube.com/watch?v=8jPP54jqswg
 
 その場合には、キーに左クリック、右クリックを設定してみてください。また、ユーザキー0`SCROLL`（REMAP上の`USER 0`）には押下中のスライドでスクロールする機能が含まれています。初期ファームウェアでは有効になっていませんが、試してみてください。
 
-## M5Dialの操作について
+### M5Dialの場合
 
 以下の操作となっております。
 
@@ -513,6 +493,62 @@ https://www.youtube.com/watch?v=8jPP54jqswg
 指がタッチパネルに接触中にボタンを押してその状態でスライドすることで、ドラッグを実現するように設計しています。しかし、操作が若干難しいです。
 
 その場合には、ーに左クリックを設定してみてください。
+
+## キーマップの変更、RP2040ファームウェアの更新
+
+キーマップの変更には、2種類の方法があります。
+
+- VIA、Remapを用いる
+- QMK Firmwareでファームウェアをビルドする
+- RP2040に対応したファームウェアを作成する
+
+始めからVIA、Remap用のファームウェアが書き込まれた状態になっています。Remapを用いる場合には特にこの工程をする必要はありません。
+
+VIA、Remapを利用しない利用しない場合は、別途ファームウェアを用意してください。RP2040はBOOTSELボタンを押しながらRESETを行うと、USBマスストレージデバイスがPCに認識され、その中にuf2ファイルをドラッグドロップすることで、ファームウェアを書き込むことができます。
+
+### VIA、Remapを利用する場合
+
+VIA、RemapはWebサイトや、ツール上からキーマップの書き換えができるサイトです。VIA対応のファームウェアをRP2040にアップロードすると、利用できるようになります。最初からRemap用のファームウェアが書き込まれた状態で出荷しています。
+
+- Remap https://remap-keys.app/
+- VIA https://caniusevia.com/
+
+ファームウェアは以下からダウンロードできます。
+
+- VIA、Remap 用ファームウェア [firmware/sparrowdial_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrowdial_via.uf2)
+
+### QMK Firmwareでファームウェアをビルドする場合
+
+現在、SparrowDialキーボードはQMK Firmwareの本体には取り込まれていません。下記リポジトリに作成したファームウェアのコードがあります。
+
+https://github.com/74th/qmk_firmware_sparrow_keyboard
+
+QMK Firmwareの環境のセットアップについては[公式のドキュメント https://docs.qmk.fm/#/newbs_getting_started](https://docs.qmk.fm/#/newbs_getting_started)を確認ください。[日本語のドキュメント https://docs.qmk.fm/#/ja/newbs_getting_started](https://docs.qmk.fm/#/ja/newbs_getting_started)もあります
+
+まず、リポジトリをチェックアウトしてください。QMK Firmwareのフォークとなっているため、QMK Firmwareのセットアップでチェックアウトされたgitリポジトリのremoteとして登録できます。
+
+```sh
+cd ~/qmk_firmware
+git remote add sparrow https://github.com/74th/qmk_firmware_sparrow_keyboard.git
+git fetch sparrow
+git checkout sparrow
+```
+
+このリポジトリ上では、キーボード名`sparrowdial`として登録されています。新しいキーマップを作成するには以下を実行します。
+
+```
+qmk new-keymap -kb sparrowdial -km <keymap_name>
+```
+
+`~/qmk_firmware/keyboards/sparrowdial/keymaps/<keymap_name>`というフォルダに作成されるため、キーマップを作成します。
+
+キーマップ作成後は、以下のコマンドでコンパイルします。
+
+```
+qmk compile -kb sparrowdial -km <keymap_name>
+```
+
+すると、`~/qmk_firmware/.build/sparrowdial_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
 
 ## トラブルシューティング
 
