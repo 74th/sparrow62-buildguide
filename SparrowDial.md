@@ -38,7 +38,8 @@
 
 - SparrowDial Top Plate (FR4 PCB) x1
 - M2 2mm スペーサー x6 : ケースとPCBの間のスペーサー
-- M2 8mm 黒 平ネジ x6 : ケースとPCBの間のネジ止め
+- M2 6mm 黒 平ネジ x5 : ケースとPCBの間のネジ止め（M5Dialを使う場合）
+- M2 4mm 黒 平ネジ x5 : ケースとPCBの間のネジ止め（M5Stack Core2を使う場合）
 - M3 10mm 鍋ネジ x2 : M5StackCore2とトッププレートのネジ止め
 - M3 15mm 鍋ネジ x2 : M5StackCore2とトッププレートのネジ止め
 
@@ -375,7 +376,7 @@ M5StackCore2を用いる場合、若干ダイオードがケースに干渉し�
 
 #### 5. SparrowDial PCBとケースのネジ止め
 
-付属のネジを用いて、M2 8mmネジで6箇所を留めます。M5Dialを用いる場合、中空スペーサーを落とさない様にしてください。
+付属のネジを用いて、M2 6mmネジで6箇所を留めます。M5Dialを用いる場合、中空スペーサーを落とさない様にしてください。また、M5StackCore2を使う場合は、1箇所のみM2 4mmネジを使ってください。
 
 ![](./img/dial/stack-pcb-skrew.jpg)
 

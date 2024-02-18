@@ -24,8 +24,7 @@
 - RGBLED SK6812-MINI-E x1
 - HY2.0-4P(Grove) SMD ソケット x1
 - M2 4mm スペーサー x4 : StickPointV、PCB間
-- M2 8mm 黒 平ネジ x7 : ケースとPCBの間のネジ止め
-- M2 4mm 黒 平ネジ x8 : StickPointVとPCBのスペーサーとのネジ止め
+- M2 4mm 黒 平ネジ x14 : ケースとPCBの間のネジ止め、StickPointVとPCBのスペーサーとのネジ止め
 
 ### PCB に実装済みの部品
 
@@ -149,7 +148,7 @@ Grove(HY2.0)ソケットを実装します。
 
 まず、1本のピンのみを実装し、はんだごてを更にあてながらPCBのシルクの位置になるように調整します。その後、残りのピンも実装します。ケーブルを差し込む面にも下部に固定用の金属部分があるため、こちらも忘れずに実装します。
 
-TODO: 写真
+![](img/60c/grove-port.jpg)
 
 ### ケースへの組み込み前の実装確認
 
@@ -161,26 +160,11 @@ USBをPCに接続します。出荷時点でキーボードとして動作する
 
 StickPointVを操作し、マウスカーソルが動作することを確認してください。
 
-QMK Configuratorのテスト画面を呼び出します。この画面では、キー入力に対して、どのキーが押されたのかを表示します。
+各キーが動作することをRemapのTest Matrix modeを使って確認して下さい。
 
-> QMK Configurator
+> RemapのTest Matrix modeを使ったキーマトリックスのテスト方法
 >
-> https://config.qmk.fm/#/test
-
-スイッチソケットの2箇所の金属部をジャンパ線や、ピンセットなどをあてたり、実際にスイッチを差し込んで押し込み、通電させます。すると、キースイッチが動作していれば、キー入力として反応します。キー入力として認識されない場合には、そのキーのダイオード、スイッチソケットの実装をやり直します。
-
-SparrowDialの初期キーマップは以下のようになっています。
-
-![](img/60c/sparrow60c_default_keymap.png)
-
-- MouseBtn1は左クリックです。QMK Configuratorでは反応しませんので、マウスカーソルをクリック可能なところに移動させて確認してください。
-- MouseBtn2は右クリックです。
-- User 0はスクロールボタンです。User 0を押しながら、StickPointVを上下に入力するとスクロールとして動作します。マウスカーソルをスクロール可能な状態にしてから確認してください。
-- MO(1) はレイヤー変更キーです。RGBLEDの色が変われば正常です。
-
-縦一列や、横一列反応しない場合には、RP2040のピンの実装が外れてしまった可能性があります。フラックスを塗った上で、RP2040の対応するピンにはんだごてを当てて、再実装します。どのキーがどのピンに対応しているかは、回路図を参照ください。
-
-また、このキーボードはレイアウト変更時に、LEDの色が変わるようになっています。初期状態でLEDが点灯することを確認してください。
+> [./remap_test_matrix_mode.md](./remap_test_matrix_mode.md)
 
 ### ケースへの組み込み
 
@@ -190,28 +174,27 @@ SparrowDialの初期キーマップは以下のようになっています。
 2. Sparrow60C PCBをケースに配置する
 3. Sparrow60C PCBとケースのネジ止め
 4. Sparrow60C Top PlateへのStickPointVの組み込み
-5. Sparrow60C Top Plateを重ねる
-6. スイッチの差し込み
-7. キーの動作テスト
-8. キーキャップの差し込み
+5. スイッチの差し込み
+6. キーの動作テスト
+7. キーキャップの差し込み
 
 #### 1. Sparrow60C PCBへHY2.0(Grove)ケーブルの接続
 
 先にPCBにHY2.0(Grove)ケーブルを差し込み、中央のホールから抜き出します。
 
-TODO: 写真
+![](img/60c/connect-grove-pcb.jpg)
 
 #### 2. Sparrow60C PCBをケースに配置する
 
 ケースにPCBに重ねます。
 
-TODO: 写真
+![](img/60c/mount-pcb.jpg)
 
 #### 3. Sparrow60C PCBとケースのネジ止め
 
-M2 8mm ネジで固定します。
+M2 4mm ネジで固定します。
 
-TODO: 写真
+![](img/60c/mount-pcb2.jpg)
 
 #### 4. Sparrow60C Top PlateへのStickPointVの組み込み
 
@@ -219,29 +202,31 @@ Sparrow60C Top Plateに、StickPointVを中央の穴に、図のようにスペ�
 
 ![](img/60c/mount_stickpointv.svg)
 
-写真のようにしてください。
+まず、スペーサーをトッププレートに取り付けます。
 
-TODO: 写真
+![](img/60c/spacer.jpg)
 
-StickPointVモジュールとHY2.0(Grove)ケーブルを接続します。
+Sparrow60C Top Plateを、ケースに重ねます。Sparrow60Cは、PCBとTop Plate間の固定は、スイッチのみで行います。そして、StickPointVモジュールとHY2.0(Grove)ケーブルを接続します。
 
-TODO: 写真
+![](img/60c/connect-stickpointv.jpg)
 
-#### 5. Sparrow60C Top Plateをケースに設置する
+トッププレートにStickPointVをM2 4mmネジで固定します。方向を間違えないように気をつけてください。
 
-Sparrow60C Top Plateを、ケースに重ねます。Sparrow60Cは、PCBとTop Plate間の固定は、スイッチのみで行います。
+![](img/60c/mount-stickpointv.jpg)
 
-TODO: 写真
+#### 5. スイッチの差し込み
 
-#### 6. スイッチの差し込み
+Sparrow60C Top Plateの穴から、Sparrow60C PCBに向かってスイッチを差し込みます。GH60互換ケースを利用している都合、以下のスイッチの一部は異なる向きを向いています。差し込み時に注意してください。
 
-Sparrow60C Top Plateの穴から、Sparrow60C PCBに向かってスイッチを差し込みます。MX互換スイッチには、Top Plateを挟み込む溝が付いています。この溝にTop Plateが挟まれるようにTop Plateを持ち上げてください。
+![](img/60c/oriented_switch.jpg)
+
+MX互換スイッチには、Top Plateを挟み込む溝が付いています。この溝にTop Plateが挟まれるようにTop Plateを持ち上げてください。
 
 この時、ケースの外側のスイッチから順に接続していくと、高さをキープしやすくなります。
 
-TODO: 写真
+![](img/60c/mount-switch.jpg)
 
-#### 7. キーの動作テスト
+#### 6. キーの動作テスト
 
 各キーが動作することをRemapのTest Matrix modeを使って確認して下さい。
 
@@ -249,7 +234,7 @@ TODO: 写真
 >
 > [./remap_test_matrix_mode.md](./remap_test_matrix_mode.md)
 
-#### 8. キーキャップの差し込み
+#### 7. キーキャップの差し込み
 
 すべてのキーが動作することを確認できたならば、キーキャップを付けて完成です！
 
