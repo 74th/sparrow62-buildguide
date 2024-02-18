@@ -21,11 +21,10 @@
 - OLED x1
 - ジョイスティックモジュール B10K x2
 - SH1.0-4P(Qwiic) ケーブル x1
-- ダイオード 1N4148W x60
-- RGBLED SK6812-MINI-E x12
 - SH1.0-4P(Qwiic) SMD ソケット x1
-- M2 2mm スペーサー x4 : StickPointV、PCB間
-- M2 8mm 黒 平ネジ x7 : ケースとPCBの間のネジ止め
+- RGBLED SK6812-MINI-E x12
+- M2 2mm スペーサー x6 : ケースとPCBの間の距離調整
+- M2 6mm 黒 平ネジ x6 : ケースとPCBの間のネジ止め
 
 ### PCBに実装済みの部品
 
@@ -110,7 +109,7 @@ We recommend soldering the socket as shown in the video.
 
 表面から、Kailh Chocスイッチを差し込み、裏面から実装します。かならず、写真のようにLEDのランドが見えている面ではんだ付けをするようにしてください。
 
-TODO: 写真
+![](./img/g21/solder-choc.jpg)
 
 ### RGBLED の実装
 
@@ -139,7 +138,7 @@ SH1.0(Qwiic)ソケットを実装します。
 
 まず、1本のピンのみを実装し、はんだごてを更にあてながらPCBのシルクの位置になるように調整します。その後、残りのピンも実装します。ケーブルを差し込む面にも下部に固定用の金属部分があるため、こちらも忘れずに実装します。
 
-TODO:
+![](./img/g21/solder-qwiic-socket.jpg)
 
 ### OLEDの実装
 
@@ -151,13 +150,65 @@ OLEDにはVCCとGNDの位置の違いで、2種類あり、それに応じてジ
 
 実装後は以下のようになります。
 
-TODO: 写真
+![](img/g21/soldered-oled.jpg)
 
 ### ジョイスティックの実装
 
 表面からスルーホールに差し込みます。まず、足を1本だけ実装し、奥まで刺さっていることを確認してから、残りの足を実装してください。足の実装後、余分な足の部分をニッパ出切り取ります。
 
-TODO: 写真
+![](./img/g21/soldered-joystick.jpg)
+
+### ケースへの組み込み
+
+ケースへの組み込みは以下の手順で行います。Kailh Chocスイッチを使う場合、Top Plateは不要です。
+
+1. ケース底面のネジ穴に対して、2mm中空スペーサーを置く
+2. SparrowG21 PCBをケースに配置する
+3. SparrowG21 PCBとケースのネジ止め
+4. （MX互換スイッチを使う場合のみ）SparrowG21 Top PlateとSH1.0(Qwiic)ケーブルを接続し、ケースに配置する
+5. （MX互換スイッチを使う場合のみ）スイッチの差し込み
+6. キーキャップの差し込み
+7. スティックキャップの差し込み
+
+#### 1. ケース底面のネジ穴に対して、2mm中空スペーサーを置く
+
+ケース底面の、各ネジ穴のところに、M2 2mm中空スペーサーを置きます。
+
+![](./img/g21/mount-spacer.jpg)
+
+#### 2. SparrowG21 PCBをケースに配置する
+
+SparrowG21 PCBを載せます。ケースの上の中空スペーサーを落とさないように気をつけてください。
+
+![](./img/g21/mount-pcb.jpg)
+
+#### 3. SparrowG21 PCBとケースのネジ止め
+
+付属のネジを用いて、M2 6mmネジで6箇所を留めます。中空スペーサーを落とさない様にしてください。
+
+![](./img/g21/add-skrew.jpg)
+
+#### 4. （MX互換スイッチを使う場合のみ）SparrowG21 Top PlateとSH1.0(Qwiic)ケーブルを接続し、ケースに配置する
+
+SparrowG21 PCBとTop PlateのSH1.0(Qwiic)ポートを、SH1.0(Qwiic)ケーブルで接続してください。
+
+![](./img/g21/connect-qwiic.jpg)
+
+#### 5. （MX互換スイッチを使う場合のみ）スイッチの差し込み
+
+Top Plateの穴から、PCBに向かってスイッチを差し込みます。MX互換スイッチには、Top Plateを挟み込む溝が付いています。この溝にTop Plateが挟まれるようにTop Plateを持ち上げてください。
+
+![](./img/g21/insert-switch.jpg)
+
+この時、左右外側のスイッチから、順に固定していくと、高さをキープしやすくなります。
+
+#### 6. キーキャップの差し込み
+
+キースイッチへ、キーキャップを付けてください。
+
+#### 7. スティックキャップの差し込み
+
+ジョイスティックへ、キャップを付けてください。これで完成です！
 
 ### 実装後の確認
 
@@ -184,37 +235,105 @@ GP2040にはWeb Configuratorがあります。Web Configuratorを起動するに
 
 その後、ブラウザにて [http://192.168.7.1](http://192.168.7.1)にアクセスすると開けます。
 
+また、設定をリストアしたファイルは以下にあります。こちらを読み込ませても設定が完了します。
+
+- [GP2040-ce v0.7.5 - SparrowG21 v1.1.0: gp2040ce-v0.7.5_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.5_sparrowg21.gp2040)
+- [GP2040-ce v0.7.7 - SparrowG21 v1.1.0: gp2040ce-v0.7.7_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.7_sparrowg21.gp2040)
+
+#### IO（ピン）ごとの機能リスト
+
+| IO       | Role                    |
+| -------- | ----------------------- |
+| 0        | OLED I2C0 SDA           |
+| 1        | OLED I2C0 SCL           |
+| 2        | HAT Left Button         |
+| 3        | S2 Button               |
+| 4        | Extra (重複割り当て用)  |
+| 5        | HAT Down Button         |
+| 6        | HAT Right Button        |
+| 7        | HAT UP Button           |
+| 8        | A1 Button               |
+| 9        | Turbo Button            |
+| 10       | Turbo LED (Active Low)  |
+| 11       | A2 Button               |
+| 12       | Function Button         |
+| 13       | B3 Button               |
+| 14       | B1 Button               |
+| 15       | B4 Button               |
+| 16       | B2 Button               |
+| 17       | R3 Button               |
+| 18       | L3 Button               |
+| 19       | R1 Button               |
+| 20       | R2 Button               |
+| 21       | L1 Button               |
+| 22       | L2 Button               |
+| 23       | S1 Button               |
+| 24       | RGB LED Data            |
+| 25       | Board LED (Active High) |
+| 26(ADC0) | Analog1 X               |
+| 27(ADC1) | Analog1 Y               |
+| 28(ADC2) | Analog2 X               |
+| 29(ADC3) | Analog2 Y               |
+
 #### Pin Mapping
 
 各スイッチと繋がるピンの設定です。
 
 ヘッダーの「Configuration」から「Pin Mapping」を開いてください。
 
-それぞれのピンを以下のように設定してください。設定後、Saveを押してください。
+それぞれのピンを以下のように設定してください。v0.7.7では、IOから機能を設定する様に変わりました。
 
-| GP2040   | Pin |
-| -------- | --- |
-| Up       | 7   |
-| Down     | 5   |
-| Left     | 2   |
-| Right    | 6   |
-| B1       | 14  |
-| B2       | 16  |
-| B3       | 13  |
-| B4       | 15  |
-| L1       | 21  |
-| R1       | 19  |
-| L2       | 22  |
-| R2       | 20  |
-| S1       | 23  |
-| S2       | 3   |
-| L3       | 17  |
-| R3       | 18  |
-| A1       | 8   |
-| A2       | 11  |
-| Function | 12  |
+| IO       | Role                                   |
+| -------- | -------------------------------------- |
+| 0        | None/Assigned to addon (OLED I2C0 SDA) |
+| 1        | None/Assigned to addon (OLED I2C0 SCL) |
+| 2        | HAT Left Button                        |
+| 3        | S2 Button                              |
+| 4        | 任意 (重複割り当て用)                  |
+| 5        | HAT Down Button                        |
+| 6        | HAT Right Button                       |
+| 7        | HAT UP Button                          |
+| 8        | A1 Button                              |
+| 9        | Turbo Button                           |
+| 10       | None/Assigned to addon (Turbo LED)     |
+| 11       | A2 Button                              |
+| 12       | Function Button                        |
+| 13       | B3 Button                              |
+| 14       | B1 Button                              |
+| 15       | B4 Button                              |
+| 16       | B2 Button                              |
+| 17       | R3 Button                              |
+| 18       | L3 Button                              |
+| 19       | R1 Button                              |
+| 20       | R2 Button                              |
+| 21       | L1 Button                              |
+| 22       | L2 Button                              |
+| 23       | S1 Button                              |
+| 24       | None/Assigned to addon (RGB LED)       |
+| 25       | None (Board LED)                       |
+| 26(ADC0) | None/Assigned to addon (Analog1 X)     |
+| 27(ADC1) | None/Assigned to addon (Analog1 Y)     |
+| 28(ADC2) | None/Assigned to addon (Analog2 X)     |
+| 29(ADC3) | None/Assigned to addon (Analog2 Y)     |
 
-![](./img/g21/gp2040-pin-mapping.png)
+設定後、Saveを押してください。
+
+![](./img/g21/gp2040-pin-mapping-v0.7.7.png.png)
+
+![v0.7.5のスクリーンショット](./img/gp2040-pin-mapping-v0.7.5.png)
+
+#### Peripheral Mapping
+
+v0.7.7ではOLEDで使用するI2Cのピンの設定はPeripheral Mappingで行います。以下のように設定してください。
+
+| Setting Name             | Value           |
+| ------------------------ | --------------- |
+| I2C &gt; I2C0            | ON              |
+| I2C &gt; I2C0 &gt; SDA   | 0               |
+| I2C &gt; I2C0 &gt; SCL   | 1               |
+| I2C &gt; I2C0 &gt; Speed | Normal - 100000 |
+
+![](./img/g21/gp2040-peripheral-mapping.png.png)
 
 #### LED Configuration
 
@@ -241,16 +360,16 @@ GP2040にはWeb Configuratorがあります。Web Configuratorを起動するに
 
 以下を設定します。設定後、Saveを押してください。
 
-| Setting Name   | Value    |
-| -------------- | -------- |
-| Enabled        | Enabled  |
-| I2C Block      | i2c0     |
-| SDA Pin        | 0        |
-| SCL Pin        | 1        |
-| I2C Address    | 0x3C     |
-| I2C Speed      | 400000   |
-| Flip Display   | None     |
-| Invert Display | Disabled |
+| Setting Name                                    | Value    |
+| ----------------------------------------------- | -------- |
+| Enabled                                         | Enabled  |
+| I2C Block                                       | i2c0     |
+| SDA Pin(v0.7.7以降はPeripheral Mappingで設定)   | 0        |
+| SCL Pin(v0.7.7以降はPeripheral Mappingで設定)   | 1        |
+| I2C Address                                     | 0x3C     |
+| I2C Speed(v0.7.7以降はPeripheral Mappingで設定) | 400000   |
+| Flip Display                                    | None     |
+| Invert Display                                  | Disabled |
 
 ![](./img/g21/gp2040-display-configuration.png)
 
@@ -294,14 +413,17 @@ SparrowG21のロゴの右側のLEDの設定です。
 
 「Turbo」と書かれたパネルの「Enabled」をオンにして、設定項目に以下の設定をしてください。設定後、最下部のSaveを押してください。
 
-| Setting Name                 | Value    |
-| ---------------------------- | -------- |
-| Turbo Pin                    | 9        |
-| Turbo Pin LED                | 10       |
-| Turbo Shot Count（連射速度） | お好みで |
-| Turbo Dial                   | none     |
+| Setting Name                             | Value    |
+| ---------------------------------------- | -------- |
+| Turbo Pin(v0.7.7以降はPin Mappingで設定) | 9        |
+| Turbo Pin LED                            | 10       |
+| Turbo Shot Count（連射速度）             | お好みで |
+| Turbo Dial                               | none     |
 
 #### Extra Button Configuration
+
+> ![!NOTE]
+> この機能はv0.7.7から削除されました。Pin Mappingで、複数のキーに同一のボタンを割当可能になりました。
 
 追加ボタン（Down、RIGHT、S2ボタンに挟まれたEXTRAボタン）の設定です。任意のボタンを左手にも割り当てることができます。
 
@@ -311,9 +433,10 @@ SparrowG21のロゴの右側のLEDの設定です。
 
 「Extra Button Configuration」と書かれたパネルの「Enabled」をオンにして、設定項目に以下の設定をしてください。設定後、最下部のSaveを押してください。
 
-| Setting Name | Value |
-| Extra Button Pin | 4 |
-| Extra Button（機能させるキー）| Downなどお好みで |
+| Setting Name                   | Value            |
+| ------------------------------ | ---------------- |
+| Extra Button Pin               | 4                |
+| Extra Button（機能させるキー） | Downなどお好みで |
 
 ## トラブルシューティング
 
