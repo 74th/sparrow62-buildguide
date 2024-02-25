@@ -1,5 +1,7 @@
 # SparrowTV Build Guide
 
+![](./photos/tv/slide.png)
+
 このビルドガイドには他のキーボードの写真が含まれていますのでご注意ください。
 
 また、作成中に疑問点等質問がありましたら、74th （twitter: [@74th](https://twitter.com/74th) 、email: site@74th.tech 、 本リポジトリの issue）まで問い合わせください。
@@ -307,3 +309,8 @@ ESP32-C3とCH9329はUARTで通信して、USBキーボード、マウスを実�
 CH9329については、拙著『WCHのICを活用する電子工作の本』でも紹介しています。
 
 また、みんなのラボさんの同人誌『キーボード／マウス　エミュレータ解説書』に詳しく解説があります。この機会にぜひ利用してみてください。
+
+## Data Sheet
+
+- [SparrowTV v1.2.0 Semantics](datasheets/SparrowTV-v1.2.0-semantics.pdf)
+- [SparrowTV v1.2.0 PCB](datasheets/SparrowTV-v1.2.0-pcb.pdf)

@@ -266,6 +266,8 @@ VIA、RemapはWebサイトや、ツール上からキーマップの書き換え
 
 - VIA、Remap 用ファームウェア [firmware/sparrow60c_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrow60c_via.uf2)
 
+書き込みを行う領域の都合上、新たにVIA、REMAPのファームウェアをインストールしても、以前変更したキーマップの変更が残っている場合があります。その時には、[公式サイトのResetting Flash memory](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)にあるUF2ファイル(flash_nuke.uf2)を一度インストールして、FLASHの全消去を行ってください。
+
 #### QMK Firmwareでファームウェアをビルドする場合
 
 現在、Sparrow60CキーボードはQMK Firmwareの本体には取り込まれていません。下記リポジトリに作成したファームウェアのコードがあります。
@@ -306,3 +308,8 @@ qmk compile -kb sparrow60c -km <keymap_name>
 > Trouble Shooting Guide
 >
 > [./trouble_shooting_guide.md](./trouble_shooting_guide.md)
+
+## Data Sheet
+
+- [Sparrow60C v1.3.1 Semantics](datasheets/Sparrow60C-v1.3.1-semantics.pdf)
+- [Sparrow60C v1.3.1 PCB](datasheets/Sparrow60C-v1.3.1-pcb.pdf)

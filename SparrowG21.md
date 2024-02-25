@@ -444,3 +444,8 @@ SparrowG21のロゴの右側のLEDの設定です。
 > Trouble Shooting Guide
 >
 > [./trouble_shooting_guide.md](./trouble_shooting_guide.md)
+
+## Data Sheet
+
+- [SparrowG21 v1.1.1 Semantics](datasheets/SparrowG21-v1.1.1-semantics.pdf)
+- [SparrowG21 v1.1.1 PCB](datasheets/SparrowG21-v1.1.1-pcb.pdf)
