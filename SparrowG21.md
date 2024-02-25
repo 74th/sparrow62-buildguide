@@ -237,7 +237,7 @@ GP2040にはWeb Configuratorがあります。Web Configuratorを起動するに
 また、設定をリストアしたファイルは以下にあります。こちらを読み込ませても設定が完了します。
 
 - [GP2040-ce v0.7.5 - SparrowG21 v1.1.0: gp2040ce-v0.7.5_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.5_sparrowg21.gp2040)
-- [GP2040-ce v0.7.7 - SparrowG21 v1.1.0: gp2040ce-v0.7.7_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.7_sparrowg21.gp2040)
+- [GP2040-ce v0.7.7 - SparrowG21 v1.1.0: gp2040ce-v0.7.7_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.7_sparrowg21.gp2040)（こちらを適用しても、Peripheral Mappingの設定が適用されないのを確認しています。Peripheral Mappingの設定は手動で行ってください）
 
 #### IO（ピン）ごとの機能リスト
 
