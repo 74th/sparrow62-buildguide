@@ -1,12 +1,87 @@
-# 付属部品の追加の購入先
+# 部品の購入先
 
-修理等で部品が必要になった場合、こちらからご購入ください。
+各部品はこちらから購入ください。
+
+## CherryMX互換スイッチソケット（Kailhスイッチソケット）
+
+- 遊舎工房 「MX用」を選んでください https://shop.yushakobo.jp/products/a01ps
+- TALP KEYBOARD https://talpkeyboard.net/items/5e02c5405b120c792616bcf9
+
+## Kailh Chocスイッチソケット
+
+- 遊舎工房 「Kailh Choc ロープロファイル用」を選んでください https://shop.yushakobo.jp/products/a01ps
+- TALP KEYBOARD https://talpkeyboard.net/items/6365b6224ff8c216413a0c92
+
+## CherryMX互換スイッチ
+
+ほとんどのスイッチがそうです。薄型と書かれているものは違う可能性があるため、気をつけてください。
+
+### おすすめ
+
+- Durock Black Lotus Linear 2023 Lubed Version
+  - リニアスイッチの中でも最高と名高い
+  - TALP KEYBOARD https://talpkeyboard.net/items/63c7d5629d284218425a5597
+  - 遊舎工房 https://shop.yushakobo.jp/products/6337
+- Jwick T1 Tactile Switch
+  - 力強いタクタイルのT1スイッチの廉価版。だけど製造元はDurockで一緒。
+  - TALP KEYBOARD https://talpkeyboard.net/items/62889ceff3de5c78c0c1fc05
+- Durock Ice King Tactile T1
+  - T1スイッチのクリアハウジング版。LEDをよく透過する。
+  - TALP KEYBOARD https://talpkeyboard.net/items/65c2eba982808c007e84c1ac
+  - 遊舎工房 https://shop.yushakobo.jp/products/8474
+- DUROCK T1 Shrimp Silent Tactile Switch
+  - T1スイッチのサイレント版。サイレント効果はほどほど。親指や小指のキーに割り当てると、強く叩いても指を痛めにくい。
+  - TALP KEYBOARD https://talpkeyboard.net/items/611f422c84ca6370e66aeb85
+  - 遊舎工房 https://shop.yushakobo.jp/products/4649
+- Kailh Deep Sea Silent Box Switch Islet
+  - おそらくHHKB Studioに搭載されているスイッチと同等スペックのスイッチ（HHKB StudioはKailh製をOEMとして使用している）。サイレントでありがちなくにゅっとした感じが抑えられて、リニアを楽しめるスイッチ。
+  - TALP KEYBOARD https://talpkeyboard.net/items/644369821c72b409e0ad9d2d
+
+## Kailh Chocスイッチ
+
+Kailh製の薄型スイッチ。
+
+- TALP KEYBOARD https://talpkeyboard.net/?category_id=638b0e2718324e0fdaf56eb0
+- 遊舎工房 https://shop.yushakobo.jp/collections/all-switches/Kailh-Choc-V1%E3%82%B9%E3%82%A4%E3%83%83%E3%83%81
+
+## CherryMX互換キーキャップ
+
+自作キーボード用のキーキャップはほとんどがこれです。Choc用と書かれているものは異なるので注意。
+
+## Kailh Choc v1キーキャップ
+
+Kailh Chocには v1、v2 があります。v1スイッチの場合はKailh Choc v1対応キーキャップを使用してください。
+Kailh Choc v2、LOFLEE x Kailh Ghost Switchは、MX互換キーキャップが使用できます。
+
+- TALP KEYBOARD https://talpkeyboard.net/?category_id=638d75c18da73b0695940f48
+- 遊舎工房 https://shop.yushakobo.jp/collections/keycaps/For-Choc-v1
+
+## GH60互換ケース
+
+- 遊舎工房 https://shop.yushakobo.jp/products/60-plastic-case
+- TALP KEYBOARD https://stores.jp/search?q=GH60&store=talpkeyboard
+
+## M5Dial
+
+- Switch Science https://www.switch-science.com/products/9271
+
+## M5StackCore2
+
+- Switch Science https://www.switch-science.com/products/9349?_pos=3&_sid=37b87364b&_ss=r
+- マルツオンライン https://www.marutsu.co.jp/pc/i/2776620/
+
+## M5Stack用赤外線送受信ユニット
+
+- Switch Science https://www.switch-science.com/products/5699
+- マルツオンライン https://www.marutsu.co.jp/pc/i/1556080/
+
+## 付属品の追加部品
 
 少数必要な場合、問い合わせいただければ相談にのります。
 
 USB Type-C ソケットが必要な場合、問い合わせください。
 
-## Sparrow62 v2.0.4~
+### Sparrow62 v2.0.4~
 
 - 1N4148W スイッチングダイオード : https://akizukidenshi.com/catalog/g/g107084/
 - TRRS ソケット : https://akizukidenshi.com/catalog/g/g106070/
@@ -24,7 +99,7 @@ USB Type-C ソケットが必要な場合、問い合わせください。
 - 5.0mm M2 ネジ : https://www.monotaro.com/p/4307/7553/?displayId=5
 - ゴムシート : https://www.monotaro.com/p/3584/6307/
 
-## Sparrow v1 2021 夏ごろ〜
+### Sparrow v1 2021 夏ごろ〜
 
 - 3.0mm 金属スペーサー : https://www.hirosugi-net.co.jp/shop/g/g102/
 - タクトスイッチ : https://akizukidenshi.com/catalog/g/g108073/

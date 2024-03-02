@@ -56,14 +56,14 @@
 
 ### キットの他に必要なもの
 
-- GH60互換キーボードケース x1
-- MX互換スイッチソケット x56
-- MX互換スイッチ x56
-- MX互換スイッチ用キーキャップ一式 x1
+- [GH60互換キーボードケース x1](./parts.md#gh60互換ケース)
+- [MX互換スイッチソケット x56](./parts.md#cherrymx互換スイッチソケットkailhスイッチソケット)
+- [MX互換スイッチ x56](./parts.md#cherrymx互換スイッチ)
+- [MX互換スイッチ用キーキャップ一式 x1](./parts.md#cherrymx互換キーキャップ)
 - PC接続用USBType-Cケーブル x1
 - Trackpad用M5Stackどちらか
-  - M5Stack Core2 x1
-  - M5Stack Dial x1
+  - [M5Stack Core2 x1](./parts.md#m5stackcore2)
+  - [M5Stack Dial x1](./parts.md#m5dial)
 
 ### 組み立てに必要な機材
 

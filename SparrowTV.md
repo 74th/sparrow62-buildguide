@@ -46,11 +46,10 @@
 
 ### キットの他に必要な部品
 
-- Kailh Chocスイッチ x15
-- Kailh Chocスイッチ用ソケット x15
-- Kailh Chocスイッチ用キーキャップ x15
-- M5Stack用赤外線送受信ユニット x1
-  - [スイッチサイエンス](https://www.switch-science.com/products/5699)
+- [Kailh Chocスイッチ x15](./parts.md#kailh-chocスイッチ)
+- [Kailh Chocスイッチ用ソケット x15](./parts.md#kailh-chocスイッチソケット)
+- [Kailh Chocスイッチ用キーキャップ x15](./parts.md#kailh-choc-v1キーキャップ)
+- [M5Stack用赤外線送受信ユニット x1](./parts.md#m5stack用赤外線送受信ユニット)
 - Groveケーブル（M5Stack用赤外線送受信ユニットに付属） x1
 - iPhone SE 2 or 3ケース x1
 
