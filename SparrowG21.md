@@ -8,6 +8,15 @@
 
 - booth(準備中)
 
+## 重要なお知らせ
+
+### 2024/03/10
+
+SparrowG21のキーケット1販売時に搭載していたファームウェアでは、RGB LEDが動作しないことがわかりました。下記の手順でファームウェアを更新してください。
+
+- BOOTSELを押しながらRESETを押して、マウントされるUSBストレージに、ストレージ消去用ファームウェア [flash_nuke.uf2](https://datasheets.raspberrypi.com/soft/flash_nuke.uf2)(Raspberry Piの公式HPよりダウンロードできるものです)を書き込む。
+- 再度、USBストレージがマウントされるため、[GP2040-CE_0.7.7_SparrowG21.uf2](firmware/GP2040-CE_0.7.7_SparrowG21.uf2)を書き込む。
+
 ## Sparrow60C の注意点
 
 - マイコン RP2040 が直接 PCB に実装されています。
@@ -242,6 +251,9 @@ GP2040にはWeb Configuratorがあります。Web Configuratorを起動するに
 
 - [GP2040-ce v0.7.5 - SparrowG21 v1.1.0: gp2040ce-v0.7.5_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.5_sparrowg21.gp2040)
 - [GP2040-ce v0.7.7 - SparrowG21 v1.1.0: gp2040ce-v0.7.7_sparrowg21.gp2040](./firmware/gp2040ce-v0.7.7_sparrowg21.gp2040)（こちらを適用しても、Peripheral Mappingの設定が適用されないのを確認しています。Peripheral Mappingの設定は手動で行ってください）
+
+GP2040-CEは利用するファームウェアによって、RGBLEDが有効にならない場合が確認されています。v0.7.7のPico用ファームウェアではRGBLEDが有効になりませんでした。設定ビルド済みのファームウェア [GP2040-CE_0.7.7_SparrowG21.uf2](firmware/GP2040-CE_0.7.7_SparrowG21.uf2) を用意しましたので、ファームウェアのアップデートを必要としない方はこちらを利用ください。
+今後のファームウェアのアップデートに対応して欲しい場合は、私（74th.tech@gmail.com、X(Twitter):@74th）の方までリクエストください。可能な範囲で対応いたします。
 
 #### IO（ピン）ごとの機能リスト
 
