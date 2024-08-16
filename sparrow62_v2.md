@@ -19,7 +19,6 @@
 
 ## Sparrow62 v2 の注意点
 
-- QMK Firmware、Remap には対応していません。
 - Sparrow62 という名前ですが、v2 は 63 キーです。
 - v2.0.5 には、シルクで Sparrow64 と書かれていますが、Sparrow62 の誤りです。
 - v2 には、細かいバージョン差分があり、1 セットの内に複数のバージョンの記載がありますが、そのようなセットになっております。v2.0.5 と v2.0.4 が同一のセットに含まれています
@@ -457,7 +456,7 @@ PCB を横から覗き込み、PCB のランドと PICO の端子が確実には
 PICO のランドは、熱しすぎると剥がれて取れてしまう場合があります。
 ですので、はんだ吸い取り線が PCB にくっついて取れない場合も、力任せに引っ張ってしまわないように気をつけてください。
 
-#### ファームウェアの準備と書き込み
+#### ファームウェアの準備と書き込み（KMK Firmware）
 
 KMK Firmware を使った例を紹介します。
 以下のリポジトリをチェックアウトし、記載の install に従い、セットアップを行います。
@@ -470,7 +469,7 @@ https://github.com/74th/sparrow62-kmk
 #### キースイッチのテスト
 
 [QMK Configurator の Keyboard Tester](https://config.qmk.fm/#/test) を開き、各スイッチソケットを通電させ、各キーが動作するか確認してください。
-
+aaa
 通電させるためのケーブルをお持ち出ない場合、キースイッチをソケットに挿して、押下することでもテストできます。
 
 ここでは、以下のような問題が見つかります。
@@ -561,6 +560,38 @@ CherryMX 五感スイッチを使用する場合、ボトムプレート、PCB�
 データシートの回路図を確認ください。PICO の GPIO がどの 行、列 と対応しているか記述されています。
 その箇所のはんだを追加して実装し直すなど行ってください。
 
+## Using QMK Firmware / QMK Firmwareの使用について
+
+Currently, it is not merged into the official repository, but forked and operated in a private repository.
+
+現状公式リポジトリにはマージしておらず、個人リポジトリでフォークして運用しています。
+
+https://github.com/74th/qmk_firmware_sparrow_keyboard/tree/sparrow/keyboards/sparrow62/rev2
+
+You can use `qmk` command by cloning this to `$HOME/qmk_firmware` or adding it as a remote.
+
+こちらを `$HOME/qmk_firmware` にクローンしたり、リモートとして追加することで、`qmk` コマンドを利用することができます。
+
+See the QMK Firmware documentation for more details.
+
+くわしくは、QMK Firmware のドキュメントを参照してください。
+
+## REMAP/VIA を利用する
+
+## Using REMAP/VIA
+
+A firmware for VIA is prepared. Please write this to your Raspberry Pi Pico and use it.
+
+VIA用のファームウェアをいかに用意しています。こちらをRaspberry Pi Picoに書き込んで利用ください。
+
+[firmware/sparrow62_v2_via.uf2](firmware/sparrow62_v2_via.uf2)
+
+We are currently applying to add a keyboard to REMAP. Until then, you can use the following as a configuration file.
+
+現在[REMAP](https://remap-keys.app/)にはキーボードの追加を申請中です。それまでは設定ファイルとして以下を利用することで利用できます。
+
+[firmware/via_sparrow62_v2.json](firmware/via_sparrow62_v2.json)
+
 ## 資料
 
 - [回路図、配線図等データシート](./datasheets/)
@@ -570,3 +601,7 @@ CherryMX 五感スイッチを使用する場合、ボトムプレート、PCB�
 
 - Twitter: @74th
 - Mail: site@74th.tech
+
+```
+
+```
