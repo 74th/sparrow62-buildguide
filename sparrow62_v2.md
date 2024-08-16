@@ -576,9 +576,7 @@ See the QMK Firmware documentation for more details.
 
 くわしくは、QMK Firmware のドキュメントを参照してください。
 
-## REMAP/VIA を利用する
-
-## Using REMAP/VIA
+## Using REMAP/VIA / REMAP/VIA を利用する
 
 A firmware for VIA is prepared. Please write this to your Raspberry Pi Pico and use it.
 
