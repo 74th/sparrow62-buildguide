@@ -241,7 +241,7 @@ git checkout sparrow
 このリポジトリ上では、キーボード名`sparrowdial`として登録されています。新しいキーマップを作成するには以下を実行します。
 
 ```
-qmk new-keymap -kb sparrowdial -km <keymap_name>
+qmk new-keymap -kb sparrow62/rev3 -km <keymap_name>
 ```
 
 `~/qmk_firmware/keyboards/sparrowdial/keymaps/<keymap_name>`というフォルダに作成されるため、キーマップを作成します。
@@ -249,7 +249,7 @@ qmk new-keymap -kb sparrowdial -km <keymap_name>
 キーマップ作成後は、以下のコマンドでコンパイルします。
 
 ```
-qmk compile -kb sparrowdial -km <keymap_name>
+qmk compile -kb sparrow62/rev3 -km <keymap_name>
 ```
 
 すると、`~/qmk_firmware/.build/sparrowdial_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
