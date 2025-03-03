@@ -78,24 +78,24 @@ https://twitter.com/Salicylic_acid3/status/1108798243142434816
 Solder one side of the PCB first.
 🇯🇵 先に PCB の片側にはんだをつけます。
 
-![](img/v1/diode1.jpg)
+![](img/62v1/diode1.jpg)
 
 Melt the solder you have applied and solder one side of the diode.
 🇯🇵 つけたハンダを溶かして、ダイオードを片側をはんだ付けします。
 
-![](img/v2/diode_1.jpg)
+![](img/62v2/diode_1.jpg)
 
 First, solder all the diodes **only one side**.
 Once one side is soldered, check that all diodes are facing the same way.
 🇯🇵 まず、すべてのダイオードを**片側だけ**はんだ付けをしましょう。
 片側のはんだ付けが済んだところで、一度すべてのダイオードが同じ向きを向いているか確認します。
 
-![](img/v1/diode4.jpg)
+![](img/62v1/diode4.jpg)
 
 Once you have checked and it is ok, solder the other leg as well.
 🇯🇵 確認が済んで大丈夫であれば、反対側の足もはんだ付けします。
 
-![](img/v1/diode2.jpg)
+![](img/62v1/diode2.jpg)
 
 ### Soldering the switch socket / スイッチソケットを実装する
 
@@ -106,7 +106,7 @@ We recommend soldering the socket as shown in the video.
 
 [Movie（Twitter）](https://twitter.com/74th/status/1514942328900775938)
 
-[Movie file switch_socket.mp4](./img/v2/switch_socket.mp4)
+[Movie file switch_socket.mp4](./img/62v2/switch_socket.mp4)
 
 1. Set the socket in the correct orientation.
 2. Apply heat with a soldering iron from the inside of the socket's terminals.
@@ -135,11 +135,11 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 向きを確認できたら、一方の足をマスキングテープで留めます。
 
-![](./img/v2/led_2.jpg)
+![](./img/62v2/led_2.jpg)
 
 すべての足を実装します。
 
-![](./img/v2/led_3.jpg)
+![](./img/62v2/led_3.jpg)
 
 ### Soldering Grove(HY2.0) sockets / Grove(HY2.0) ソケットの実装
 

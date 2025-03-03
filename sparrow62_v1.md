@@ -7,8 +7,8 @@ Sparrow62 is the DIY Keyboard kit inspired by Lily58.
 Lily58 に触発された @74th が販売する、自作キーボードキットです。
 
 **using Kailh Choc V2 switches（keycap: DSA）**
-![](img/v1/top_choc.jpg)
-![](img/v1/top_choc2.jpg)
+![](img/62v1/top_choc.jpg)
+![](img/62v1/top_choc2.jpg)
 
 ### features
 
@@ -23,10 +23,10 @@ As a more complete keyboard that is easier to make, there is Lily58 distributed 
 （より作りやすい、完成度の高いキーボードとして、ゆーちさんの頒布されている Lily58 があります。 ぜひ Lily58 の購入も検討ください。）
 
 **Kailh Choc V1 キースイッチの場合**
-![](img/v1/top_choc_v1.jpg)
+![](img/62v1/top_choc_v1.jpg)
 
 **Cherry MX 互換スイッチを使用し、トッププレートを加えた場合（キーキャップ: DSA）**
-![](img/v1/top_cherry_mx.jpg)
+![](img/62v1/top_cherry_mx.jpg)
 
 ## additional items
 
@@ -77,7 +77,7 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 切断した際に発生する小さな破片にご注意ください。
 写真青丸の銅線は切断しないように気をつけてください。
 
-![](img/v1/choc_v2.jpg)
+![](img/62v1/choc_v2.jpg)
 
 ここできれいに切断すると、安定性が増します。
 もし少し残ってぐらついてしまう場合、補助的にトッププレートを使うことで安定させることもできます（ただし、Choc スイッチの下の爪と上の爪までの幅が 1.65mm であるため、完全にははまりません）。
@@ -95,11 +95,11 @@ Pro Micro の Micro USB 端子は非常にもげやすいものになってい�
 これを防止するため、端子に エボキシ系接着剤を塗布します。
 誤って端子の中に接着剤が入り込まないように気をつけてください。
 
-![](img/v1/pro_micro_connecter.jpg)
+![](img/62v1/pro_micro_connecter.jpg)
 
 ### Solder Pro Micro and pin header (if you using mac8 pin header)
 
-![](img/v1/pro_micro.jpg)
+![](img/62v1/pro_micro.jpg)
 
 #### コンスルーピンヘッダを使用する場合
 
@@ -130,19 +130,19 @@ https://twitter.com/Salicylic_acid3/status/1108798243142434816
 
 **1. Solder one side of the PCB first (先に PCB の片側にはんだをつける)**
 
-![](img/v1/diode1.jpg)
+![](img/62v1/diode1.jpg)
 
 **2. Melt the attached solder and solder the diode on one side (つけたハンダを溶かして、ダイオードを片側をはんだ付けする)**
 
-![](img/v1/diode2.jpg)
+![](img/62v1/diode2.jpg)
 
 **3. Check the orientation of the diode (ダイオードの向きを確認する)**
 
-![](img/v1/diode4.jpg)
+![](img/62v1/diode4.jpg)
 
 **4. Solder the other side (反対側の足をはんだ付けする)**
 
-![](img/v1/diode2.jpg)
+![](img/62v1/diode2.jpg)
 
 ### Solder switch socket (スイッチソケットを実装する)
 
@@ -153,19 +153,19 @@ https://twitter.com/Salicylic_acid3/status/1310253635255717889
 
 **1. Solder the pads on both sides of the PCB(先に PCB の両側の端子にハンダをつける)**
 
-![](img/v1/socket1.jpg)
+![](img/62v1/socket1.jpg)
 
 **2. Place the socket and push while melting the solder(ソケットを置き、ハンダを溶かしながら押す)**
 
-![](img/v1/socket2.jpg)
+![](img/62v1/socket2.jpg)
 
 **3. Do the same on the other side(反対側も同様にする)**
 
-![](img/v1/socket3.jpg)
+![](img/62v1/socket3.jpg)
 
 **4. Repeat until they are in close contact (密着するまでくりかえす)**
 
-![](img/v1/socket4.jpg)
+![](img/62v1/socket4.jpg)
 
 ### Implement tact switch
 
@@ -179,7 +179,7 @@ The surface to be soldered is **the same surface as the diode**.
 
 **tactile switch(タクトスイッチ)**
 
-![](img/v1/tact_switch.jpg)
+![](img/62v1/tact_switch.jpg)
 
 ### Implement TRRS socket
 
@@ -193,7 +193,7 @@ The surface to be soldered is **the same surface as the diode**.
 
 **TRRS Socket(TRRS ジャック)**
 
-![](img/v1/trrs.jpg)
+![](img/62v1/trrs.jpg)
 
 ### Assemble the top and bottom plate
 
@@ -206,13 +206,13 @@ Attach the bottom plate to the PCB with double-sided tape.
 
 #### For Cherry MX Compatible Switches
 
-![](./img/v1/screw.png)
+![](./img/62v1/screw.png)
 
 #### For Cherry MX Cpmpatible Switches with Trackpad
 
-![](./img/v1/screw_trackpad.png)
+![](./img/62v1/screw_trackpad.png)
 
-![](./img/v1/spacer.png)
+![](./img/62v1/spacer.png)
 
 ### Cut and attach rubber sheets with double-sided tape
 
@@ -221,9 +221,9 @@ Attach the bottom plate to the PCB with double-sided tape.
 For trackpad, use a long rubber sheet.
 トラックパッドがある場合、より長いシートをトラックパッド用に使ってください。
 
-![](./img/v1/rubber_sheet.jpg)
+![](./img/62v1/rubber_sheet.jpg)
 
-![](./img/v1/rubber_sheet2.jpg)
+![](./img/62v1/rubber_sheet2.jpg)
 
 ### Insert switches and Pro Micro
 
@@ -269,11 +269,11 @@ VIA を使う場合、QMK Toolbox でファームウェアを書き込めば完�
 
 レイヤ 1
 
-![](./img/v1/keymap_default_layer1.png)
+![](./img/62v1/keymap_default_layer1.png)
 
 レイヤ 2（レイヤ 1 の`MO(1)`のキーと同時に押すと、動作する）
 
-![](./img/v1/keymap_default_layer2.png)
+![](./img/62v1/keymap_default_layer2.png)
 
 こちらを [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) を使って書き込むことができます。
 
@@ -308,7 +308,7 @@ qmk flash -kb sparrow62 -km default
 
 この default のキーマップは以下のようになっています。 `MO(_FN)`のキーを押すと、キーレイヤが下の`[_FN]`のものに変わり、F1-12 キーや、矢印キーとして動作させることができます。
 
-![](img/v1/default_keymap.png)
+![](img/62v1/default_keymap.png)
 
 新しいキーマップを作成する場合には、以下のように実行します（nnyn が新しいキーマップ名）
 
@@ -344,11 +344,11 @@ https://config.qmk.fm/#/test
 
 左手用のキーの場合、以下の同じ色の部分がつながっています。それぞれテスターなどで疎通しているか確認ください。
 
-![](img/v1/left_hand_debug.jpg)
+![](img/62v1/left_hand_debug.jpg)
 
 右手用のキーの場合、以下の同じ色の部分がつながっています。それぞれテスターなどで疎通しているか確認ください。
 
-![](img/v1/right_hand_debug.jpg)
+![](img/62v1/right_hand_debug.jpg)
 
 #### 縦一列、横一列が動作しない場合
 

@@ -4,11 +4,11 @@
 
 このガイドには一部 Sparrow 62 v1 の写真が含まれていますので注意ください。
 
-![](./img/v2/v2_3.jpg)
+![](./img/62v2/v2_3.jpg)
 
-![](./img/v2/v2_1.jpg)
+![](./img/62v2/v2_1.jpg)
 
-![](./img/v2/v2_2.jpg)
+![](./img/62v2/v2_2.jpg)
 
 また、作成中に疑問点等質問がありましたら、74th （twitter: [@74th](https://twitter.com/74th) 、email: site@74th.tech 、 本リポジトリの issue）まで問い合わせください。
 
@@ -30,8 +30,8 @@ Sparrow 62 は 74th が頒布する自作キーボードキットです。
 最初は Lily58 からインスピレーションを得て、数々の改良を加えました。
 
 **using Kailh Choc V2 switches（keycap: DSA）**
-![](img/v1/top_choc.jpg)
-![](img/v1/top_choc2.jpg)
+![](img/62v1/top_choc.jpg)
+![](img/62v1/top_choc2.jpg)
 
 これは購入者がご自身で組み立てが必要なキットです。
 完成を保証するものではありません。
@@ -146,7 +146,7 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 切断した際に発生する小さな破片にご注意ください。
 写真青丸の銅線は切断しないように気をつけてください。
 
-![](img/v1/choc_v2.jpg)
+![](img/62v1/choc_v2.jpg)
 
 ここできれいに切断すると、安定性が増します。
 
@@ -160,23 +160,23 @@ Kailh Choc V2 では銅線の足が 3 つ出ていますが、このうち写真
 
 まず、片方のランドにハンダを乗せます（予備はんだ）。
 
-![](./img/v2/smd_register_1.jpg)
+![](./img/62v2/smd_register_1.jpg)
 
 片手にはんだごて、片手にピンセットで抵抗をつまみ、ハンダを溶かして抵抗をスライドさせるように差し込みます。
 
-![](./img/v2/smd_register_2.jpg)
+![](./img/62v2/smd_register_2.jpg)
 
 片側のはんだ付けができたところで、一度誤った抵抗を接続していないか確認すると良いです。
 
-![](./img/v2/smd_register_3.jpg)
+![](./img/62v2/smd_register_3.jpg)
 
 もう片方のはんだ付けもします。
 
-![](./img/v2/smd_register_4.jpg)
+![](./img/62v2/smd_register_4.jpg)
 
 これを、左右 5 個ずつ行ってください。
 
-![](./img/v2/smd_register_5.jpg)
+![](./img/62v2/smd_register_5.jpg)
 
 ### ダイオードのはんだ付け / Solder Diodes
 
@@ -191,20 +191,20 @@ https://twitter.com/Salicylic_acid3/status/1108798243142434816
 
 先に PCB の片側にはんだをつけます。
 
-![](img/v1/diode1.jpg)
+![](img/62v1/diode1.jpg)
 
 つけたハンダを溶かして、ダイオードを片側をはんだ付けします。
 
-![](img/v2/diode_1.jpg)
+![](img/62v2/diode_1.jpg)
 
 まず、すべてのダイオードを**片側だけ**はんだ付けをしましょう。
 片側のはんだ付けが済んだところで、一度すべてのダイオードが同じ向きを向いているか確認します。
 
-![](img/v1/diode4.jpg)
+![](img/62v1/diode4.jpg)
 
 確認が済んで大丈夫であれば、反対側の足もはんだ付けします。
 
-![](img/v1/diode2.jpg)
+![](img/62v1/diode2.jpg)
 
 ### スイッチソケットを実装する
 
@@ -223,7 +223,7 @@ Choc 用スイッチソケットには向きがあります。以下の記事を
 
 [動画（Twitter）](https://twitter.com/74th/status/1514942328900775938)
 
-[動画ファイル switch_socket.mp4](./img/v2/switch_socket.mp4)
+[動画ファイル switch_socket.mp4](./img/62v2/switch_socket.mp4)
 
 1. ソケットを正しい方向にセットします。
 2. ソケットの端子の内側から、はんだごてで熱を加えます
@@ -240,17 +240,17 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 また、LED の 4 本の足の 1 つ GND には切れ込みが入っています。切れ込みとシルクの斜め線を合わせるようにしてください。
 
-![](./img/v2/led_1.jpg)
+![](./img/62v2/led_1.jpg)
 
-![](./img/v2/led_4.png)
+![](./img/62v2/led_4.png)
 
 向きを確認できたら、一方の足をマスキングテープで留めます。
 
-![](./img/v2/led_2.jpg)
+![](./img/62v2/led_2.jpg)
 
 すべての足を実装します。
 
-![](./img/v2/led_3.jpg)
+![](./img/62v2/led_3.jpg)
 
 ### USB Type-C ソケットを実装する
 
@@ -264,53 +264,53 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 ↓ 表側。ソケット基盤を当てる前。
 
-![](img/v2/usb_1.jpg)
+![](img/62v2/usb_1.jpg)
 
 ↓ 裏側。表側から基盤を当てている。
 
-![](img/v2/usb_2.jpg)
+![](img/62v2/usb_2.jpg)
 
 ピンヘッダを裏から、プラスチックの部分が上になるように差し込みます。
 ピンヘッダは穴に刺さるように分割してください。
 分割した際にプラスチックの部分が破れてしまっても問題ありません。
 
-![](img/v2/usb_3.jpg)
+![](img/62v2/usb_3.jpg)
 
 差し込んだ後に、マスキングテープで固定をします。
 
-![](img/v2/usb_4.jpg)
+![](img/62v2/usb_4.jpg)
 
 表に向けます。このとき、ソケット基盤と PCB が密着するようにしてください。
 
-![](img/v2/usb_5.jpg)
+![](img/62v2/usb_5.jpg)
 
 表からはんだごてでピンヘッダをはんだ付けします。
 
-![](img/v2/usb_6.jpg)
+![](img/62v2/usb_6.jpg)
 
 裏に向けます。
 
-![](img/v2/usb_7.jpg)
+![](img/62v2/usb_7.jpg)
 
 ラジオペンチでピンヘッダのプラスチックの部分をゆっくりと抜きます。
 
-![](img/v2/usb_8.jpg)
+![](img/62v2/usb_8.jpg)
 
 7 ピンのものは、左右交互に少しずつ引き抜いてみてください。
 
-![](img/v2/usb_9.jpg)
+![](img/62v2/usb_9.jpg)
 
-![](img/v2/usb_10.jpg)
+![](img/62v2/usb_10.jpg)
 
 ぬけたら、裏側からはんだ付けをします。
 
-![](img/v2/usb_11.jpg)
+![](img/62v2/usb_11.jpg)
 
 はんだから飛び出ているピンをニッパで切り取ります。
 
-![](img/v2/usb_12.jpg)
+![](img/62v2/usb_12.jpg)
 
-![](img/v2/usb_13.jpg)
+![](img/62v2/usb_13.jpg)
 
 ### Raspberry Pi PICO （以下、PICO）の USB のランドへの予備ハンダ
 
@@ -321,36 +321,36 @@ PICO の実装の前にここにハンダを少し載せておきます。
 多くなるとガタつくため、少量のせてください。
 写真は TP3 に乗せていますが、TP2 と TP3 の 2 つに乗せてください。
 
-![](./img/v2/pico_usb_4.jpg)
+![](./img/62v2/pico_usb_4.jpg)
 
 ### Raspberry Pi PICO （以下、PICO）の実装
 
 PICO は PCB を表向きにして、はんだづけをします。
 
-![](img/v2/pico_1.jpg)
+![](img/62v2/pico_1.jpg)
 
 PICO を重ねます。
 
-![](img/v2/pico_2.jpg)
+![](img/62v2/pico_2.jpg)
 
 PICO と PCB には M2 の穴があいており、ここに 5mm のネジを差し込むと、PICO が動かずにはんだづけができます。
 
-![](img/v2/pico_3.jpg)
+![](img/62v2/pico_3.jpg)
 
 まず端の 2 箇所を、PICO の側面の端子を使ってはんだづけをします。
 はんだづけをしてから M2 のネジを外します。
 
-![](img/v2/pico_4.jpg)
+![](img/62v2/pico_4.jpg)
 
 残りをはんだづけします。
 
 最後に横から確認し、PCB のランドと、PICO の間が空いていないことを確認します。
 
-![](img/v2/pico_5.jpg)
+![](img/62v2/pico_5.jpg)
 
 空いてしまっている場合、以下の写真のようになります。再度はんだづけをおこなってください。
 
-![](img/v2/pico_6.jpg)
+![](img/62v2/pico_6.jpg)
 
 ### Raspberry Pi PICO の USB 端子の実装
 
@@ -358,14 +358,14 @@ PICO と PCB には M2 の穴があいており、ここに 5mm のネジを差�
 
 PCB を裏側に、この先程はんだを少し乗せた USB DM/DP が覗けるスルーホールが空いています。
 
-![](img/v2/pico_usb_1.jpg)
+![](img/62v2/pico_usb_1.jpg)
 
 このスルーホールとランドを接続するように、はんだごてをあててはんだを流し込みます。
 このとき、はんだごてのこて先はペン型のこて先を利用するとやりやすいです。
 
-![](img/v2/pico_usb_2.jpg)
+![](img/62v2/pico_usb_2.jpg)
 
-![](img/v2/pico_usb_3.jpg)
+![](img/62v2/pico_usb_3.jpg)
 
 実装後は一度 USB Type-C ソケットを、PC の USB と、ケーブルで接続してみましょう。
 RPI-RP2 というドライブがマウントできれば、成功です。
@@ -378,32 +378,32 @@ IO エキスパンダ MCP23019 を実装します。
 足を多少曲げなければ入らないようになっています。
 曲げすぎて折れてしまわないように気をつけてください。
 
-![](img/v2/mcp23019_1.jpg)
+![](img/62v2/mcp23019_1.jpg)
 
-![](img/v2/mcp23019_2.jpg)
+![](img/62v2/mcp23019_2.jpg)
 
 裏面からはんだ付けを行います。
 
-![](img/v2/mcp23019_3.jpg)
+![](img/62v2/mcp23019_3.jpg)
 
 ### TRRS ジャックの実装
 
 TRRS ジャックは、左右それぞれ 1 つずつあります。
 表面から差し込みます。
 
-![](img/v2/trrs_1.jpg)
+![](img/62v2/trrs_1.jpg)
 
-![](img/v2/trrs_2.jpg)
+![](img/62v2/trrs_2.jpg)
 
 浮いてしまわないように、マスキングテープで留めておくと良いです。
 
-![](img/v2/trrs_3.jpg)
+![](img/62v2/trrs_3.jpg)
 
 裏面から、はんだづけをします。
 
-![](img/v2/trrs_4.jpg)
+![](img/62v2/trrs_4.jpg)
 
-![](img/v2/trrs_5.jpg)
+![](img/62v2/trrs_5.jpg)
 
 これで、はんだこてが必要な作業は以上になります。
 
@@ -412,17 +412,17 @@ TRRS ジャックは、左右それぞれ 1 つずつあります。
 CherryMX 互換スイッチを使用する場合、このタイミングでスタビライザーを差し込んでください。
 左手に 1 箇所、右手に 3 箇所あります。
 
-![](img/v2/stabilizer_1.jpg)
+![](img/62v2/stabilizer_1.jpg)
 
 ### ボトムプレートが鑑賞しないか確認する
 
 まず、裏面からボトムシートを重ねます。
 
-![](img/v2/bottom_1.jpg)
+![](img/62v2/bottom_1.jpg)
 
 これは実装箇所に干渉せず、ピタリを収まるようにできています。
 
-![](img/v2/bottom_2.jpg)
+![](img/62v2/bottom_2.jpg)
 
 干渉する場合、部品のズレなどをはんだ付けを再度やり直してください。
 
@@ -499,11 +499,11 @@ aaa
 
 ネジで止める箇所には、トッププレートとつなぐ部分と、アクリル製 IC カバーとつなぐ部分の 2 種類があります。IC カバーのネジ止めは、以下の 5 箇所になります。
 
-![](./img/v2/ic_cover_1.jpg)
+![](./img/62v2/ic_cover_1.jpg)
 
 IC カバーの箇所は以下のように重ねてネジ止めを行います。
 
-![](./img/v2/ic_cover_2.png)
+![](./img/62v2/ic_cover_2.png)
 
 順序は以下のように行います。
 
@@ -516,11 +516,11 @@ IC カバーの箇所は以下のように重ねてネジ止めを行います�
 
 Kailh Choc スイッチを使用する場合、ボトムプレート、PCB、トッププレートは以下のように隙間なく重ねます。ネジ止めは IC カバーのみ行います。
 
-![](./img/v2/choc_plate_1.png)
+![](./img/62v2/choc_plate_1.png)
 
 CherryMX 五感スイッチを使用する場合、ボトムプレート、PCB、スペーサー、トッププレートを以下のように重ねます。
 
-![](./img/v2/mx_plate_1.png)
+![](./img/62v2/mx_plate_1.png)
 
 順序は以下のように行います。
 

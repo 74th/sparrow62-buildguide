@@ -98,7 +98,7 @@ We recommend soldering the socket as shown in the video.
 
 [Movie（Twitter）](https://twitter.com/74th/status/1514942328900775938)
 
-[Movie file switch_socket.mp4](./img/v2/switch_socket.mp4)
+[Movie file switch_socket.mp4](./img/62v2/switch_socket.mp4)
 
 1. Set the socket in the correct orientation.
 2. Apply heat with a soldering iron from the inside of the socket's terminals.
@@ -132,17 +132,17 @@ PCB 表向きから見ると、発光面が見える形になります。
 
 また、RGBLED の 4 本の足の 1 つ GND には切れ込みが入っています。切れ込みとシルクの斜め線を合わせるようにしてください。
 
-![](./img/v2/led_1.jpg)
+![](./img/62v2/led_1.jpg)
 
-![](./img/v2/led_4.png)
+![](./img/62v2/led_4.png)
 
 向きを確認できたら、一方の足をマスキングテープで留めます。
 
-![](./img/v2/led_2.jpg)
+![](./img/62v2/led_2.jpg)
 
 すべての足を実装します。
 
-![](./img/v2/led_3.jpg)
+![](./img/62v2/led_3.jpg)
 
 ### Soldering SH1.0(Qwiic) sockets / SH1.0(Qwiic) ソケットの実装
 
