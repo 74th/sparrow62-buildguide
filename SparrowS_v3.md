@@ -240,9 +240,15 @@ VIA、RemapはWebサイトや、ツール上からキーマップの書き換え
 
 ファームウェアは以下からダウンロードできます。
 
-- VIA、Remap 用ファームウェア [firmware/sparrowdial_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/master/firmware/sparrowsv3_via.uf2)
+> [!IMPORTANT]
+> 追加4キーパッド対応版は、追加4キーパッドを使用する場合のみ書き込んでください
+
+- VIA、Remap 用ファームウェア 通常版 [./firmware/sparrows_v3/qmk_firmware-sparrows_v3-via.uf2](./firmware/sparrows_v3/qmk_firmware-sparrows_v3-via.uf2)
+- VIA、Remap 用ファームウェア 右手追加4キーパッド対応版 [./firmware/sparrows_v3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2](./firmware/sparrows_v3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2)
 
 書き込みを行う領域の都合上、新たにVIA、REMAPのファームウェアをインストールしても、以前変更したキーマップの変更が残っている場合があります。その時には、[公式サイトのResetting Flash memory](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)にあるUF2ファイル(flash_nuke.uf2)を一度インストールして、FLASHの全消去を行ってください。
+
+また、書き込み直後は右手や、追加4キーが動作しない場合があります。一度USBを抜き差しして電源をリセットさせてください。
 
 ### QMK Firmwareでファームウェアをビルドする場合
 
@@ -261,7 +267,7 @@ git fetch sparrow
 git checkout sparrow
 ```
 
-このリポジトリ上では、キーボード名`sparrowdial`として登録されています。新しいキーマップを作成するには以下を実行します。
+このリポジトリ上では、キーボード名`sparrow62/rev3`として登録されています。新しいキーマップを作成するには以下を実行します。
 
 ```
 qmk new-keymap -kb sparrow62/rev3 -km <keymap_name>
@@ -269,13 +275,20 @@ qmk new-keymap -kb sparrow62/rev3 -km <keymap_name>
 
 `~/qmk_firmware/keyboards/sparrowdial/keymaps/<keymap_name>`というフォルダに作成されるため、キーマップを作成します。
 
+右手追加4キーを利用する場合には、`~/ghq/github.com/qmk/qmk_firmware/keyboards/sparrow62/rev3/config.h`を開き、`USE_RIGHT_4KEYS`の値を`1`に設定します。
+
+```
+// 右手左側の追加4キーオプション使用時は1にする
+#define USE_RIGHT_4KEYS 1
+```
+
 キーマップ作成後は、以下のコマンドでコンパイルします。
 
 ```
 qmk compile -kb sparrow62/rev3 -km <keymap_name>
 ```
 
-すると、`~/qmk_firmware/.build/sparrowdial_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
+すると、`~/qmk_firmware/.build/sparrows_rev3_<keymap_name>.uf2`にビルドされるため、これをRP2040に書き込みます。
 
 ## トラブルシューティング
 
