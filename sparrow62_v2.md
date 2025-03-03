@@ -582,7 +582,7 @@ A firmware for VIA is prepared. Please write this to your Raspberry Pi Pico and 
 
 VIA用のファームウェアをいかに用意しています。こちらをRaspberry Pi Picoに書き込んで利用ください。
 
-[./firmware/62v2/sparrow62_v2_via.uf2](./firmware/62v2/sparrow62_v2_via.uf2)
+[./firmware/62v2/sparrow62_v2_via.uf2](https://github.com/74th/sparrow62-buildguide/raw/refs/heads/master/firmware/62v2/sparrow62_v2_via.uf2)
 
 We are currently applying to add a keyboard to REMAP. Until then, you can use the following as a configuration file.
 
