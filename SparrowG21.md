@@ -335,7 +335,7 @@ GP2040-CEは利用するファームウェアによって、RGBLEDが有効に�
 
 ![](./img/g21/gp2040-pin-mapping-v0.7.7.png.png)
 
-![v0.7.5のスクリーンショット](./img/gp2040-pin-mapping-v0.7.5.png)
+![v0.7.5のスクリーンショット](./img/g21/gp2040-pin-mapping-v0.7.5.png)
 
 #### Peripheral Mapping
 
