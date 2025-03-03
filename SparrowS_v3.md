@@ -243,8 +243,8 @@ VIA、RemapはWebサイトや、ツール上からキーマップの書き換え
 > [!IMPORTANT]
 > 追加4キーパッド対応版は、追加4キーパッドを使用する場合のみ書き込んでください
 
-- VIA、Remap 用ファームウェア 通常版 [./firmware/sparrows_v3/qmk_firmware-sparrows_v3-via.uf2](./firmware/sparrows_v3/qmk_firmware-sparrows_v3-via.uf2)
-- VIA、Remap 用ファームウェア 右手追加4キーパッド対応版 [./firmware/sparrows_v3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2](./firmware/sparrows_v3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2)
+- VIA、Remap 用ファームウェア 通常版 [./firmware/sv3/qmk_firmware-sparrows_v3-via.uf2](./firmware/sv3/qmk_firmware-sparrows_v3-via.uf2)
+- VIA、Remap 用ファームウェア 右手追加4キーパッド対応版 [./firmware/sv3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2](./firmware/sv3/qmk_firmware-sparrows_v3_with_4keyspad-via.uf2)
 
 書き込みを行う領域の都合上、新たにVIA、REMAPのファームウェアをインストールしても、以前変更したキーマップの変更が残っている場合があります。その時には、[公式サイトのResetting Flash memory](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#resetting-flash-memory)にあるUF2ファイル(flash_nuke.uf2)を一度インストールして、FLASHの全消去を行ってください。
 
