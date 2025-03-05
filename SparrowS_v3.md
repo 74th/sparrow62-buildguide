@@ -50,6 +50,12 @@ SparrowS v3は@74thが頒布する自作キーボードキットです。
 - 右手用PCB x1
 - 左手用トッププレート x1
 - 右手用トッププレート x1
+- 左手用ケース（MXスイッチ用、Chocスイッチ用のどちらか） x1
+- 左手用ケースヘッダーバー奥用 x1
+- 左手用ケースヘッダーバー手前用 x1
+- 右手用ケース（MXスイッチ用、Chocスイッチ用のどちらか） x1
+- 右手用ケースヘッダーバー奥用 x1
+- 右手用ケースヘッダーバー手前用 x1
 - ダイオード 1N4148W x58
 - SK6812-MINI-E x1
 - TRRSソケット x2
@@ -60,6 +66,8 @@ SparrowS v3は@74thが頒布する自作キーボードキットです。
 - ガスケットマウントクッション x2.5
 - M2 4mmネジ x19
 - グリップクッション x4片
+
+使用している市販品の購入先については、後述しております。
 
 ## 追加で必要なもの
 
@@ -325,6 +333,35 @@ qmk compile -kb sparrow62/rev3 -km <keymap_name>
 >
 > [./trouble_shooting_guide.md](./trouble_shooting_guide.md)
 
+## 同梱済みの部品の購入先
+
+- ケース
+  - [Boothショップ https://74th.booth.pm/items/6655442](https://74th.booth.pm/items/6655442)
+  - [ケースデータ ./misc/sv3/case/v1.0.0/](./misc/sv3/case/v1.0.0/)
+- Qwiicソケット（SH1.0-4P）
+  - 千石電商 [https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-0KNJ](https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-0KNJ)
+- RGB LED（SK6812-MINI-E）
+  - 遊舎工房 [https://shop.yushakobo.jp/products/sk6812mini-e-10](https://shop.yushakobo.jp/products/sk6812mini-e-10)
+  - など
+- 抵抗 0603in 1608M SMD（ご連絡いただければ、送料のみでお譲りします）
+  - マルツオンライン [https://www.marutsu.co.jp/pc/i/856811/](https://www.marutsu.co.jp/pc/i/856811/)
+- コンデンサ 0603in 1608M SMD（ご連絡いただければ、送料のみでお譲りします）
+  - マルツオンライン [https://www.marutsu.co.jp/pc/i/2353831/](https://www.marutsu.co.jp/pc/i/2353831/)
+- ガスケットマウントクッション
+  - Kelowna机械键盘gasket胶条结构垫片进口le-20背胶泡棉垫片
+    - Aliexpress [https://ja.aliexpress.com/item/1005003264458903.html](https://ja.aliexpress.com/item/1005003264458903.html)
+    - TaoBao [https://item.taobao.com/item.htm?id=651429257414](https://item.taobao.com/item.htm?id=651429257414)
+- 底面グリップクッション
+  - GRIPLUS（グリップラス） 極薄・強力 滑り止めシール 楽器用 スクエア ブラック [https://www.amazon.co.jp/gp/product/B0C2BCX287/](https://www.amazon.co.jp/gp/product/B0C2BCX287/)
+- M2 4mm ネジ
+  - SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ)
+    - モノタロウ [https://www.monotaro.com/p/4926/2744/](https://www.monotaro.com/p/4926/2744/)
+  - など
+- Qwiicケーブル
+  - Qwiicケーブル（50mm）（スイッチサイエンス） [https://www.switch-science.com/products/3542](https://www.switch-science.com/products/3542)
+  - SH1.0 4P Reverse Side 10cm（aliexpress）[https://ja.aliexpress.com/item/1005006171950032.html](https://ja.aliexpress.com/item/1005006171950032.html)
+    - 必ず「Reverse Side」や「反向」と書かれている物を購入してください。
+
 ## Data Sheet
 
 - [SparrowSV3 Left PCB v3.0.2 Semantics](datasheets/SparrowSV3-left-3.0.2-semantics.pdf)
@@ -335,3 +372,7 @@ qmk compile -kb sparrow62/rev3 -km <keymap_name>
 - [SparrowSV3 Left Top Plate v3.0.2 PCB](datasheets/SparrowSV3-left-top-3.0.2-pcb.pdf)
 - [SparrowSV3 Right Top Plate v3.0.2 Semantics](datasheets/SparrowSV3-right-top-3.0.2-semantics.pdf)
 - [SparrowSV3 Right Top Plate v3.0.2 PCB](datasheets/SparrowSV3-right-top-3.0.2-pcb.pdf)
+
+## その他
+
+- ケースデータ [./misc/sv3/case/v1.0.0/](./misc/sv3/case/v1.0.0/)
