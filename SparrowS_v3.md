@@ -288,8 +288,10 @@ VIA、RemapはWebサイトや、ツール上からキーマップの書き換え
 ### QMK Firmwareでファームウェアをビルドする場合
 
 現在、SparrowDialキーボードはQMK Firmwareの本体には取り込まれていません。下記リポジトリに作成したファームウェアのコードがあります。
+SparrowSという名前ですが、Sparrow62からのバージョン3であるため、[keyboards/sparrow62/rev3](https://github.com/74th/qmk_firmware_sparrow_keyboard/tree/sparrow/keyboards/sparrow62/rev3)というディレクトリ構成になっています。
 
-https://github.com/74th/qmk_firmware_sparrow_keyboard
+- リポジトリ: https://github.com/74th/qmk_firmware_sparrow_keyboard
+- キーボードディレクトリ: https://github.com/74th/qmk_firmware_sparrow_keyboard/tree/sparrow/keyboards/sparrow62/rev3
 
 QMK Firmwareの環境のセットアップについては[公式のドキュメント https://docs.qmk.fm/#/newbs_getting_started](https://docs.qmk.fm/#/newbs_getting_started)を確認ください。[日本語のドキュメント https://docs.qmk.fm/#/ja/newbs_getting_started](https://docs.qmk.fm/#/ja/newbs_getting_started)もあります
 
