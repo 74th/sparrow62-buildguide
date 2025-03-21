@@ -48,6 +48,8 @@ SparrowS v3は@74thが頒布する自作キーボードキットです。
 
 ## キット同梱品
 
+### ベースキット
+
 - 左手用PCB x1
 - 右手用PCB x1
 - 左手用トッププレート x1
@@ -71,7 +73,18 @@ SparrowS v3は@74thが頒布する自作キーボードキットです。
 
 使用している市販品の購入先については、後述しております。
 
+### 追加4キーパッド
+
+- PCB x1
+- トッププレート x1
+- ケース x1
+- M2 4mmネジ x5
+- グリップクッション x1片
+- Qwiic互換ケーブル x1
+
 ## 追加で必要なもの
+
+### ベースキット
 
 - スイッチソケット（以下のどちらか） x58
   - Cherry MX互換ソケット（Kailh製で確認済み）
@@ -84,8 +97,49 @@ SparrowS v3は@74thが頒布する自作キーボードキットです。
   - Cherry MX互換スイッチ
   - Kailh Choc v1/v2スイッチ（Lofree x Kailh Shaddowシリーズも可）
 - スイッチ対応キーキャップ一式
+  - MX互換スイッチの場合
+    - 1U x48
+    - 1.5U x2 - Tabキー、バックスラッシュキー
+    - 1.75U x2 - 右Shiftキー（左手に利用）、Controlキー
+    - 1.25U x6 - 最下段のモディファイアキー
+  - Chocの場合
+    - 1U x48
+      - 左手左端のShift、Control、Tabキー、右手右端のバックスラッシュキーは1Uが適合します
+    - 1.25U x6 - 1Uでも可
 - TRRSケーブル x1
 - USB-Cケーブル x1
+
+### 追加4キーパッド
+
+- スイッチ（以下の種類のもの） x3
+  - Cherry MX互換スイッチ
+  - Kailh Choc v1/v2スイッチ（Lofree x Kailh Shaddowシリーズも可）
+- スイッチ対応キーキャップ 3種
+  - MX互換スイッチの場合
+    - 2U x1 - バックスペースキー
+    - 2.25U x1 - Enterキー
+    - 2.75U x1 - 左Shiftキー
+    - 1.25U x1
+  - Chocの場合
+    - 1U x3
+    - 1.25U x1 - 1Uでも可
+- (MX互換スイッチのみ) 2U スタビライザー x3
+- スイッチソケット（以下のどちらか） x4
+  - Cherry MX互換ソケット（Kailh製で確認済み）
+  - Kailh Chocソケット
+
+### 使用可能なスタビライザー
+
+(MX互換スイッチのみ) 2U スタビライザー x3が必要です。
+自作キーボードで用いられるスタビライザーには、「プレートマウントスタビライザー」と「PCBマウントスタビライザー」があります。
+「PCBマウントスタビライザー」を利用してください。
+
+- 遊舎工房: [MXスイッチ スタビライザー https://shop.yushakobo.jp/products/a0500st](https://shop.yushakobo.jp/products/a0500st)
+- TalpKeyboard: [DUROCK 2U V3 PCBマウントスタビライザー（スモーキー/ゴールド） https://talpkeyboard.net/items/66793a80b90fcc082dad12f2](https://talpkeyboard.net/items/66793a80b90fcc082dad12f2)
+
+Chocの場合にはスタビライザーは使用できません。
+
+### 追加4キーパッドを利用する場合
 
 ## 対応キーキャップ
 
@@ -287,6 +341,10 @@ VIA、RemapはWebサイトや、ツール上からキーマップの書き換え
 
 また、書き込み直後は右手や、追加4キーが動作しない場合があります。一度USBを抜き差しして電源をリセットさせてください。
 
+初期キーマップはRemapの画面もしくは、QMK Firmware上の以下のコードを確認ください。
+
+[https://github.com/74th/qmk_firmware_sparrow_keyboard/blob/sparrow/keyboards/sparrow62/rev3/keymaps/via/keymap.c#L29-L54](https://github.com/74th/qmk_firmware_sparrow_keyboard/blob/sparrow/keyboards/sparrow62/rev3/keymaps/via/keymap.c#L29-L54)
+
 ### QMK Firmwareでファームウェアをビルドする場合
 
 現在、SparrowDialキーボードはQMK Firmwareの本体には取り込まれていません。下記リポジトリに作成したファームウェアのコードがあります。
@@ -340,35 +398,9 @@ PC上にRPI-RP2という名前のUSBドライブが認識します。
 右手に4キーを追加するモジュールを作成しております。
 こちらを、右手のQwiicソケット（SH1.0-4P）に、Qwiicケーブル（キットには互換ケーブルを付属）を接続して、右手に4キーを増設することができます。
 
-### キットの他に必要なもの
+### キットの他に必要な物
 
-- スイッチ（以下の種類のもの） x3
-  - Cherry MX互換スイッチ
-  - Kailh Choc v1/v2スイッチ（Lofree x Kailh Shaddowシリーズも可）
-- スイッチ対応キーキャップ 3種
-  - Chocの場合
-    - 1U x3
-    - 1.25U x1
-  - MX互換スイッチの場合
-    - 2U x1 - バックスペースキー
-    - 2.25U x1 - Enterキー
-    - 2.75U x1 - 左Shiftキー
-    - 1.25U x1
-- (MX互換スイッチのみ) 2U スタビライザー x3
-- スイッチソケット（以下のどちらか） x4
-  - Cherry MX互換ソケット（Kailh製で確認済み）
-  - Kailh Chocソケット
-
-### 使用可能なスタビライザー
-
-(MX互換スイッチのみ) 2U スタビライザー x3が必要です。
-自作キーボードで用いられるスタビライザーには、「プレートマウントスタビライザー」と「PCBマウントスタビライザー」があります。
-「PCBマウントスタビライザー」を利用してください。
-
-- 遊舎工房: [MXスイッチ スタビライザー https://shop.yushakobo.jp/products/a0500st](https://shop.yushakobo.jp/products/a0500st)
-- TalpKeyboard: [DUROCK 2U V3 PCBマウントスタビライザー（スモーキー/ゴールド） https://talpkeyboard.net/items/66793a80b90fcc082dad12f2](https://talpkeyboard.net/items/66793a80b90fcc082dad12f2)
-
-Chocの場合にはスタビライザーは使用できません。
+[前述の『キットの他に必要なもの』を確認ください。](キットの他に必要なもの)
 
 ### 組み立て
 
