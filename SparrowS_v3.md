@@ -487,11 +487,15 @@ CherryMX互換スイッチの場合、スタビライザーのスペース上、
 - M2 4mm ネジ
   - SNZF 精密機器用十字穴付き皿小ねじ(微細ねじ)
     - モノタロウ [https://www.monotaro.com/p/4926/2744/](https://www.monotaro.com/p/4926/2744/)
+  - (同梱品購入先) Taobao [https://detail.tmall.com/item.htm?id=589111930409](https://detail.tmall.com/item.htm?id=589111930409)
   - など
 - Qwiicケーブル
   - Qwiicケーブル（50mm）（スイッチサイエンス） [https://www.switch-science.com/products/3542](https://www.switch-science.com/products/3542)
+  - 汎用SH1.0ケーブルを利用する場合、必ず「Reverse Side」や「反向」と書かれている物を購入してください。
   - SH1.0 4P Reverse Side 10cm（aliexpress）[https://ja.aliexpress.com/item/1005006171950032.html](https://ja.aliexpress.com/item/1005006171950032.html)
-    - 必ず「Reverse Side」や「反向」と書かれている物を購入してください。
+  - (同梱品購入先) Taobao [https://item.taobao.com/item.htm?id=613425378650](https://item.taobao.com/item.htm?id=613425378650)
+- インサートナット 長さ 3mm, M2, 外形(OD) 3.2mm
+  - https://ja.aliexpress.com/item/1005006262109427.html
 
 ## Data Sheet
 
