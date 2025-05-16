@@ -470,6 +470,19 @@ CherryMX互換スイッチの場合、スタビライザーのスペース上、
 >
 > [./trouble_shooting_guide.md](./trouble_shooting_guide.md)
 
+## 右手用キーボード、追加4キーパッドのファームウェア
+
+右手用キーボード、追加4キーパッドには、MCU CH32V003が搭載されています。
+そのファームウェアはch32funを用いて実装しています。
+ファームウェアは頒布したキットには既に書き込まれているため、変更は必要ありません。
+
+このファームウェアのコードに関しては以下のリポジトリで公開しております。
+変更の必要がある場合などには参照ください。
+
+> 右手用キーボード<br/>https://github.com/74th/sparrow-keyboard-sub-firmware/tree/main/SparrowSV3-Right
+
+> 追加4キーパッド<br/>https://github.com/74th/sparrow-keyboard-sub-firmware/tree/main/SparrowSV3-4Keys
+
 ## 同梱済みの部品の購入先
 
 - ケース
